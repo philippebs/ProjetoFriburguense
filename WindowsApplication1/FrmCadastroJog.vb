@@ -17,6 +17,7 @@ Public Class FrmCadastroJog
         Dim nascimento As Date = mtxtCadastroNAscimento.Text
         Dim inicio As Date = mtxtCadastroInicio.Text
         Dim termino As Date = mtxtCadastroTermino.Text
+        Dim cad As Integer
         'Dim id As Integer
         nascimento = Format(nascimento, "yyyy-MM-dd")
         inicio = Format(inicio, "yyyy-MM-dd")
@@ -42,8 +43,9 @@ Public Class FrmCadastroJog
                 adaptador.InsertCommand.Parameters("@termino").Value = termino
                 adaptador.InsertCommand.Parameters("@clausulas_jogador").Value = txtClausulasJogador.Text
                 adaptador.InsertCommand.ExecuteNonQuery()
+                MessageBox.Show("Cadastro realizado com sucesso!")
             Else
-                MessageBox.Show(linha.Text)
+                'MessageBox.Show(linha.Text)
                 adaptador.UpdateCommand.Parameters("@id_jogador").Value = id_jogador
                 adaptador.UpdateCommand.Parameters("@nome_jogador").Value = txtNomeJogador.Text
                 adaptador.UpdateCommand.Parameters("@categoria_jogador").Value = cmbCategoriaJogador.SelectedItem
@@ -58,11 +60,12 @@ Public Class FrmCadastroJog
                 adaptador.UpdateCommand.Parameters("@iniciado").Value = inicio
                 adaptador.UpdateCommand.Parameters("@termino").Value = termino
                 adaptador.UpdateCommand.Parameters("@clausulas_jogador").Value = txtClausulasJogador.Text
-
                 adaptador.UpdateCommand.ExecuteNonQuery()
+                MessageBox.Show("Alteração realizada com sucesso!!")
             End If
             conn.Close()
             frmListarJogadores.atualizar()
+            Me.Close()
         Catch ex As Exception
             MessageBox.Show("Valores repetidos")
             MessageBox.Show(ex.ToString)
@@ -84,7 +87,7 @@ Public Class FrmCadastroJog
 
             conn.Open()
             adaptador.SelectCommand.Parameters("@nome_jogador").Value = linha.SubItems(0).Text
-            MessageBox.Show(linha.SubItems(0).Text)
+            'MessageBox.Show(linha.SubItems(0).Text)
             objReader = adaptador.SelectCommand().ExecuteReader
 
             Do While objReader.Read
@@ -120,13 +123,14 @@ Public Class FrmCadastroJog
             mtxtCadastroInicio.Enabled = False
             mtxtCadastroTermino.Enabled = False
             txtClausulasJogador.Enabled = False
-
+            btnCadastarJogador.Enabled = False
+            btnAlertaCadastroJogador.Enabled = False
             'cmbPosicaoJogador.Text = linha.SubItems(1).Text
             'cmbCategoriaJogador.Text = linha.SubItems(2).Text
             'MessageBox.Show(linha.SubItems(3).Text)
             conn.Close()
         Else
-            MessageBox.Show("Erro!")
+            'MessageBox.Show("Erro!")
         End If
 
     End Sub
@@ -145,5 +149,7 @@ Public Class FrmCadastroJog
         mtxtCadastroInicio.Enabled = True
         mtxtCadastroTermino.Enabled = True
         txtClausulasJogador.Enabled = True
+        btnCadastarJogador.Enabled = True
+        btnAlertaCadastroJogador.Enabled = True
     End Sub
 End Class
