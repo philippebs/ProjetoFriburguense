@@ -81,3 +81,16 @@ C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\Wi
 C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
 C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
 C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroJog.resources
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaJogador.resources
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Philippe-i3\Documents\Projeto v1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache

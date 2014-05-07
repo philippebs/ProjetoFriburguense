@@ -79,7 +79,7 @@ Module Jogadores
         Dim sqlInsertCommand As New MySqlCommand
 
         sqlInsertCommand.Connection = conn
-        sqlInsertCommand.CommandText = "INSERT INTO tabela_jogadores ( nome_jogador, categoria_jogador, nascimento_jogador, posicao_jogador, agente_jogador, valor_jogador, preco_jogador, remuneracao_jogador, valor_carteira_jogador, iniciado, termino, clausulas_jogador) values(?,?,?,?,?,?,?,?,?,?,?,?,?)"
+        sqlInsertCommand.CommandText = "INSERT INTO tabela_jogadores ( nome_jogador, categoria_jogador, nascimento_jogador, posicao_jogador, agente_jogador,tipo_jogador, valor_jogador, preco_jogador, remuneracao_jogador, valor_carteira_jogador, iniciado, termino, clausulas_jogador) values(?,?,?,?,?,?,?,?,?,?,?,?,?)"
 
         objParam = sqlInsertCommand.Parameters.Add("@nome_jogador", MySqlDbType.VarChar)
         objParam.SourceColumn = "nome_jogador"
