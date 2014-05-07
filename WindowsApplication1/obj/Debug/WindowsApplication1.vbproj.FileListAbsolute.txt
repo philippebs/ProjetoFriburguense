@@ -1,0 +1,83 @@
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
+C:\Users\desktop\AppData\Local\Temporary Projects\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaJogadores.resources
+C:\Users\desktop\Documents\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\desktop\Documents\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\desktop\Documents\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\desktop\Documents\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\desktop\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaJogador.resources
+C:\Users\eu\Desktop\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\eu\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\eu\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\eu\Desktop\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaJogador.resources
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\eu\Documents\Visual Studio 2013\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaJogador.resources
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Philippe-i3\Desktop\projeto v 2\backup\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Philippe-i3\Desktop\projeto v 2\backup\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Philippe-i3\Desktop\projeto v 2\backup\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Philippe-i3\Desktop\projeto v 2\backup\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Philippe-i3\Desktop\projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroJog.resources
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroJog.resources
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaJogador.resources
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\desktop\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroJog.resources
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaJogador.resources
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Public\Documents\Projeto v 2\WindowsApplication1\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
