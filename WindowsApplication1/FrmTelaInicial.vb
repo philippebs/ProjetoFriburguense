@@ -1,6 +1,7 @@
 ﻿Public Class Friburguense
 
     Private frmListaJogadores As FrmListaJogador
+    Private frmListaContatos As FrmListaContato
 
 
     Private Sub ProfissionalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfissionalToolStripMenuItem.Click
@@ -24,10 +25,13 @@
         frmListaJogadores.CategoriaJogador(categoria)
         frmListaJogadores.MdiParent = Me
         frmListaJogadores.Show()
+    End Sub
 
+    Private Sub ListarContatos()
+        frmListaContatos = New FrmListaContato
 
-
-
+        frmListaContatos.MdiParent = Me
+        frmListaContatos.Show()
     End Sub
 
     Private Sub Friburguense_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -48,5 +52,9 @@
                 ' Catch and ignore the error if casting failed.
             End Try
         Next
+    End Sub
+
+    Private Sub ContatosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContatosToolStripMenuItem.Click
+        ListarContatos()
     End Sub
 End Class
