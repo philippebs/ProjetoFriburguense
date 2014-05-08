@@ -1,8 +1,12 @@
 ﻿Public Class Friburguense
 
     Private frmListaJogadores As FrmListaJogador
+<<<<<<< HEAD
     Private frmListaContatos As FrmListaContato
 
+=======
+    Private frmCadastrarAlertas As FrmCadastrarAlerta
+>>>>>>> c776088c014cdd54e926387b1451f60db2eb812e
 
     Private Sub ProfissionalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfissionalToolStripMenuItem.Click
         ListarJogadores("profissional")
@@ -25,6 +29,7 @@
         frmListaJogadores.CategoriaJogador(categoria)
         frmListaJogadores.MdiParent = Me
         frmListaJogadores.Show()
+<<<<<<< HEAD
     End Sub
 
     Private Sub ListarContatos()
@@ -32,6 +37,8 @@
 
         frmListaContatos.MdiParent = Me
         frmListaContatos.Show()
+=======
+>>>>>>> c776088c014cdd54e926387b1451f60db2eb812e
     End Sub
 
     Private Sub Friburguense_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -54,7 +61,14 @@
         Next
     End Sub
 
+<<<<<<< HEAD
     Private Sub ContatosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContatosToolStripMenuItem.Click
         ListarContatos()
+=======
+    Private Sub CadastrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastrarToolStripMenuItem.Click
+        frmCadastrarAlertas = New FrmCadastrarAlerta
+        frmCadastrarAlertas.MdiParent = Me
+        frmCadastrarAlertas.Show()
+>>>>>>> c776088c014cdd54e926387b1451f60db2eb812e
     End Sub
 End Class
