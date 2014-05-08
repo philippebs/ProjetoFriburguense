@@ -1,7 +1,7 @@
 ﻿Public Class Friburguense
 
     Private frmListaJogadores As FrmListaJogador
-
+    Private frmCadastrarAlertas As FrmCadastrarAlerta
 
     Private Sub ProfissionalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfissionalToolStripMenuItem.Click
         ListarJogadores("profissional")
@@ -24,10 +24,6 @@
         frmListaJogadores.CategoriaJogador(categoria)
         frmListaJogadores.MdiParent = Me
         frmListaJogadores.Show()
-
-
-
-
     End Sub
 
     Private Sub Friburguense_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -48,5 +44,11 @@
                 ' Catch and ignore the error if casting failed.
             End Try
         Next
+    End Sub
+
+    Private Sub CadastrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastrarToolStripMenuItem.Click
+        frmCadastrarAlertas = New FrmCadastrarAlerta
+        frmCadastrarAlertas.MdiParent = Me
+        frmCadastrarAlertas.Show()
     End Sub
 End Class

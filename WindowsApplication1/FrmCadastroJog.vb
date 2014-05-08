@@ -17,7 +17,7 @@ Public Class FrmCadastroJog
         Dim nascimento As Date = mtxtCadastroNAscimento.Text
         Dim inicio As Date = mtxtCadastroInicio.Text
         Dim termino As Date = mtxtCadastroTermino.Text
-        Dim cad As Integer
+
         'Dim id As Integer
         nascimento = Format(nascimento, "yyyy-MM-dd")
         inicio = Format(inicio, "yyyy-MM-dd")

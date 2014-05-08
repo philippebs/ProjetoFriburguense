@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.vb" />
+    <Compile Include="FrmCadastrarAlerta.Designer.vb">
+      <DependentUpon>FrmCadastrarAlerta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastrarAlerta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmCadastroJog.Designer.vb">
       <DependentUpon>FrmCadastroJog.vb</DependentUpon>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmCadastrarAlerta.resx">
+      <DependentUpon>FrmCadastrarAlerta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroJog.resx">
       <DependentUpon>FrmCadastroJog.vb</DependentUpon>
     </EmbeddedResource>

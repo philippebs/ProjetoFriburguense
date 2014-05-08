@@ -22,16 +22,125 @@ Partial Class FrmCadastrarAlerta
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTitulo = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.mtxtAlertaDataInicio = New System.Windows.Forms.MaskedTextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.mtxtAlertaDataTermino = New System.Windows.Forms.MaskedTextBox()
+        Me.btnAlertaSalvar = New System.Windows.Forms.Button()
+        Me.btnAlertaCancelar = New System.Windows.Forms.Button()
+        Me.txtTexto = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'FrmAlerta
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(35, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Título"
+        '
+        'txtTitulo
+        '
+        Me.txtTitulo.Location = New System.Drawing.Point(53, 22)
+        Me.txtTitulo.Name = "txtTitulo"
+        Me.txtTitulo.Size = New System.Drawing.Size(348, 20)
+        Me.txtTitulo.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(9, 58)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(74, 13)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Data de início"
+        '
+        'mtxtAlertaDataInicio
+        '
+        Me.mtxtAlertaDataInicio.Location = New System.Drawing.Point(89, 55)
+        Me.mtxtAlertaDataInicio.Mask = "00/00/0000"
+        Me.mtxtAlertaDataInicio.Name = "mtxtAlertaDataInicio"
+        Me.mtxtAlertaDataInicio.Size = New System.Drawing.Size(75, 20)
+        Me.mtxtAlertaDataInicio.TabIndex = 2
+        Me.mtxtAlertaDataInicio.ValidatingType = GetType(Date)
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(241, 58)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(82, 13)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Data de término"
+        '
+        'mtxtAlertaDataTermino
+        '
+        Me.mtxtAlertaDataTermino.Location = New System.Drawing.Point(329, 55)
+        Me.mtxtAlertaDataTermino.Mask = "00/00/0000"
+        Me.mtxtAlertaDataTermino.Name = "mtxtAlertaDataTermino"
+        Me.mtxtAlertaDataTermino.Size = New System.Drawing.Size(72, 20)
+        Me.mtxtAlertaDataTermino.TabIndex = 3
+        Me.mtxtAlertaDataTermino.ValidatingType = GetType(Date)
+        '
+        'btnAlertaSalvar
+        '
+        Me.btnAlertaSalvar.Location = New System.Drawing.Point(8, 314)
+        Me.btnAlertaSalvar.Name = "btnAlertaSalvar"
+        Me.btnAlertaSalvar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAlertaSalvar.TabIndex = 5
+        Me.btnAlertaSalvar.Text = "Salvar"
+        Me.btnAlertaSalvar.UseVisualStyleBackColor = True
+        '
+        'btnAlertaCancelar
+        '
+        Me.btnAlertaCancelar.Location = New System.Drawing.Point(89, 314)
+        Me.btnAlertaCancelar.Name = "btnAlertaCancelar"
+        Me.btnAlertaCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAlertaCancelar.TabIndex = 6
+        Me.btnAlertaCancelar.Text = "Cancelar"
+        Me.btnAlertaCancelar.UseVisualStyleBackColor = True
+        '
+        'txtTexto
+        '
+        Me.txtTexto.Location = New System.Drawing.Point(15, 90)
+        Me.txtTexto.Multiline = True
+        Me.txtTexto.Name = "txtTexto"
+        Me.txtTexto.Size = New System.Drawing.Size(389, 209)
+        Me.txtTexto.TabIndex = 4
+        Me.txtTexto.Text = "Insira o texto aqui"
+        '
+        'FrmCadastrarAlerta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(457, 421)
-        Me.Name = "FrmAlerta"
-        Me.Text = "FrmAlerta"
+        Me.ClientSize = New System.Drawing.Size(413, 349)
+        Me.Controls.Add(Me.txtTexto)
+        Me.Controls.Add(Me.btnAlertaCancelar)
+        Me.Controls.Add(Me.btnAlertaSalvar)
+        Me.Controls.Add(Me.mtxtAlertaDataTermino)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.mtxtAlertaDataInicio)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtTitulo)
+        Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "FrmCadastrarAlerta"
+        Me.Text = "Cadastrar Alerta"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtTitulo As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents mtxtAlertaDataInicio As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents mtxtAlertaDataTermino As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents btnAlertaSalvar As System.Windows.Forms.Button
+    Friend WithEvents btnAlertaCancelar As System.Windows.Forms.Button
+    Friend WithEvents txtTexto As System.Windows.Forms.TextBox
 End Class

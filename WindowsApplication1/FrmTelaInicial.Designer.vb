@@ -32,6 +32,7 @@ Partial Class Friburguense
         Me.CalendárioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlertasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,9 +93,16 @@ Partial Class Friburguense
         '
         'AlertasToolStripMenuItem
         '
+        Me.AlertasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastrarToolStripMenuItem})
         Me.AlertasToolStripMenuItem.Name = "AlertasToolStripMenuItem"
         Me.AlertasToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.AlertasToolStripMenuItem.Text = "Alertas"
+        '
+        'CadastrarToolStripMenuItem
+        '
+        Me.CadastrarToolStripMenuItem.Name = "CadastrarToolStripMenuItem"
+        Me.CadastrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CadastrarToolStripMenuItem.Text = "Cadastrar"
         '
         'Friburguense
         '
@@ -125,4 +133,5 @@ Partial Class Friburguense
     Friend WithEvents CalendárioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ContatosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AlertasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CadastrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
