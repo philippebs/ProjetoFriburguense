@@ -101,7 +101,7 @@ Partial Class Friburguense
         'CadastrarToolStripMenuItem
         '
         Me.CadastrarToolStripMenuItem.Name = "CadastrarToolStripMenuItem"
-        Me.CadastrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CadastrarToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.CadastrarToolStripMenuItem.Text = "Cadastrar"
         '
         'Friburguense

@@ -73,19 +73,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.vb" />
-<<<<<<< HEAD
     <Compile Include="Contatos.vb" />
     <Compile Include="ContatosPeloNome.vb" />
-    <Compile Include="FrmCadastroContato.Designer.vb">
-      <DependentUpon>FrmCadastroContato.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCadastroContato.vb">
-=======
     <Compile Include="FrmCadastrarAlerta.Designer.vb">
       <DependentUpon>FrmCadastrarAlerta.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmCadastrarAlerta.vb">
->>>>>>> c776088c014cdd54e926387b1451f60db2eb812e
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroContato.Designer.vb">
+      <DependentUpon>FrmCadastroContato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroContato.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCadastroJog.Designer.vb">
@@ -131,13 +130,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <EmbeddedResource Include="FrmCadastroContato.resx">
-      <DependentUpon>FrmCadastroContato.vb</DependentUpon>
-=======
     <EmbeddedResource Include="FrmCadastrarAlerta.resx">
       <DependentUpon>FrmCadastrarAlerta.vb</DependentUpon>
->>>>>>> c776088c014cdd54e926387b1451f60db2eb812e
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroContato.resx">
+      <DependentUpon>FrmCadastroContato.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroJog.resx">
       <DependentUpon>FrmCadastroJog.vb</DependentUpon>
