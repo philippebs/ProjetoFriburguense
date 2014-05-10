@@ -131,7 +131,7 @@ Partial Class FrmCadastroJog
         'cmbPosicaoJogador
         '
         Me.cmbPosicaoJogador.FormattingEnabled = true
-        Me.cmbPosicaoJogador.Items.AddRange(New Object() {"Goleiro", "Lateral Esquerdo", "Lateral Direito", "Volante", "Meia Armador", "Meia Atacante", "Atacante"})
+        Me.cmbPosicaoJogador.Items.AddRange(New Object() {"Goleiro", "Zagueiro", "Lateral Esquerdo", "Lateral Direito", "Volante", "Meia Armador", "Meia Atacante", "Atacante"})
         Me.cmbPosicaoJogador.Location = New System.Drawing.Point(55, 34)
         Me.cmbPosicaoJogador.Name = "cmbPosicaoJogador"
         Me.cmbPosicaoJogador.Size = New System.Drawing.Size(108, 21)

@@ -33,6 +33,8 @@ Partial Class Friburguense
         Me.ContatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlertasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CadastrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastrarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -87,6 +89,7 @@ Partial Class Friburguense
         '
         'ContatosToolStripMenuItem
         '
+        Me.ContatosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastrarToolStripMenuItem1, Me.ListarToolStripMenuItem})
         Me.ContatosToolStripMenuItem.Name = "ContatosToolStripMenuItem"
         Me.ContatosToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.ContatosToolStripMenuItem.Text = "Contatos"
@@ -103,6 +106,18 @@ Partial Class Friburguense
         Me.CadastrarToolStripMenuItem.Name = "CadastrarToolStripMenuItem"
         Me.CadastrarToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.CadastrarToolStripMenuItem.Text = "Cadastrar"
+        '
+        'CadastrarToolStripMenuItem1
+        '
+        Me.CadastrarToolStripMenuItem1.Name = "CadastrarToolStripMenuItem1"
+        Me.CadastrarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.CadastrarToolStripMenuItem1.Text = "Cadastrar"
+        '
+        'ListarToolStripMenuItem
+        '
+        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
+        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ListarToolStripMenuItem.Text = "Listar"
         '
         'Friburguense
         '
@@ -134,4 +149,6 @@ Partial Class Friburguense
     Friend WithEvents ContatosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AlertasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CadastrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CadastrarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ListarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

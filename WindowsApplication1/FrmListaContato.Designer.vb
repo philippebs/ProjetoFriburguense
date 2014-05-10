@@ -37,6 +37,7 @@ Partial Class FrmListaContato
         Me.lstvContato.FullRowSelect = True
         Me.lstvContato.GridLines = True
         Me.lstvContato.Location = New System.Drawing.Point(12, 12)
+        Me.lstvContato.MultiSelect = False
         Me.lstvContato.Name = "lstvContato"
         Me.lstvContato.Size = New System.Drawing.Size(258, 312)
         Me.lstvContato.TabIndex = 1

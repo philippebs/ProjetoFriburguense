@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class FrmCadastroJog
     Public frmListarJogadores As New FrmListaJogador
+    Private frmCadastrarAlertas As FrmCadastrarAlerta
     Public linha As ListViewItem
 
     Private conn As MySql.Data.MySqlClient.MySqlConnection
@@ -75,7 +76,10 @@ Public Class FrmCadastroJog
     End Sub
 
     Private Sub btnAlertaCadastroJogador_Click(sender As Object, e As EventArgs) Handles btnAlertaCadastroJogador.Click
-        MessageBox.Show(mtxtCadastroNAscimento.TextLength)
+        Dim frmCadastroAlert As New FrmCadastrarAlerta()
+        frmCadastroAlert.MdiParent = Me.MdiParent
+        frmCadastroAlert.frmCadastroJogador = Me
+        frmCadastroAlert.Show()
         
     End Sub
 

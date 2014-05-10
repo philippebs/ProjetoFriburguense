@@ -115,3 +115,15 @@ C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\bi
 C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.exe
 C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.xml
 C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastrarAlerta.resources
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroContato.resources
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroJog.resources
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaContato.resources
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaJogador.resources
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache

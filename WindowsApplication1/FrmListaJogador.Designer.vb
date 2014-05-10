@@ -39,6 +39,7 @@ Partial Class FrmListaJogador
         Me.lstvJogador.FullRowSelect = True
         Me.lstvJogador.GridLines = True
         Me.lstvJogador.Location = New System.Drawing.Point(-1, -1)
+        Me.lstvJogador.MultiSelect = False
         Me.lstvJogador.Name = "lstvJogador"
         Me.lstvJogador.Size = New System.Drawing.Size(481, 284)
         Me.lstvJogador.TabIndex = 0

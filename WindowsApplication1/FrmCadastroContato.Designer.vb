@@ -56,7 +56,7 @@ Partial Class FrmCadastroContato
         Me.txtNomeContato.Location = New System.Drawing.Point(53, 6)
         Me.txtNomeContato.Name = "txtNomeContato"
         Me.txtNomeContato.Size = New System.Drawing.Size(296, 20)
-        Me.txtNomeContato.TabIndex = 19
+        Me.txtNomeContato.TabIndex = 0
         '
         'Label3
         '
@@ -72,7 +72,7 @@ Partial Class FrmCadastroContato
         Me.txtEmailContato.Location = New System.Drawing.Point(53, 32)
         Me.txtEmailContato.Name = "txtEmailContato"
         Me.txtEmailContato.Size = New System.Drawing.Size(296, 20)
-        Me.txtEmailContato.TabIndex = 24
+        Me.txtEmailContato.TabIndex = 1
         '
         'Label2
         '
@@ -115,14 +115,16 @@ Partial Class FrmCadastroContato
         Me.txtSiteContato.Location = New System.Drawing.Point(82, 138)
         Me.txtSiteContato.Name = "txtSiteContato"
         Me.txtSiteContato.Size = New System.Drawing.Size(267, 20)
-        Me.txtSiteContato.TabIndex = 32
+        Me.txtSiteContato.TabIndex = 5
         '
         'lstvNotas
         '
+        Me.lstvNotas.FullRowSelect = True
+        Me.lstvNotas.GridLines = True
         Me.lstvNotas.Location = New System.Drawing.Point(82, 164)
         Me.lstvNotas.Name = "lstvNotas"
         Me.lstvNotas.Size = New System.Drawing.Size(267, 147)
-        Me.lstvNotas.TabIndex = 33
+        Me.lstvNotas.TabIndex = 6
         Me.lstvNotas.UseCompatibleStateImageBehavior = False
         '
         'btnCadastarContato
@@ -130,7 +132,7 @@ Partial Class FrmCadastroContato
         Me.btnCadastarContato.Location = New System.Drawing.Point(12, 330)
         Me.btnCadastarContato.Name = "btnCadastarContato"
         Me.btnCadastarContato.Size = New System.Drawing.Size(75, 23)
-        Me.btnCadastarContato.TabIndex = 34
+        Me.btnCadastarContato.TabIndex = 7
         Me.btnCadastarContato.Text = "Cadastrar"
         Me.btnCadastarContato.UseVisualStyleBackColor = True
         '
@@ -139,7 +141,7 @@ Partial Class FrmCadastroContato
         Me.btnCancelarCadastroContato.Location = New System.Drawing.Point(93, 330)
         Me.btnCancelarCadastroContato.Name = "btnCancelarCadastroContato"
         Me.btnCancelarCadastroContato.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelarCadastroContato.TabIndex = 35
+        Me.btnCancelarCadastroContato.TabIndex = 8
         Me.btnCancelarCadastroContato.Text = "Cancelar"
         Me.btnCancelarCadastroContato.UseVisualStyleBackColor = True
         '
@@ -148,7 +150,7 @@ Partial Class FrmCadastroContato
         Me.btnEditarCadastroContato.Location = New System.Drawing.Point(174, 330)
         Me.btnEditarCadastroContato.Name = "btnEditarCadastroContato"
         Me.btnEditarCadastroContato.Size = New System.Drawing.Size(75, 23)
-        Me.btnEditarCadastroContato.TabIndex = 36
+        Me.btnEditarCadastroContato.TabIndex = 9
         Me.btnEditarCadastroContato.Text = "Editar"
         Me.btnEditarCadastroContato.UseVisualStyleBackColor = True
         '
@@ -157,7 +159,7 @@ Partial Class FrmCadastroContato
         Me.btnAlertaCadastroContato.Location = New System.Drawing.Point(255, 330)
         Me.btnAlertaCadastroContato.Name = "btnAlertaCadastroContato"
         Me.btnAlertaCadastroContato.Size = New System.Drawing.Size(75, 23)
-        Me.btnAlertaCadastroContato.TabIndex = 37
+        Me.btnAlertaCadastroContato.TabIndex = 10
         Me.btnAlertaCadastroContato.Text = "Alerta"
         Me.btnAlertaCadastroContato.UseVisualStyleBackColor = True
         '
@@ -176,7 +178,7 @@ Partial Class FrmCadastroContato
         Me.txtTel2Contato.Mask = "(##) #### - #####"
         Me.txtTel2Contato.Name = "txtTel2Contato"
         Me.txtTel2Contato.Size = New System.Drawing.Size(94, 20)
-        Me.txtTel2Contato.TabIndex = 39
+        Me.txtTel2Contato.TabIndex = 3
         '
         'txtCelularContato
         '
@@ -184,7 +186,7 @@ Partial Class FrmCadastroContato
         Me.txtCelularContato.Mask = "(##) #### - #####"
         Me.txtCelularContato.Name = "txtCelularContato"
         Me.txtCelularContato.Size = New System.Drawing.Size(94, 20)
-        Me.txtCelularContato.TabIndex = 40
+        Me.txtCelularContato.TabIndex = 4
         '
         'txtTel1Contato
         '
@@ -192,7 +194,7 @@ Partial Class FrmCadastroContato
         Me.txtTel1Contato.Mask = "(##) #### - #####"
         Me.txtTel1Contato.Name = "txtTel1Contato"
         Me.txtTel1Contato.Size = New System.Drawing.Size(94, 20)
-        Me.txtTel1Contato.TabIndex = 41
+        Me.txtTel1Contato.TabIndex = 2
         '
         'FrmCadastroContato
         '

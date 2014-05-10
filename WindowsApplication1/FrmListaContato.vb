@@ -17,33 +17,33 @@ Public Class FrmListaContato
     
 
     Public Sub atualizar()
-        'lstvContato.Items.Clear()
-        'conn.Open()
+        lstvContato.Items.Clear()
+        conn.Open()
 
-        'objReader = adaptador.SelectCommand().ExecuteReader
+        objReader = adaptador.SelectCommand().ExecuteReader
 
 
 
-        'Do While objReader.Read
-        '    'Dim cat As String
-        '    ' cat = objReader.GetString(2)
-        '    Dim linha As New ListViewItem
-        '    'If cat = categoria Then
-        '    linha.Text = objReader.GetString(1)
-        '    linha.SubItems.Add(objReader.GetString(2))
-        '    linha.SubItems.Add(objReader.GetString(4))
-        '    'linha.SubItems.Add(objReader.GetInt32(3).ToString)
-        '    lstvContato.Items.Add(linha)
-        '    'End If
+        Do While objReader.Read
+            'Dim cat As String
+            ' cat = objReader.GetString(2)
+            Dim linha As New ListViewItem
+            'If cat = categoria Then
+            linha.Text = objReader.GetString(1)
+            linha.SubItems.Add(objReader.GetString(2))
+            linha.SubItems.Add(objReader.GetString(4))
+            'linha.SubItems.Add(objReader.GetInt32(3).ToString)
+            lstvContato.Items.Add(linha)
+            'End If
 
-        'Loop
+        Loop
 
-        'conn.Close()
+        conn.Close()
     End Sub
 
     Private Sub FrmListaContato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'conn = Conexao.getConexao
-        'adaptador = Contatos.getAdapter(conn)
+        conn = Conexao.getConexao
+        adaptador = Contatos.getAdapter(conn)
     End Sub
 
     Private Sub FrmListaContato_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

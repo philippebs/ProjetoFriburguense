@@ -3,6 +3,7 @@
     Private frmListaJogadores As FrmListaJogador
     Private frmCadastrarAlertas As FrmCadastrarAlerta
     Private frmListaContatos As FrmListaContato
+    Private frmCadastroContatos As FrmCadastroContato
 
     Private Sub ProfissionalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfissionalToolStripMenuItem.Click
         ListarJogadores("profissional")
@@ -53,7 +54,13 @@
         frmCadastrarAlertas.Show()
     End Sub
 
-    Private Sub ContatosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContatosToolStripMenuItem.Click
+    Private Sub CadastrarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CadastrarToolStripMenuItem1.Click
+        frmCadastroContatos = New FrmCadastroContato
+        frmCadastroContatos.MdiParent = Me
+        frmCadastroContatos.Show()
+    End Sub
+
+    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
         frmListaContatos = New FrmListaContato
         frmListaContatos.MdiParent = Me
         frmListaContatos.Show()

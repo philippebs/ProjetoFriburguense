@@ -2,6 +2,7 @@
 Public Class FrmCadastroContato
 
     Public frmListarContatos As New FrmListaContato
+    Private frmCadastrarAlertas As New FrmCadastrarAlerta
     Public linha As ListViewItem
 
     Private conn As MySql.Data.MySqlClient.MySqlConnection
@@ -29,8 +30,9 @@ Public Class FrmCadastroContato
                 adaptador.InsertCommand.Parameters("@celular_contato").Value = txtCelularContato.Text
                 adaptador.InsertCommand.Parameters("@site_contato").Value = txtSiteContato.Text
                 adaptador.InsertCommand.ExecuteNonQuery()
+                MessageBox.Show("Cadastro realizado com sucesso!")
             Else
-                MessageBox.Show(linha.Text)
+                'MessageBox.Show(linha.Text)
                 adaptador.UpdateCommand.Parameters("@id_contato").Value = id_contato
                 adaptador.UpdateCommand.Parameters("@nome_contato").Value = txtNomeContato.Text
                 adaptador.UpdateCommand.Parameters("@email_contato").Value = txtEmailContato.Text
@@ -38,11 +40,12 @@ Public Class FrmCadastroContato
                 adaptador.UpdateCommand.Parameters("@telefone2_contato").Value = txtTel2Contato.Text
                 adaptador.UpdateCommand.Parameters("@celular_contato").Value = txtCelularContato.Text
                 adaptador.UpdateCommand.Parameters("@site_contato").Value = txtSiteContato.Text
-
                 adaptador.UpdateCommand.ExecuteNonQuery()
+                MessageBox.Show("Alteração realizada com sucesso!")
             End If
             conn.Close()
             frmListarContatos.atualizar()
+            Me.Close()
         Catch ex As Exception
             MessageBox.Show("Valores repetidos")
             MessageBox.Show(ex.ToString)
@@ -52,7 +55,10 @@ Public Class FrmCadastroContato
     End Sub
 
     Private Sub btnAlertaCadastroContato_Click(sender As Object, e As EventArgs) Handles btnAlertaCadastroContato.Click
-        'MessageBox.Show(mtxtCadastroNAnscimento.TextLength)
+        Dim frmCadastroAlert As New FrmCadastrarAlerta()
+        frmCadastroAlert.MdiParent = Me.MdiParent
+        frmCadastroAlert.frmCadastroContatos = Me
+        frmCadastroAlert.Show()
 
     End Sub
 
@@ -64,7 +70,7 @@ Public Class FrmCadastroContato
 
             conn.Open()
             adaptador.SelectCommand.Parameters("@nome_contato").Value = linha.SubItems(0).Text
-            MessageBox.Show(linha.SubItems(0).Text)
+            'MessageBox.Show(linha.SubItems(0).Text)
             objReader = adaptador.SelectCommand().ExecuteReader
 
             Do While objReader.Read
@@ -92,8 +98,11 @@ Public Class FrmCadastroContato
             'cmbCategoriaJogador.Text = linha.SubItems(2).Text
             'MessageBox.Show(linha.SubItems(3).Text)
             conn.Close()
-        Else
-            MessageBox.Show("Erro!")
+            btnCadastarContato.Enabled = False
+            btnAlertaCadastroContato.Enabled = False
+
+            'Else
+            '    MessageBox.Show("Erro!")
         End If
 
     End Sub
@@ -105,6 +114,8 @@ Public Class FrmCadastroContato
         txtTel2Contato.Enabled = True
         txtCelularContato.Enabled = True
         txtSiteContato.Enabled = True
+        btnCadastarContato.Enabled = True
+        btnAlertaCadastroContato.Enabled = True
     End Sub
 
    
