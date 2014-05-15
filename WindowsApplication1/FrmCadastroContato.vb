@@ -7,8 +7,11 @@ Public Class FrmCadastroContato
 
     Private conn As MySql.Data.MySqlClient.MySqlConnection
     Private adaptador As MySql.Data.MySqlClient.MySqlDataAdapter
+    Private adaptador2 As MySql.Data.MySqlClient.MySqlDataAdapter
     Private Property objReader As MySqlDataReader
+    Private Property objReader2 As MySqlDataReader
     Private id_contato As Integer = 0
+
 
     Private Sub btnCancelarCadastroContato_Click(sender As Object, e As EventArgs) Handles btnCancelarCadastroContato.Click
         Me.Close()
@@ -58,19 +61,24 @@ Public Class FrmCadastroContato
         Dim frmCadastroAlert As New FrmCadastrarAlerta()
         frmCadastroAlert.MdiParent = Me.MdiParent
         frmCadastroAlert.frmCadastroContatos = Me
+        'MessageBox.Show(lstvNotas.SelectedItems(0).SubItems(0).Text)
+        frmCadastroAlert.txtTitulo.Text = lstvNotas.SelectedItems(0).SubItems(0).Text
+
         frmCadastroAlert.Show()
 
     End Sub
 
     Private Sub FrmCadastroContato_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        atualizar()
+
         If Not linha Is Nothing Then
 
             conn = Conexao.getConexao
             adaptador = ContatosPeloNome.getAdapter(conn)
-
+            adaptador2 = NotasPeloNome.getAdapter(conn)
             conn.Open()
             adaptador.SelectCommand.Parameters("@nome_contato").Value = linha.SubItems(0).Text
-            'MessageBox.Show(linha.SubItems(0).Text)
+            
             objReader = adaptador.SelectCommand().ExecuteReader
 
             Do While objReader.Read
@@ -93,7 +101,7 @@ Public Class FrmCadastroContato
             txtTel2Contato.Enabled = False
             txtCelularContato.Enabled = False
             txtSiteContato.Enabled = False
-            
+
             'cmbPosicaoJogador.Text = linha.SubItems(1).Text
             'cmbCategoriaJogador.Text = linha.SubItems(2).Text
             'MessageBox.Show(linha.SubItems(3).Text)
@@ -119,4 +127,105 @@ Public Class FrmCadastroContato
     End Sub
 
    
+    Private Sub lstvNotas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstvNotas.SelectedIndexChanged
+
+
+        'Dim conn As New MySqlConnection
+        'Dim adaptador As New MySqlDataAdapter
+        'Dim dados As New DataTable
+
+
+        'Private Property objReader As MySqlDataReader
+
+    'Dim conexao As New MySqlConnection
+    'Dim comando As New MySqlCommand
+    'Dim adaptador As New MySqlDataAdapter
+    'Dim dados As New DataTable
+    'Dim sql As String
+
+
+    End Sub
+    Public Sub atualizar()
+        lstvNotas.Items.Clear()
+        'conn.Open()
+
+
+        'adaptador2 = NotasPeloNome.getAdapter(conn)
+        conn.Open()
+        adaptador = ContatosPeloNome.getAdapter(conn)
+
+        If linha Is Nothing Then
+            lstvNotas.Enabled = False
+            btnRemoverNota.Enabled = False
+            btnCadastrarNota.Enabled = False
+            conn.Close()
+        Else
+            adaptador.SelectCommand.Parameters("@nome_contato").Value = linha.SubItems(0).Text
+            objReader = adaptador.SelectCommand().ExecuteReader
+            Do While objReader.Read
+                id_contato = objReader.GetValue(0)
+            Loop
+            conn.Close()
+            conn.Open()
+
+            adaptador2 = Notas.getAdapter(conn, id_contato)
+            objReader2 = adaptador2.SelectCommand().ExecuteReader
+
+
+            Do While objReader2.Read
+                'Dim cat As String
+                ' cat = objReader.GetString(2)
+                Dim linha As New ListViewItem
+                'If cat = categoria Then
+                linha.Text = objReader2.GetString(2)
+                'linha.SubItems.Add(objReader2.GetString(2))
+                ' linha.SubItems.Add(objReader.GetString(4))
+                'linha.SubItems.Add(objReader.GetInt32(3).ToString)
+                lstvNotas.Items.Add(linha)
+                'End If
+
+            Loop
+
+            conn.Close()
+        End If
+
+
+
+    End Sub
+    Private Sub FrmCadastroContato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conn = Conexao.getConexao
+        adaptador = Contatos.getAdapter(conn)
+    End Sub
+
+    
+    Private Sub btnCadastrarNota_Click(sender As Object, e As EventArgs) Handles btnCadastrarNota.Click
+        Dim frmCadastroNota As New FrmCadastroNota()
+        Dim cont As String = frmCadastroNota.mandarContato(id_contato)
+        frmCadastroNota.MdiParent = Me.MdiParent
+        'frmCadastroNota.frmListarNotas = Me
+        frmCadastroNota.Show()
+    End Sub
+
+    'Private Sub btnListaMostrarContato_Click(sender As Object, e As EventArgs) Handles btnListaMostrarContato.Click
+    '    If lstvNotas.SelectedIndices.Count > 0 Then
+    '        Dim frmCadastro As New FrmCadastroContato()
+    '        frmCadastro.MdiParent = Me.MdiParent
+    '        frmCadastro.frmListarContatos = Me
+    '        frmCadastro.linha = lstvNotas.SelectedItems(0)
+    '        ' MessageBox.Show(lstvJogador.SelectedItems(0).SubItems(0).Text)
+    '        frmCadastro.btnCadastarContato.Text = "Salvar"
+    '        frmCadastro.Show()
+    '    Else
+    '        MessageBox.Show("linha não selecionada")
+    '    End If
+    'End Sub
+
+    'End Sub
+
+    Private Sub btnRemoverNota_Click(sender As Object, e As EventArgs) Handles btnRemoverNota.Click
+        'Dim frmDeletarNota As New FrmDeletarNota()
+        'frmDeletarNota.MdiParent = Me.MdiParent
+        'frmDeletarNota.frmCadastroContatos = Me
+        'frmDeletarNota.Show()
+    End Sub
 End Class

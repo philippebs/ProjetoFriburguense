@@ -32,6 +32,7 @@ Partial Class FrmCadastroContato
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtSiteContato = New System.Windows.Forms.TextBox()
         Me.lstvNotas = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnCadastarContato = New System.Windows.Forms.Button()
         Me.btnCancelarCadastroContato = New System.Windows.Forms.Button()
         Me.btnEditarCadastroContato = New System.Windows.Forms.Button()
@@ -40,6 +41,8 @@ Partial Class FrmCadastroContato
         Me.txtTel2Contato = New System.Windows.Forms.MaskedTextBox()
         Me.txtCelularContato = New System.Windows.Forms.MaskedTextBox()
         Me.txtTel1Contato = New System.Windows.Forms.MaskedTextBox()
+        Me.btnCadastrarNota = New System.Windows.Forms.Button()
+        Me.btnRemoverNota = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -119,13 +122,20 @@ Partial Class FrmCadastroContato
         '
         'lstvNotas
         '
+        Me.lstvNotas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1})
         Me.lstvNotas.FullRowSelect = True
         Me.lstvNotas.GridLines = True
         Me.lstvNotas.Location = New System.Drawing.Point(82, 164)
         Me.lstvNotas.Name = "lstvNotas"
-        Me.lstvNotas.Size = New System.Drawing.Size(267, 147)
+        Me.lstvNotas.Size = New System.Drawing.Size(267, 130)
         Me.lstvNotas.TabIndex = 6
         Me.lstvNotas.UseCompatibleStateImageBehavior = False
+        Me.lstvNotas.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Notas"
+        Me.ColumnHeader1.Width = 250
         '
         'btnCadastarContato
         '
@@ -196,11 +206,31 @@ Partial Class FrmCadastroContato
         Me.txtTel1Contato.Size = New System.Drawing.Size(94, 20)
         Me.txtTel1Contato.TabIndex = 2
         '
+        'btnCadastrarNota
+        '
+        Me.btnCadastrarNota.Location = New System.Drawing.Point(82, 300)
+        Me.btnCadastrarNota.Name = "btnCadastrarNota"
+        Me.btnCadastrarNota.Size = New System.Drawing.Size(18, 23)
+        Me.btnCadastrarNota.TabIndex = 39
+        Me.btnCadastrarNota.Text = "+"
+        Me.btnCadastrarNota.UseVisualStyleBackColor = True
+        '
+        'btnRemoverNota
+        '
+        Me.btnRemoverNota.Location = New System.Drawing.Point(106, 300)
+        Me.btnRemoverNota.Name = "btnRemoverNota"
+        Me.btnRemoverNota.Size = New System.Drawing.Size(18, 23)
+        Me.btnRemoverNota.TabIndex = 40
+        Me.btnRemoverNota.Text = "-"
+        Me.btnRemoverNota.UseVisualStyleBackColor = True
+        '
         'FrmCadastroContato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(372, 368)
+        Me.Controls.Add(Me.btnRemoverNota)
+        Me.Controls.Add(Me.btnCadastrarNota)
         Me.Controls.Add(Me.txtTel1Contato)
         Me.Controls.Add(Me.txtCelularContato)
         Me.Controls.Add(Me.txtTel2Contato)
@@ -243,4 +273,7 @@ Partial Class FrmCadastroContato
     Friend WithEvents txtTel2Contato As System.Windows.Forms.MaskedTextBox
     Friend WithEvents txtCelularContato As System.Windows.Forms.MaskedTextBox
     Friend WithEvents txtTel1Contato As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents btnCadastrarNota As System.Windows.Forms.Button
+    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnRemoverNota As System.Windows.Forms.Button
 End Class
