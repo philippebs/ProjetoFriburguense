@@ -144,3 +144,9 @@ C:\Users\eu\Desktop\Friburguense\ProjetoFriburguense\WindowsApplication1\bin\Deb
 C:\Users\eu\Desktop\Friburguense\ProjetoFriburguense\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
 C:\Users\eu\Desktop\Friburguense\ProjetoFriburguense\WindowsApplication1\bin\Debug\WindowsApplication1.xml
 C:\Users\eu\Desktop\Friburguense\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroNota.resources
+C:\Users\desktop\Documents\Projeto v 2\ProjetoFriburguense\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\desktop\Documents\Projeto v 2\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\desktop\Documents\Projeto v 2\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\desktop\Documents\Projeto v 2\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroNota.resources
+C:\Users\desktop\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCalendario.resources

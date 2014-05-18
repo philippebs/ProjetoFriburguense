@@ -4,6 +4,7 @@
     Private frmCadastrarAlertas As FrmCadastrarAlerta
     Private frmListaContatos As FrmListaContato
     Private frmCadastroContatos As FrmCadastroContato
+    Private frmCalendario As FrmCalendario
 
     Private Sub ProfissionalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfissionalToolStripMenuItem.Click
         ListarJogadores("profissional")
@@ -64,5 +65,11 @@
         frmListaContatos = New FrmListaContato
         frmListaContatos.MdiParent = Me
         frmListaContatos.Show()
+    End Sub
+
+    Private Sub CalendárioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CalendárioToolStripMenuItem.Click
+        frmCalendario = New FrmCalendario
+        frmCalendario.MdiParent = Me
+        frmCalendario.Show()
     End Sub
 End Class
