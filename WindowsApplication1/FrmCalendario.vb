@@ -1,4 +1,5 @@
-﻿Public Class FrmCalendario
+﻿Imports MySql.Data.MySqlClient
+Public Class FrmCalendario
 
     Dim lblDayz As Label
     Dim mesAtual As String
@@ -9,8 +10,13 @@
     Dim Dayofweek, CurrentCulture As String
     Dim botao5 As Integer
     Dim irParProximoMes As Boolean = True
+    Dim conn As New MySqlConnection
+    Dim adaptador As New MySqlDataAdapter
+    Private Property objReader As MySqlDataReader
 
     Private Sub FrmCalendario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conn = Conexao.getConexao
+        adaptador = Alertas.getAdapter(conn)
         'exibe o mês atual
         'comboBoxMonth.Text = DateTime.Now.Month.ToString()
 
@@ -32,6 +38,23 @@
         'MessageBox.Show(lblAnoCalendario.Text)
         'chama a função verificaDia
         verificaDia()
+        conn.Open()
+        'Teste 
+        Dim data As Date = lblAnoCalendario.Text + "/" + mesAtual.ToString + "/01"
+        '        MessageBox.Show(data)
+        adaptador.SelectCommand.Parameters("@data_inicio_alerta").Value = data
+        data = lblAnoCalendario.Text + "/" + mesAtual.ToString + "/" + Dayz.ToString
+        adaptador.SelectCommand.Parameters("@data_inicio_alerta1").Value = data
+        objReader = adaptador.SelectCommand().ExecuteReader
+        Dim diaMarcado As String = "0"
+
+        Do While objReader.Read
+            diaMarcado = objReader.GetValue(1).ToString
+            'MessageBox.Show(diaMarcado.Length & " - " & diaMarcado.Substring(8, 2))
+            diaMarcado = diaMarcado.Substring(8, 2)
+
+        Loop
+
         For i As Int32 = 1 To Dayz
             ndayz += 1
             'lblDayz = New Label()
@@ -41,18 +64,7 @@
             btnDayz.Name = "b" & i
             'lblDayz.Text = i.ToString()
             btnDayz.Text = i.ToString
-            'lblDayz.BorderStyle = BorderStyle.Fixed3D
 
-            'If i = DateTime.Now.Day Then
-            '    lblDayz.BackColor = Color.Green
-            'ElseIf ndayz = 1 Then
-            '    lblDayz.BackColor = Color.Red
-            'ElseIf ndayz = 7 Then
-            '    lblDayz.BackColor = Color.Blue
-            'Else
-            '    lblDayz.BackColor = Color.Aquamarine
-            'End If
-            'lblDayz.Font = label31.Font
             If i = DateTime.Now.Day Then
                 btnDayz.BackColor = Color.Green
             ElseIf ndayz = 1 Then
@@ -61,6 +73,10 @@
                 btnDayz.BackColor = Color.Blue
             Else
                 btnDayz.BackColor = Color.Aquamarine
+            End If
+            If i = diaMarcado.ToString Then
+                MessageBox.Show(diaMarcado)
+                btnDayz.BackColor = Color.Coral
             End If
             btnDayz.SetBounds(x, y, 37, 27)
             'lblDayz.SetBounds(x, y, 37, 27)
@@ -73,13 +89,17 @@
             'panel1.Controls.Add(lblDayz)
             pnlCalendarioDias.Controls.Add(btnDayz)
             'lblDayz.Enabled = True
-
         Next
+        'Dim tamanho = diaMarcado.Length - 2
+
+        'Fim teste
+       
         'retorna os valores padrão
         x = 0
         ndayz = 0
         y = 0
         'lblAnoCalendario.Text = mtxtAno.Text
+        conn.Clone()
     End Sub
 
     Private Sub btnDayz_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -90,6 +110,29 @@
             MessageBox.Show("è o 15")
 
         End If
+    End Sub
+
+    Public Sub atualizar()
+        conn.Open()
+
+        objReader = adaptador.SelectCommand().ExecuteReader
+
+
+
+        Do While objReader.Read
+            'Dim cat As String
+            ' cat = objReader.GetString(2)
+            Dim linha As New ListViewItem
+            'If cat = categoria Then
+            linha.Text = objReader.GetString(1)
+            linha.SubItems.Add(objReader.GetString(2))
+            linha.SubItems.Add(objReader.GetString(4))
+            'linha.SubItems.Add(objReader.GetInt32(3).ToString)
+            'End If
+
+        Loop
+
+        conn.Close()
     End Sub
 
     Private Function verificaDia() As Int32
@@ -158,7 +201,7 @@
                     mesAtual = currentmonth.ToString()
                 End If
             End If
-           
+
             'limpa o painel
             pnlCalendarioDias.Controls.Clear()
             'Exibe o nome do mes na cultura do windows

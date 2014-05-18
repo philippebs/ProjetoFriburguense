@@ -72,6 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alertas.vb" />
     <Compile Include="Conexao.vb" />
     <Compile Include="Contatos.vb" />
     <Compile Include="ContatosPeloNome.vb" />
