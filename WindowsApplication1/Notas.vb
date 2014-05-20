@@ -58,6 +58,15 @@ Module Notas
 
         notasDtAdapter.InsertCommand = sqlInsertCommand
 
+        Dim sqlDeletecommand As New MySqlCommand
+        sqlDeletecommand.Connection = conn
+        sqlDeletecommand.CommandText = "DELETE FROM friburguense.tabela_notas WHERE tabela_notas.nota = '" + codigo_contato + "'"
+
+        'objParam = sqlSelectcommand.Parameters.Add("@id_contato", MySqlDbType.Int32)
+        'objParam.SourceColumn = "id_contato"
+        'objParam.SourceVersion = DataRowVersion.Current
+        notasDtAdapter.DeleteCommand = sqlDeletecommand
+
 
 
         Return notasDtAdapter
