@@ -31,10 +31,10 @@ Partial Class Friburguense
         Me.InteressadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CalendárioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AlertasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CadastrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CadastrarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AlertasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -94,6 +94,18 @@ Partial Class Friburguense
         Me.ContatosToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.ContatosToolStripMenuItem.Text = "Contatos"
         '
+        'CadastrarToolStripMenuItem1
+        '
+        Me.CadastrarToolStripMenuItem1.Name = "CadastrarToolStripMenuItem1"
+        Me.CadastrarToolStripMenuItem1.Size = New System.Drawing.Size(124, 22)
+        Me.CadastrarToolStripMenuItem1.Text = "Cadastrar"
+        '
+        'ListarToolStripMenuItem
+        '
+        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
+        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.ListarToolStripMenuItem.Text = "Listar"
+        '
         'AlertasToolStripMenuItem
         '
         Me.AlertasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastrarToolStripMenuItem})
@@ -104,20 +116,8 @@ Partial Class Friburguense
         'CadastrarToolStripMenuItem
         '
         Me.CadastrarToolStripMenuItem.Name = "CadastrarToolStripMenuItem"
-        Me.CadastrarToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.CadastrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CadastrarToolStripMenuItem.Text = "Cadastrar"
-        '
-        'CadastrarToolStripMenuItem1
-        '
-        Me.CadastrarToolStripMenuItem1.Name = "CadastrarToolStripMenuItem1"
-        Me.CadastrarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.CadastrarToolStripMenuItem1.Text = "Cadastrar"
-        '
-        'ListarToolStripMenuItem
-        '
-        Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ListarToolStripMenuItem.Text = "Listar"
         '
         'Friburguense
         '
