@@ -223,7 +223,11 @@ Public Class FrmCadastroContato
     'End Sub
 
     Private Sub btnRemoverNota_Click(sender As Object, e As EventArgs) Handles btnRemoverNota.Click
+<<<<<<< HEAD
         If lstvNotas.SelectedItems.Count > 0 AndAlso MessageBox.Show("Deseja deletar esta nota ?", "Confirma", MessageBoxButtons.YesNo) = _
+=======
+        If lstvNotas.SelectedItems.Count > 0 AndAlso MessageBox.Show("Deseja deletar este item ?", "Confirma", MessageBoxButtons.YesNo) = _
+>>>>>>> 1781b594d5d2ccf522f2a16d239e5f8f7226b9b3
 Windows.Forms.DialogResult.Yes Then
             Dim texto As String = lstvNotas.SelectedItems(0).Text
 
