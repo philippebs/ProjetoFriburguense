@@ -223,9 +223,22 @@ Public Class FrmCadastroContato
     'End Sub
 
     Private Sub btnRemoverNota_Click(sender As Object, e As EventArgs) Handles btnRemoverNota.Click
-        'Dim frmDeletarNota As New FrmDeletarNota()
-        'frmDeletarNota.MdiParent = Me.MdiParent
-        'frmDeletarNota.frmCadastroContatos = Me
-        'frmDeletarNota.Show()
+        If lstvNotas.SelectedItems.Count > 0 AndAlso MessageBox.Show("Deseja deletar esta nota ?", "Confirma", MessageBoxButtons.YesNo) = _
+Windows.Forms.DialogResult.Yes Then
+            Dim texto As String = lstvNotas.SelectedItems(0).Text
+
+            MsgBox(texto)
+            conn = Conexao.getConexao
+            adaptador = Notas.getAdapter(conn, texto)
+
+            conn.Open()
+
+            'adaptador.DeleteCommand.Parameters("@notas").Value = "15"
+            objReader = adaptador.DeleteCommand().ExecuteReader
+            lstvNotas.SelectedItems(0).Remove()
+            conn.Close()
+
+        End If
+
     End Sub
 End Class

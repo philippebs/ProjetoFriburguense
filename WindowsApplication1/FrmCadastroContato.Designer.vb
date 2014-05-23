@@ -22,6 +22,7 @@ Partial Class FrmCadastroContato
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCadastroContato))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtNomeContato = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -208,18 +209,19 @@ Partial Class FrmCadastroContato
         '
         'btnCadastrarNota
         '
+        Me.btnCadastrarNota.BackgroundImage = CType(resources.GetObject("btnCadastrarNota.BackgroundImage"), System.Drawing.Image)
         Me.btnCadastrarNota.Location = New System.Drawing.Point(82, 300)
         Me.btnCadastrarNota.Name = "btnCadastrarNota"
-        Me.btnCadastrarNota.Size = New System.Drawing.Size(18, 23)
+        Me.btnCadastrarNota.Size = New System.Drawing.Size(24, 24)
         Me.btnCadastrarNota.TabIndex = 39
-        Me.btnCadastrarNota.Text = "+"
         Me.btnCadastrarNota.UseVisualStyleBackColor = True
         '
         'btnRemoverNota
         '
-        Me.btnRemoverNota.Location = New System.Drawing.Point(106, 300)
+        Me.btnRemoverNota.BackgroundImage = CType(resources.GetObject("btnRemoverNota.BackgroundImage"), System.Drawing.Image)
+        Me.btnRemoverNota.Location = New System.Drawing.Point(112, 300)
         Me.btnRemoverNota.Name = "btnRemoverNota"
-        Me.btnRemoverNota.Size = New System.Drawing.Size(18, 23)
+        Me.btnRemoverNota.Size = New System.Drawing.Size(24, 24)
         Me.btnRemoverNota.TabIndex = 40
         Me.btnRemoverNota.Text = "-"
         Me.btnRemoverNota.UseVisualStyleBackColor = True
