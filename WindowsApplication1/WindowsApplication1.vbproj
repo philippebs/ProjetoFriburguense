@@ -100,8 +100,6 @@
     <Compile Include="FrmCadastroNota.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="FrmCalendario.Designer.vb">
       <DependentUpon>FrmCalendario.vb</DependentUpon>
     </Compile>
@@ -109,7 +107,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDeletarNota.vb" />
->>>>>>> 8c59050ba187fd985fab4b76c1dcafc7ccdf5183
     <Compile Include="FrmListaContato.Designer.vb">
       <DependentUpon>FrmListaContato.vb</DependentUpon>
     </Compile>

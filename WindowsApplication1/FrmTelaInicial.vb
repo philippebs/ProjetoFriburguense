@@ -1,5 +1,5 @@
 ﻿Public Class Friburguense
-
+    'linha de modificacao
     Private frmListaJogadores As FrmListaJogador
     Private frmCadastrarAlertas As FrmCadastrarAlerta
     Private frmListaContatos As FrmListaContato

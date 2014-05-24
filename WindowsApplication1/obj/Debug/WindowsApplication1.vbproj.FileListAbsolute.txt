@@ -190,3 +190,7 @@ F:\Projeto v3\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplicati
 F:\Projeto v3\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.Friburguense.resources
 F:\Projeto v3\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
 F:\Projeto v3\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+P:\Projeto v3\ProjetoFriburguense\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+P:\Projeto v3\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+P:\Projeto v3\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+P:\Projeto v3\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
