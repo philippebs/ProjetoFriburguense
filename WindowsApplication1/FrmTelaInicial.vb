@@ -42,7 +42,6 @@
                 ' Set the BackColor of the MdiClient control.
                 ctlMDI.BackColor = Color.White
 
-
             Catch exc As InvalidCastException
                 ' Catch and ignore the error if casting failed.
             End Try

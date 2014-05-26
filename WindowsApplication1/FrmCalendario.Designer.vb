@@ -211,6 +211,7 @@ Partial Class FrmCalendario
         'btnDiaAtualCor
         '
         Me.btnDiaAtualCor.BackColor = System.Drawing.Color.Green
+        Me.btnDiaAtualCor.Enabled = False
         Me.btnDiaAtualCor.Location = New System.Drawing.Point(11, 334)
         Me.btnDiaAtualCor.Name = "btnDiaAtualCor"
         Me.btnDiaAtualCor.Size = New System.Drawing.Size(28, 23)

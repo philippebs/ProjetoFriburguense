@@ -113,6 +113,12 @@
     <Compile Include="FrmListaContato.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmListaEventosDia.Designer.vb">
+      <DependentUpon>FrmListaEventosDia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaEventosDia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmListaJogador.Designer.vb">
       <DependentUpon>FrmListaJogador.vb</DependentUpon>
     </Compile>
@@ -144,6 +150,7 @@
     </Compile>
     <Compile Include="Notas.vb" />
     <Compile Include="NotasPeloNome.vb" />
+    <Compile Include="ProcurarData.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FrmCadastrarAlerta.resx">
@@ -163,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListaContato.resx">
       <DependentUpon>FrmListaContato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaEventosDia.resx">
+      <DependentUpon>FrmListaEventosDia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListaJogador.resx">
       <DependentUpon>FrmListaJogador.vb</DependentUpon>

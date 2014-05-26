@@ -1,11 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
-Module Alertas
+Module ProcurarData
     Function getAdapter(conn As MySql.Data.MySqlClient.MySqlConnection) As MySql.Data.MySqlClient.MySqlDataAdapter
-        Dim alertasDtAdapter As New MySqlDataAdapter
+        Dim procurarDataDtAdapter As New MySqlDataAdapter
         Dim sqlSelectcommand As New MySqlCommand
 
         sqlSelectcommand.Connection = conn
-        sqlSelectcommand.CommandText = "Select * from tabela_alerta where data_inicio_alerta between ? and ?"
+        sqlSelectcommand.CommandText = "Select * from tabela_alerta where data_inicio_alerta = ?"
 
         Dim objParam As MySqlParameter
 
@@ -13,13 +13,9 @@ Module Alertas
         objParam.SourceColumn = "data_inicio_alerta"
         objParam.SourceVersion = DataRowVersion.Current
 
-        objParam = sqlSelectcommand.Parameters.Add("@data_inicio_alerta1", MySqlDbType.Date)
-        objParam.SourceColumn = "data_inicio_alerta1"
-        objParam.SourceVersion = DataRowVersion.Current
+        procurarDataDtAdapter.SelectCommand = sqlSelectcommand
 
-        alertasDtAdapter.SelectCommand = sqlSelectcommand
-
-        Return alertasDtAdapter
+        Return procurarDataDtAdapter
 
     End Function
 End Module
