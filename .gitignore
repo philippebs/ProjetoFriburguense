@@ -1,0 +1,8 @@
+#Ignore files created by Visual Studio
+*.suo
+*.user
+*.cache
+*/WindowsApplication1/obj/*
+
+#Ignore files created by ReSharper
+_ReSharper*/

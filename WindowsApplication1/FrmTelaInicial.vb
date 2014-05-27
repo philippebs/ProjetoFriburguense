@@ -5,6 +5,8 @@
     Private frmListaContatos As FrmListaContato
     Private frmCadastroContatos As FrmCadastroContato
     Private frmCalendario As FrmCalendario
+    Private frmLogin As FrmLogin
+
 
     Private Sub ProfissionalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfissionalToolStripMenuItem.Click
         ListarJogadores("profissional")
@@ -19,16 +21,22 @@
     End Sub
 
     Private Sub InteressadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InteressadosToolStripMenuItem.Click
-        ListarJogadores("interessado")
+        Login("interessados")
+        'ListarJogadores("interessado")
     End Sub
-
+    Private Sub Login(tela As String)
+        frmLogin = New FrmLogin
+        frmLogin.abrirOutraTela(tela)
+        frmLogin.MdiParent = Me
+        frmLogin.Show()
+    End Sub
     Private Sub ListarJogadores(categoria As String)
         frmListaJogadores = New FrmListaJogador
         frmListaJogadores.CategoriaJogador(categoria)
         frmListaJogadores.MdiParent = Me
         frmListaJogadores.Show()
     End Sub
-
+    
     Private Sub Friburguense_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim ctl As Control
         Dim ctlMDI As MdiClient
@@ -55,15 +63,17 @@
     End Sub
 
     Private Sub CadastrarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CadastrarToolStripMenuItem1.Click
-        frmCadastroContatos = New FrmCadastroContato
-        frmCadastroContatos.MdiParent = Me
-        frmCadastroContatos.Show()
+        Login("cad_contato")
+        'frmCadastroContatos = New FrmCadastroContato
+        'frmCadastroContatos.MdiParent = Me
+        'frmCadastroContatos.Show()
     End Sub
 
     Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
-        frmListaContatos = New FrmListaContato
-        frmListaContatos.MdiParent = Me
-        frmListaContatos.Show()
+        Login("lst_contato")
+        'frmListaContatos = New FrmListaContato
+        'frmListaContatos.MdiParent = Me
+        'frmListaContatos.Show()
     End Sub
 
     Private Sub CalendárioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CalendárioToolStripMenuItem.Click
