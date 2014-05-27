@@ -13,6 +13,7 @@ Public Class FrmCalendario
     Dim adaptador As New MySqlDataAdapter
     Private Property objReader As MySqlDataReader
 
+
     Private Sub FrmCalendario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conn = Conexao.getConexao
         adaptador = Alertas.getAdapter(conn)
@@ -185,28 +186,113 @@ Public Class FrmCalendario
 
     Private Sub btnDayz_Click(ByVal sender As Object, ByVal e As EventArgs)
         ' Add event handler code here.
-        Dim linha As New ListViewItem
-        conn = Conexao.getConexao
-        adaptador = ProcurarData.getAdapter(conn)
-        conn.Open()
+        'Dim linha As New ListViewItem
+        Dim diaSelecionado As Integer = 0
+        'conn = Conexao.getConexao
+        'adaptador = ProcurarData.getAdapter(conn)
+        'conn.Open()
         Dim dataSelecionada As Date
         If sender.ToString = "System.Windows.Forms.Button, Text: 1" Then
-            MessageBox.Show("è o 1!!")
+            diaSelecionado = 1
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 2" Then
+            diaSelecionado = 2
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 3" Then
+            diaSelecionado = 3
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 4" Then
+            diaSelecionado = 4
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 5" Then
+            diaSelecionado = 5
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 6" Then
+            diaSelecionado = 6
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 7" Then
+            diaSelecionado = 7
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 8" Then
+            diaSelecionado = 8
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 9" Then
+            diaSelecionado = 9
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 10" Then
+            diaSelecionado = 10
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 11" Then
+            diaSelecionado = 11
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 12" Then
+            diaSelecionado = 12
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 13" Then
+            diaSelecionado = 13
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 14" Then
+            diaSelecionado = 14
         ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 15" Then
-            MessageBox.Show("è o 15")
+            diaSelecionado = 15
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 16" Then
+            diaSelecionado = 16
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 17" Then
+            diaSelecionado = 17
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 18" Then
+            diaSelecionado = 18
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 19" Then
+            diaSelecionado = 19
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 20" Then
+            diaSelecionado = 20
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 21" Then
+            diaSelecionado = 21
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 22" Then
+            diaSelecionado = 22
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 23" Then
+            diaSelecionado = 23
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 24" Then
+            diaSelecionado = 24
         ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 25" Then
-            dataSelecionada = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-25"
-            adaptador.SelectCommand.Parameters("@data_inicio_alerta").Value = dataSelecionada
+            diaSelecionado = 25
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 20" Then
+            diaSelecionado = 20
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 21" Then
+            diaSelecionado = 21
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 22" Then
+            diaSelecionado = 22
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 23" Then
+            diaSelecionado = 23
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 24" Then
+            diaSelecionado = 24
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 25" Then
+            diaSelecionado = 25
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 26" Then
+            diaSelecionado = 26
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 27" Then
+            diaSelecionado = 27
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 28" Then
+            diaSelecionado = 28
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 29" Then
+            diaSelecionado = 29
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 30" Then
+            diaSelecionado = 30
+        ElseIf sender.ToString = "System.Windows.Forms.Button, Text: 31" Then
+            diaSelecionado = 31
         End If
-        objReader = adaptador.SelectCommand().ExecuteReader
-        Do While objReader.Read
-            MessageBox.Show("Id: " & objReader.GetValue(0).ToString)
-            MessageBox.Show("Titulo: " & objReader.GetValue(1).ToString)
-            MessageBox.Show("Data inicio: " & objReader.GetValue(2).ToString)
-            MessageBox.Show("Data fim: " & objReader.GetValue(3).ToString)
-            MessageBox.Show("Mensagem: " & objReader.GetValue(4).ToString)
-        Loop
-        conn.Close()
+
+
+        dataSelecionada = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-" + diaSelecionado.ToString
+
+        Dim frmListarEventosDia As New FrmListaEventosDia
+        frmListarEventosDia.MdiParent = Me.MdiParent
+        frmListarEventosDia.frmCalendario = Me
+        frmListarEventosDia.data = dataSelecionada
+        frmListarEventosDia.Show()
+
+        'adaptador.SelectCommand.Parameters("@data_inicio_alerta").Value = dataSelecionada
+        'objReader = adaptador.SelectCommand().ExecuteReader
+
+        'Do While objReader.Read
+        '    'MessageBox.Show("Id: " & objReader.GetValue(0).ToString)
+        '    'MessageBox.Show("Titulo: " & objReader.GetValue(1).ToString)
+        '    'MessageBox.Show("Data inicio: " & objReader.GetValue(2).ToString)
+        '    'MessageBox.Show("Data fim: " & objReader.GetValue(3).ToString)
+        '    'MessageBox.Show("Mensagem: " & objReader.GetValue(4).ToString)
+        '    linha.Text = objReader.GetValue(1).ToString
+        '    linha.SubItems.Add(objReader.GetValue(2).ToString)
+        '    linha.SubItems.Add(objReader.GetValue(3).ToString)
+        '    linha.SubItems.Add(objReader.GetValue(4).ToString)
+
+        'Loop
+        'conn.Close()
     End Sub
 
     Public Sub atualizar()
