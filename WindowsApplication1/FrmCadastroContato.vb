@@ -154,6 +154,7 @@ Public Class FrmCadastroContato
         conn.Open()
         adaptador = ContatosPeloNome.getAdapter(conn)
 
+
         If linha Is Nothing Then
             lstvNotas.Enabled = False
             btnRemoverNota.Enabled = False
@@ -192,17 +193,21 @@ Public Class FrmCadastroContato
 
 
     End Sub
+    Public Sub Up()
+        atualizar()
+    End Sub
+
     Private Sub FrmCadastroContato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conn = Conexao.getConexao
         adaptador = Contatos.getAdapter(conn)
     End Sub
 
-    
+
     Private Sub btnCadastrarNota_Click(sender As Object, e As EventArgs) Handles btnCadastrarNota.Click
         Dim frmCadastroNota As New FrmCadastroNota()
         Dim cont As String = frmCadastroNota.mandarContato(id_contato)
         frmCadastroNota.MdiParent = Me.MdiParent
-        'frmCadastroNota.frmListarNotas = Me
+        frmCadastroNota.frmListarContatos = Me
         frmCadastroNota.Show()
     End Sub
 
@@ -227,7 +232,6 @@ Public Class FrmCadastroContato
 Windows.Forms.DialogResult.Yes Then
             Dim texto As String = lstvNotas.SelectedItems(0).Text
 
-            MsgBox(texto)
             conn = Conexao.getConexao
             adaptador = Notas.getAdapter(conn, texto)
 
