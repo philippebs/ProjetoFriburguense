@@ -27,6 +27,7 @@ Public Class FrmListaJogador
         lstvJogador.Items.Clear()
         conn.Open()
 
+        adaptador.SelectCommand.Parameters("@categoria_jogador").Value = categoria
         objReader = adaptador.SelectCommand().ExecuteReader
 
 
