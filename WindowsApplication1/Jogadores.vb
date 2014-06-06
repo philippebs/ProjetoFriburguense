@@ -7,11 +7,17 @@ Module Jogadores
         Dim sqlSelectcommand As New MySqlCommand
 
         sqlSelectcommand.Connection = conn
-        sqlSelectcommand.CommandText = "Select * from tabela_jogadores"
+        sqlSelectcommand.CommandText = "Select * from tabela_jogadores where categoria_jogador = ?"
+
+        Dim objParam As MySqlParameter
+
+        objParam = sqlSelectcommand.Parameters.Add("@categoria_jogador", MySqlDbType.VarChar)
+        objParam.SourceColumn = "categoria_jogador"
+        objParam.SourceVersion = DataRowVersion.Current
 
         jogadoresDtAdapter.SelectCommand = sqlSelectcommand
 
-        Dim objParam As MySqlParameter
+
 
         Dim sqlUpdateCommand As New MySqlCommand
 

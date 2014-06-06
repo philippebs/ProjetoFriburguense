@@ -36,11 +36,12 @@ Public Class FrmLogin
                 'frmCadastroContatos.MdiParent = Me
                 frmListaContatos.Show()
             End If
+            Me.Close()
         Else
             MsgBox("Senha incorreta, por favor tente novamente")
         End If
         conn.Close()
-        Me.Close()
+
     End Sub
     Private Function GeraMD5(texto As String) As String
         'Criamos a instância do Provider MD5

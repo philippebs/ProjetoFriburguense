@@ -80,7 +80,7 @@ Public Class FrmCadastroJog
         frmCadastroAlert.MdiParent = Me.MdiParent
         frmCadastroAlert.frmCadastroJogador = Me
         frmCadastroAlert.Show()
-        
+
     End Sub
 
     Private Sub FrmCadastroJog_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -156,4 +156,6 @@ Public Class FrmCadastroJog
         btnCadastarJogador.Enabled = True
         btnAlertaCadastroJogador.Enabled = True
     End Sub
+
+
 End Class
