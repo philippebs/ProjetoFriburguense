@@ -53,11 +53,12 @@ Partial Class FrmCadastroJog
         Me.mtxtCadastroNAscimento = New System.Windows.Forms.MaskedTextBox()
         Me.mtxtCadastroInicio = New System.Windows.Forms.MaskedTextBox()
         Me.mtxtCadastroTermino = New System.Windows.Forms.MaskedTextBox()
-        Me.SuspendLayout
+        Me.btnContratoCadastro = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
         '
         'Label1
         '
-        Me.Label1.AutoSize = true
+        Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(6, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 13)
@@ -80,7 +81,7 @@ Partial Class FrmCadastroJog
         '
         'Label2
         '
-        Me.Label2.AutoSize = true
+        Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 139)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
@@ -96,7 +97,7 @@ Partial Class FrmCadastroJog
         '
         'Label3
         '
-        Me.Label3.AutoSize = true
+        Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(6, 109)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(28, 13)
@@ -112,7 +113,7 @@ Partial Class FrmCadastroJog
         '
         'Label4
         '
-        Me.Label4.AutoSize = true
+        Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(6, 168)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(31, 13)
@@ -121,7 +122,7 @@ Partial Class FrmCadastroJog
         '
         'Label5
         '
-        Me.Label5.AutoSize = true
+        Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(6, 42)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 13)
@@ -130,7 +131,7 @@ Partial Class FrmCadastroJog
         '
         'cmbPosicaoJogador
         '
-        Me.cmbPosicaoJogador.FormattingEnabled = true
+        Me.cmbPosicaoJogador.FormattingEnabled = True
         Me.cmbPosicaoJogador.Items.AddRange(New Object() {"Goleiro", "Zagueiro", "Lateral Esquerdo", "Lateral Direito", "Volante", "Meia Armador", "Meia Atacante", "Atacante"})
         Me.cmbPosicaoJogador.Location = New System.Drawing.Point(55, 34)
         Me.cmbPosicaoJogador.Name = "cmbPosicaoJogador"
@@ -139,7 +140,7 @@ Partial Class FrmCadastroJog
         '
         'Label6
         '
-        Me.Label6.AutoSize = true
+        Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(63, 80)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(100, 13)
@@ -148,7 +149,7 @@ Partial Class FrmCadastroJog
         '
         'Label7
         '
-        Me.Label7.AutoSize = true
+        Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(6, 197)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(71, 13)
@@ -171,7 +172,7 @@ Partial Class FrmCadastroJog
         '
         'Label8
         '
-        Me.Label8.AutoSize = true
+        Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(6, 223)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(74, 13)
@@ -187,7 +188,7 @@ Partial Class FrmCadastroJog
         '
         'Label9
         '
-        Me.Label9.AutoSize = true
+        Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(6, 247)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(84, 13)
@@ -196,7 +197,7 @@ Partial Class FrmCadastroJog
         '
         'Label10
         '
-        Me.Label10.AutoSize = true
+        Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(63, 276)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(32, 13)
@@ -205,7 +206,7 @@ Partial Class FrmCadastroJog
         '
         'Label11
         '
-        Me.Label11.AutoSize = true
+        Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(245, 276)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(45, 13)
@@ -215,14 +216,14 @@ Partial Class FrmCadastroJog
         'txtClausulasJogador
         '
         Me.txtClausulasJogador.Location = New System.Drawing.Point(64, 307)
-        Me.txtClausulasJogador.Multiline = true
+        Me.txtClausulasJogador.Multiline = True
         Me.txtClausulasJogador.Name = "txtClausulasJogador"
         Me.txtClausulasJogador.Size = New System.Drawing.Size(296, 109)
         Me.txtClausulasJogador.TabIndex = 12
         '
         'Label12
         '
-        Me.Label12.AutoSize = true
+        Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(6, 351)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(52, 13)
@@ -236,7 +237,7 @@ Partial Class FrmCadastroJog
         Me.btnCadastarJogador.Size = New System.Drawing.Size(68, 23)
         Me.btnCadastarJogador.TabIndex = 13
         Me.btnCadastarJogador.Text = "Cadastrar"
-        Me.btnCadastarJogador.UseVisualStyleBackColor = true
+        Me.btnCadastarJogador.UseVisualStyleBackColor = True
         '
         'btnCancelarCadastroJogador
         '
@@ -245,7 +246,7 @@ Partial Class FrmCadastroJog
         Me.btnCancelarCadastroJogador.Size = New System.Drawing.Size(68, 23)
         Me.btnCancelarCadastroJogador.TabIndex = 14
         Me.btnCancelarCadastroJogador.Text = "Cancelar"
-        Me.btnCancelarCadastroJogador.UseVisualStyleBackColor = true
+        Me.btnCancelarCadastroJogador.UseVisualStyleBackColor = True
         '
         'btnEditarCadastroJogador
         '
@@ -254,7 +255,7 @@ Partial Class FrmCadastroJog
         Me.btnEditarCadastroJogador.Size = New System.Drawing.Size(68, 23)
         Me.btnEditarCadastroJogador.TabIndex = 15
         Me.btnEditarCadastroJogador.Text = "Editar"
-        Me.btnEditarCadastroJogador.UseVisualStyleBackColor = true
+        Me.btnEditarCadastroJogador.UseVisualStyleBackColor = True
         '
         'btnAlertaCadastroJogador
         '
@@ -263,11 +264,11 @@ Partial Class FrmCadastroJog
         Me.btnAlertaCadastroJogador.Size = New System.Drawing.Size(68, 23)
         Me.btnAlertaCadastroJogador.TabIndex = 16
         Me.btnAlertaCadastroJogador.Text = "Alerta"
-        Me.btnAlertaCadastroJogador.UseVisualStyleBackColor = true
+        Me.btnAlertaCadastroJogador.UseVisualStyleBackColor = True
         '
         'cmbCategoriaJogador
         '
-        Me.cmbCategoriaJogador.FormattingEnabled = true
+        Me.cmbCategoriaJogador.FormattingEnabled = True
         Me.cmbCategoriaJogador.Items.AddRange(New Object() {"Profissional", "Juvenil", "Juniores"})
         Me.cmbCategoriaJogador.Location = New System.Drawing.Point(262, 34)
         Me.cmbCategoriaJogador.Name = "cmbCategoriaJogador"
@@ -276,7 +277,7 @@ Partial Class FrmCadastroJog
         '
         'Label13
         '
-        Me.Label13.AutoSize = true
+        Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(204, 42)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(52, 13)
@@ -285,7 +286,7 @@ Partial Class FrmCadastroJog
         '
         'Label15
         '
-        Me.Label15.AutoSize = true
+        Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(259, 80)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(32, 13)
@@ -322,11 +323,21 @@ Partial Class FrmCadastroJog
         Me.mtxtCadastroTermino.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
         Me.mtxtCadastroTermino.ValidatingType = GetType(Date)
         '
+        'btnContratoCadastro
+        '
+        Me.btnContratoCadastro.Location = New System.Drawing.Point(305, 438)
+        Me.btnContratoCadastro.Name = "btnContratoCadastro"
+        Me.btnContratoCadastro.Size = New System.Drawing.Size(68, 23)
+        Me.btnContratoCadastro.TabIndex = 31
+        Me.btnContratoCadastro.Text = "Contrato"
+        Me.btnContratoCadastro.UseVisualStyleBackColor = True
+        '
         'FrmCadastroJog
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(378, 466)
+        Me.Controls.Add(Me.btnContratoCadastro)
         Me.Controls.Add(Me.mtxtCadastroTermino)
         Me.Controls.Add(Me.mtxtCadastroInicio)
         Me.Controls.Add(Me.mtxtCadastroNAscimento)
@@ -358,14 +369,14 @@ Partial Class FrmCadastroJog
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtNomeJogador)
         Me.Controls.Add(Me.Label1)
-        Me.MaximizeBox = false
-        Me.MinimizeBox = false
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FrmCadastroJog"
         Me.Text = "Cadastro de Jogadores"
-        Me.ResumeLayout(false)
-        Me.PerformLayout
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtNomeJogador As System.Windows.Forms.TextBox
     Friend WithEvents txtTipoJogador As System.Windows.Forms.TextBox
@@ -397,4 +408,5 @@ End Sub
     Friend WithEvents mtxtCadastroNAscimento As System.Windows.Forms.MaskedTextBox
     Friend WithEvents mtxtCadastroInicio As System.Windows.Forms.MaskedTextBox
     Friend WithEvents mtxtCadastroTermino As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents btnContratoCadastro As System.Windows.Forms.Button
 End Class

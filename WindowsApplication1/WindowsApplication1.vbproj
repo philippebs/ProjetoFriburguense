@@ -106,6 +106,12 @@
     <Compile Include="FrmCalendario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCadastroContrato.Designer.vb">
+      <DependentUpon>FrmCadastroContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmDeletarNota.vb" />
     <Compile Include="FrmListaContato.Designer.vb">
       <DependentUpon>FrmListaContato.vb</DependentUpon>
@@ -125,6 +131,12 @@
     <Compile Include="FrmListaJogador.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmTelaInicial.Designer.vb">
       <DependentUpon>FrmTelaInicial.vb</DependentUpon>
     </Compile>
@@ -133,6 +145,7 @@
     </Compile>
     <Compile Include="Jogadores.vb" />
     <Compile Include="JogadoresPeloNome.vb" />
+    <Compile Include="Login.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -168,6 +181,9 @@
     <EmbeddedResource Include="FrmCalendario.resx">
       <DependentUpon>FrmCalendario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroContrato.resx">
+      <DependentUpon>FrmCadastroContrato.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListaContato.resx">
       <DependentUpon>FrmListaContato.vb</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListaJogador.resx">
       <DependentUpon>FrmListaJogador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTelaInicial.resx">
       <DependentUpon>FrmTelaInicial.vb</DependentUpon>

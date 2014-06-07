@@ -156,4 +156,11 @@ Public Class FrmCadastroJog
         btnCadastarJogador.Enabled = True
         btnAlertaCadastroJogador.Enabled = True
     End Sub
+
+    Private Sub btnContratoCadastro_Click(sender As Object, e As EventArgs) Handles btnContratoCadastro.Click
+        Dim frmCadastroContrato As New FrmCadastroContrato()
+        frmCadastroContrato.MdiParent = Me.MdiParent
+        frmCadastroContrato.frmCadastroJog = Me
+        frmCadastroContrato.Show()
+    End Sub
 End Class

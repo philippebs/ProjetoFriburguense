@@ -5,7 +5,7 @@ Public Class FrmListaJogador
     Dim adaptador As New MySqlDataAdapter
     Dim dados As New DataTable
     Dim categoria As String
-
+    Public frmLogin As New FrmLogin
     Private Property objReader As MySqlDataReader
 
     'Dim conexao As New MySqlConnection

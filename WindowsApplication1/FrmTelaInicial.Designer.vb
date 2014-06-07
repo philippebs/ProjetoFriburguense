@@ -78,6 +78,7 @@ Partial Class Friburguense
         '
         'InteressadosToolStripMenuItem
         '
+        Me.InteressadosToolStripMenuItem.Image = CType(resources.GetObject("InteressadosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.InteressadosToolStripMenuItem.Name = "InteressadosToolStripMenuItem"
         Me.InteressadosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InteressadosToolStripMenuItem.Text = "Interessados"
@@ -100,6 +101,7 @@ Partial Class Friburguense
         '
         'CadastrarToolStripMenuItem1
         '
+        Me.CadastrarToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.CadastrarToolStripMenuItem1.Image = CType(resources.GetObject("CadastrarToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.CadastrarToolStripMenuItem1.Name = "CadastrarToolStripMenuItem1"
         Me.CadastrarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
@@ -123,7 +125,7 @@ Partial Class Friburguense
         'CadastrarToolStripMenuItem
         '
         Me.CadastrarToolStripMenuItem.Name = "CadastrarToolStripMenuItem"
-        Me.CadastrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CadastrarToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.CadastrarToolStripMenuItem.Text = "Cadastrar"
         '
         'Friburguense

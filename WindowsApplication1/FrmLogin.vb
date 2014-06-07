@@ -24,23 +24,31 @@ Public Class FrmLogin
         If GeraMD5(txtSenha.Text) = senha Then
 
             If abrir = "interessados" Then
-                ListarJogadores(abrir)
+                frmListaJogadores = New FrmListaJogador
+                frmListaJogadores.MdiParent = Me.MdiParent
+                frmListaJogadores.frmLogin = Me
+                frmListaJogadores.CategoriaJogador(abrir)
+                'ListarJogadores(abrir)
+                frmListaJogadores.Show()
             End If
             If abrir = "cad_contato" Then
                 frmCadastroContatos = New FrmCadastroContato
-                'frmCadastroContatos.MdiParent = Me
+                frmCadastroContatos.MdiParent = Me.MdiParent
+                frmCadastroContatos.frmLogin = Me
                 frmCadastroContatos.Show()
             End If
             If abrir = "lst_contato" Then
                 frmListaContatos = New FrmListaContato
-                'frmCadastroContatos.MdiParent = Me
+                frmListaContatos.MdiParent = Me.MdiParent
+                frmListaContatos.frmLogin = Me
                 frmListaContatos.Show()
             End If
+            Me.Close()
         Else
             MsgBox("Senha incorreta, por favor tente novamente")
         End If
         conn.Close()
-        Me.Close()
+
     End Sub
     Private Function GeraMD5(texto As String) As String
         'Criamos a instância do Provider MD5

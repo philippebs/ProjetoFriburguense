@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class FrmCadastroContato
-
+    Public frmLogin As New FrmLogin
     Public frmListarContatos As New FrmListaContato
     Private frmCadastrarAlertas As New FrmCadastrarAlerta
     Public linha As ListViewItem

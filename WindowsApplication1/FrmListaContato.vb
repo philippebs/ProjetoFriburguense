@@ -1,7 +1,7 @@
 ﻿
 Imports MySql.Data.MySqlClient
 Public Class FrmListaContato
-
+    Public frmLogin As New FrmLogin
     Dim conn As New MySqlConnection
     Dim adaptador As New MySqlDataAdapter
     Dim dados As New DataTable
