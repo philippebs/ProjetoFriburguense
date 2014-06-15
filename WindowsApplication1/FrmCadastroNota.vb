@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class FrmCadastroNota
-    Public frmListarNotas As New FrmCadastroContato
+    Public frmListarContatos As New FrmCadastroContato
     Private frmCadastrarAlertas As FrmCadastrarAlerta
     Public linha As ListViewItem
 
@@ -39,7 +39,8 @@ Public Class FrmCadastroNota
                 MessageBox.Show("Alteração realizada com sucesso!!")
             End If
             conn.Close()
-            frmListarNotas.atualizar()
+            frmListarContatos.Up()
+
             Me.Close()
         Catch ex As Exception
             MessageBox.Show("Valores repetidos")

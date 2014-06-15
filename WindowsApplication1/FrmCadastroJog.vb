@@ -80,7 +80,7 @@ Public Class FrmCadastroJog
         frmCadastroAlert.MdiParent = Me.MdiParent
         frmCadastroAlert.frmCadastroJogador = Me
         frmCadastroAlert.Show()
-        
+
     End Sub
 
     Private Sub FrmCadastroJog_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -134,7 +134,7 @@ Public Class FrmCadastroJog
             'MessageBox.Show(linha.SubItems(3).Text)
             conn.Close()
         Else
-            'MessageBox.Show("Erro!")
+            MessageBox.Show("Erro!")
         End If
 
     End Sub
@@ -156,11 +156,15 @@ Public Class FrmCadastroJog
         btnCadastarJogador.Enabled = True
         btnAlertaCadastroJogador.Enabled = True
     End Sub
-
     Private Sub btnContratoCadastro_Click(sender As Object, e As EventArgs) Handles btnContratoCadastro.Click
         Dim frmCadastroContrato As New FrmCadastroContrato()
+        frmCadastroContrato.IdJogador(id_jogador)
         frmCadastroContrato.MdiParent = Me.MdiParent
         frmCadastroContrato.frmCadastroJog = Me
+
+        MessageBox.Show(id_jogador)
         frmCadastroContrato.Show()
     End Sub
+
+
 End Class

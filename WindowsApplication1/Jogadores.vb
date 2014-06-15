@@ -14,11 +14,8 @@ Module Jogadores
         objParam = sqlSelectcommand.Parameters.Add("@categoria_jogador", MySqlDbType.VarChar)
         objParam.SourceColumn = "categoria_jogador"
         objParam.SourceVersion = DataRowVersion.Current
-        jogadoresDtAdapter.SelectCommand = sqlSelectcommand
 
         jogadoresDtAdapter.SelectCommand = sqlSelectcommand
-
-
 
         Dim sqlUpdateCommand As New MySqlCommand
 
@@ -141,8 +138,6 @@ Module Jogadores
         objParam.SourceVersion = DataRowVersion.Current
 
         jogadoresDtAdapter.InsertCommand = sqlInsertCommand
-
-
 
         Return jogadoresDtAdapter
 

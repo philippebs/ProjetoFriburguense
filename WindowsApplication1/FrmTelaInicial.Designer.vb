@@ -61,26 +61,26 @@ Partial Class Friburguense
         'ProfissionalToolStripMenuItem
         '
         Me.ProfissionalToolStripMenuItem.Name = "ProfissionalToolStripMenuItem"
-        Me.ProfissionalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProfissionalToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.ProfissionalToolStripMenuItem.Text = "Profissional"
         '
         'JunioresToolStripMenuItem
         '
         Me.JunioresToolStripMenuItem.Name = "JunioresToolStripMenuItem"
-        Me.JunioresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.JunioresToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.JunioresToolStripMenuItem.Text = "Juniores"
         '
         'JuvenilToolStripMenuItem
         '
         Me.JuvenilToolStripMenuItem.Name = "JuvenilToolStripMenuItem"
-        Me.JuvenilToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.JuvenilToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.JuvenilToolStripMenuItem.Text = "Juvenil"
         '
         'InteressadosToolStripMenuItem
         '
         Me.InteressadosToolStripMenuItem.Image = CType(resources.GetObject("InteressadosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.InteressadosToolStripMenuItem.Name = "InteressadosToolStripMenuItem"
-        Me.InteressadosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InteressadosToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.InteressadosToolStripMenuItem.Text = "Interessados"
         '
         'CalendárioToolStripMenuItem
@@ -104,14 +104,14 @@ Partial Class Friburguense
         Me.CadastrarToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.CadastrarToolStripMenuItem1.Image = CType(resources.GetObject("CadastrarToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.CadastrarToolStripMenuItem1.Name = "CadastrarToolStripMenuItem1"
-        Me.CadastrarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.CadastrarToolStripMenuItem1.Size = New System.Drawing.Size(124, 22)
         Me.CadastrarToolStripMenuItem1.Text = "Cadastrar"
         '
         'ListarToolStripMenuItem
         '
         Me.ListarToolStripMenuItem.Image = CType(resources.GetObject("ListarToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ListarToolStripMenuItem.Name = "ListarToolStripMenuItem"
-        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ListarToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.ListarToolStripMenuItem.Text = "Listar"
         '
         'AlertasToolStripMenuItem

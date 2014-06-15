@@ -215,3 +215,5 @@ C:\Users\Philippe-i3\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication
 C:\Users\Philippe-i3\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmListaEventosDia.resources
 C:\Users\Philippe-i3\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmLogin.resources
 C:\Users\Philippe-i3\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastroContrato.resources
+C:\Users\Philippe-i3\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmAlertaBox.resources
+C:\Users\Philippe-i3\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmVerAlerta.resources

@@ -22,59 +22,59 @@ Partial Class FrmCadastroContrato
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.mtxtCadastroTermino = New System.Windows.Forms.MaskedTextBox()
-        Me.mtxtCadastroInicio = New System.Windows.Forms.MaskedTextBox()
-        Me.txtClausulasJogador = New System.Windows.Forms.TextBox()
+        Me.mtxtDataTermino = New System.Windows.Forms.MaskedTextBox()
+        Me.mtxtDataInicio = New System.Windows.Forms.MaskedTextBox()
+        Me.txtClausulasContrato = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtValorCarteiraJogador = New System.Windows.Forms.TextBox()
+        Me.txtValorCarteiraContrato = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtRemuneracaoJogador = New System.Windows.Forms.TextBox()
+        Me.txtRemuneracaoContrato = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtPrecoJogador = New System.Windows.Forms.TextBox()
+        Me.txtPrecoContrato = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtValorJogador = New System.Windows.Forms.TextBox()
+        Me.txtValorContrato = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtAgenteJogador = New System.Windows.Forms.TextBox()
+        Me.txtAgenteContrato = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtTipoJogador = New System.Windows.Forms.TextBox()
+        Me.txtTipoContrato = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnAlertaCadastroJogador = New System.Windows.Forms.Button()
-        Me.btnEditarCadastroJogador = New System.Windows.Forms.Button()
-        Me.btnCancelarCadastroJogador = New System.Windows.Forms.Button()
-        Me.btnCadastarJogador = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAlertaCadastroContrato = New System.Windows.Forms.Button()
+        Me.btnEditarCadastroContrato = New System.Windows.Forms.Button()
+        Me.btnCancelarCadastroContrato = New System.Windows.Forms.Button()
+        Me.btnCadastarContrato = New System.Windows.Forms.Button()
+        Me.btnRenovarContrato = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'mtxtCadastroTermino
+        'mtxtDataTermino
         '
-        Me.mtxtCadastroTermino.Location = New System.Drawing.Point(298, 212)
-        Me.mtxtCadastroTermino.Mask = "00/00/0000"
-        Me.mtxtCadastroTermino.Name = "mtxtCadastroTermino"
-        Me.mtxtCadastroTermino.Size = New System.Drawing.Size(64, 20)
-        Me.mtxtCadastroTermino.TabIndex = 38
-        Me.mtxtCadastroTermino.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
-        Me.mtxtCadastroTermino.ValidatingType = GetType(Date)
+        Me.mtxtDataTermino.Location = New System.Drawing.Point(298, 212)
+        Me.mtxtDataTermino.Mask = "00/00/0000"
+        Me.mtxtDataTermino.Name = "mtxtDataTermino"
+        Me.mtxtDataTermino.Size = New System.Drawing.Size(64, 20)
+        Me.mtxtDataTermino.TabIndex = 38
+        Me.mtxtDataTermino.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
+        Me.mtxtDataTermino.ValidatingType = GetType(Date)
         '
-        'mtxtCadastroInicio
+        'mtxtDataInicio
         '
-        Me.mtxtCadastroInicio.Location = New System.Drawing.Point(120, 212)
-        Me.mtxtCadastroInicio.Mask = "00/00/0000"
-        Me.mtxtCadastroInicio.Name = "mtxtCadastroInicio"
-        Me.mtxtCadastroInicio.Size = New System.Drawing.Size(64, 20)
-        Me.mtxtCadastroInicio.TabIndex = 37
-        Me.mtxtCadastroInicio.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
-        Me.mtxtCadastroInicio.ValidatingType = GetType(Date)
+        Me.mtxtDataInicio.Location = New System.Drawing.Point(120, 212)
+        Me.mtxtDataInicio.Mask = "00/00/0000"
+        Me.mtxtDataInicio.Name = "mtxtDataInicio"
+        Me.mtxtDataInicio.Size = New System.Drawing.Size(64, 20)
+        Me.mtxtDataInicio.TabIndex = 37
+        Me.mtxtDataInicio.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
+        Me.mtxtDataInicio.ValidatingType = GetType(Date)
         '
-        'txtClausulasJogador
+        'txtClausulasContrato
         '
-        Me.txtClausulasJogador.Location = New System.Drawing.Point(66, 246)
-        Me.txtClausulasJogador.Multiline = True
-        Me.txtClausulasJogador.Name = "txtClausulasJogador"
-        Me.txtClausulasJogador.Size = New System.Drawing.Size(296, 109)
-        Me.txtClausulasJogador.TabIndex = 39
+        Me.txtClausulasContrato.Location = New System.Drawing.Point(66, 246)
+        Me.txtClausulasContrato.Multiline = True
+        Me.txtClausulasContrato.Name = "txtClausulasContrato"
+        Me.txtClausulasContrato.Size = New System.Drawing.Size(296, 109)
+        Me.txtClausulasContrato.TabIndex = 39
         '
         'Label12
         '
@@ -103,12 +103,12 @@ Partial Class FrmCadastroContrato
         Me.Label10.TabIndex = 47
         Me.Label10.Text = "Inicio"
         '
-        'txtValorCarteiraJogador
+        'txtValorCarteiraContrato
         '
-        Me.txtValorCarteiraJogador.Location = New System.Drawing.Point(103, 179)
-        Me.txtValorCarteiraJogador.Name = "txtValorCarteiraJogador"
-        Me.txtValorCarteiraJogador.Size = New System.Drawing.Size(259, 20)
-        Me.txtValorCarteiraJogador.TabIndex = 36
+        Me.txtValorCarteiraContrato.Location = New System.Drawing.Point(103, 179)
+        Me.txtValorCarteiraContrato.Name = "txtValorCarteiraContrato"
+        Me.txtValorCarteiraContrato.Size = New System.Drawing.Size(259, 20)
+        Me.txtValorCarteiraContrato.TabIndex = 36
         '
         'Label9
         '
@@ -119,12 +119,12 @@ Partial Class FrmCadastroContrato
         Me.Label9.TabIndex = 46
         Me.Label9.Text = "Valor de carteira"
         '
-        'txtRemuneracaoJogador
+        'txtRemuneracaoContrato
         '
-        Me.txtRemuneracaoJogador.Location = New System.Drawing.Point(104, 155)
-        Me.txtRemuneracaoJogador.Name = "txtRemuneracaoJogador"
-        Me.txtRemuneracaoJogador.Size = New System.Drawing.Size(259, 20)
-        Me.txtRemuneracaoJogador.TabIndex = 35
+        Me.txtRemuneracaoContrato.Location = New System.Drawing.Point(104, 155)
+        Me.txtRemuneracaoContrato.Name = "txtRemuneracaoContrato"
+        Me.txtRemuneracaoContrato.Size = New System.Drawing.Size(259, 20)
+        Me.txtRemuneracaoContrato.TabIndex = 35
         '
         'Label8
         '
@@ -135,12 +135,12 @@ Partial Class FrmCadastroContrato
         Me.Label8.TabIndex = 45
         Me.Label8.Text = "Remuneração"
         '
-        'txtPrecoJogador
+        'txtPrecoContrato
         '
-        Me.txtPrecoJogador.Location = New System.Drawing.Point(104, 129)
-        Me.txtPrecoJogador.Name = "txtPrecoJogador"
-        Me.txtPrecoJogador.Size = New System.Drawing.Size(259, 20)
-        Me.txtPrecoJogador.TabIndex = 34
+        Me.txtPrecoContrato.Location = New System.Drawing.Point(104, 129)
+        Me.txtPrecoContrato.Name = "txtPrecoContrato"
+        Me.txtPrecoContrato.Size = New System.Drawing.Size(259, 20)
+        Me.txtPrecoContrato.TabIndex = 34
         '
         'Label7
         '
@@ -160,12 +160,12 @@ Partial Class FrmCadastroContrato
         Me.Label6.TabIndex = 40
         Me.Label6.Text = "Detalhes do cotrato"
         '
-        'txtValorJogador
+        'txtValorContrato
         '
-        Me.txtValorJogador.Location = New System.Drawing.Point(66, 100)
-        Me.txtValorJogador.Name = "txtValorJogador"
-        Me.txtValorJogador.Size = New System.Drawing.Size(297, 20)
-        Me.txtValorJogador.TabIndex = 33
+        Me.txtValorContrato.Location = New System.Drawing.Point(66, 100)
+        Me.txtValorContrato.Name = "txtValorContrato"
+        Me.txtValorContrato.Size = New System.Drawing.Size(297, 20)
+        Me.txtValorContrato.TabIndex = 33
         '
         'Label4
         '
@@ -176,12 +176,12 @@ Partial Class FrmCadastroContrato
         Me.Label4.TabIndex = 43
         Me.Label4.Text = "Valor"
         '
-        'txtAgenteJogador
+        'txtAgenteContrato
         '
-        Me.txtAgenteJogador.Location = New System.Drawing.Point(66, 74)
-        Me.txtAgenteJogador.Name = "txtAgenteJogador"
-        Me.txtAgenteJogador.Size = New System.Drawing.Size(297, 20)
-        Me.txtAgenteJogador.TabIndex = 32
+        Me.txtAgenteContrato.Location = New System.Drawing.Point(66, 74)
+        Me.txtAgenteContrato.Name = "txtAgenteContrato"
+        Me.txtAgenteContrato.Size = New System.Drawing.Size(297, 20)
+        Me.txtAgenteContrato.TabIndex = 32
         '
         'Label3
         '
@@ -192,12 +192,12 @@ Partial Class FrmCadastroContrato
         Me.Label3.TabIndex = 41
         Me.Label3.Text = "Tipo"
         '
-        'txtTipoJogador
+        'txtTipoContrato
         '
-        Me.txtTipoJogador.Location = New System.Drawing.Point(66, 48)
-        Me.txtTipoJogador.Name = "txtTipoJogador"
-        Me.txtTipoJogador.Size = New System.Drawing.Size(296, 20)
-        Me.txtTipoJogador.TabIndex = 31
+        Me.txtTipoContrato.Location = New System.Drawing.Point(66, 48)
+        Me.txtTipoContrato.Name = "txtTipoContrato"
+        Me.txtTipoContrato.Size = New System.Drawing.Size(296, 20)
+        Me.txtTipoContrato.TabIndex = 31
         '
         'Label2
         '
@@ -208,108 +208,108 @@ Partial Class FrmCadastroContrato
         Me.Label2.TabIndex = 42
         Me.Label2.Text = "Agente"
         '
-        'btnAlertaCadastroJogador
+        'btnAlertaCadastroContrato
         '
-        Me.btnAlertaCadastroJogador.Location = New System.Drawing.Point(233, 377)
-        Me.btnAlertaCadastroJogador.Name = "btnAlertaCadastroJogador"
-        Me.btnAlertaCadastroJogador.Size = New System.Drawing.Size(68, 23)
-        Me.btnAlertaCadastroJogador.TabIndex = 53
-        Me.btnAlertaCadastroJogador.Text = "Alerta"
-        Me.btnAlertaCadastroJogador.UseVisualStyleBackColor = True
+        Me.btnAlertaCadastroContrato.Location = New System.Drawing.Point(233, 377)
+        Me.btnAlertaCadastroContrato.Name = "btnAlertaCadastroContrato"
+        Me.btnAlertaCadastroContrato.Size = New System.Drawing.Size(68, 23)
+        Me.btnAlertaCadastroContrato.TabIndex = 53
+        Me.btnAlertaCadastroContrato.Text = "Alerta"
+        Me.btnAlertaCadastroContrato.UseVisualStyleBackColor = True
         '
-        'btnEditarCadastroJogador
+        'btnEditarCadastroContrato
         '
-        Me.btnEditarCadastroJogador.Location = New System.Drawing.Point(159, 377)
-        Me.btnEditarCadastroJogador.Name = "btnEditarCadastroJogador"
-        Me.btnEditarCadastroJogador.Size = New System.Drawing.Size(68, 23)
-        Me.btnEditarCadastroJogador.TabIndex = 52
-        Me.btnEditarCadastroJogador.Text = "Editar"
-        Me.btnEditarCadastroJogador.UseVisualStyleBackColor = True
+        Me.btnEditarCadastroContrato.Location = New System.Drawing.Point(159, 377)
+        Me.btnEditarCadastroContrato.Name = "btnEditarCadastroContrato"
+        Me.btnEditarCadastroContrato.Size = New System.Drawing.Size(68, 23)
+        Me.btnEditarCadastroContrato.TabIndex = 52
+        Me.btnEditarCadastroContrato.Text = "Editar"
+        Me.btnEditarCadastroContrato.UseVisualStyleBackColor = True
         '
-        'btnCancelarCadastroJogador
+        'btnCancelarCadastroContrato
         '
-        Me.btnCancelarCadastroJogador.Location = New System.Drawing.Point(85, 377)
-        Me.btnCancelarCadastroJogador.Name = "btnCancelarCadastroJogador"
-        Me.btnCancelarCadastroJogador.Size = New System.Drawing.Size(68, 23)
-        Me.btnCancelarCadastroJogador.TabIndex = 51
-        Me.btnCancelarCadastroJogador.Text = "Cancelar"
-        Me.btnCancelarCadastroJogador.UseVisualStyleBackColor = True
+        Me.btnCancelarCadastroContrato.Location = New System.Drawing.Point(85, 377)
+        Me.btnCancelarCadastroContrato.Name = "btnCancelarCadastroContrato"
+        Me.btnCancelarCadastroContrato.Size = New System.Drawing.Size(68, 23)
+        Me.btnCancelarCadastroContrato.TabIndex = 51
+        Me.btnCancelarCadastroContrato.Text = "Cancelar"
+        Me.btnCancelarCadastroContrato.UseVisualStyleBackColor = True
         '
-        'btnCadastarJogador
+        'btnCadastarContrato
         '
-        Me.btnCadastarJogador.Location = New System.Drawing.Point(11, 377)
-        Me.btnCadastarJogador.Name = "btnCadastarJogador"
-        Me.btnCadastarJogador.Size = New System.Drawing.Size(68, 23)
-        Me.btnCadastarJogador.TabIndex = 50
-        Me.btnCadastarJogador.Text = "Cadastrar"
-        Me.btnCadastarJogador.UseVisualStyleBackColor = True
+        Me.btnCadastarContrato.Location = New System.Drawing.Point(11, 377)
+        Me.btnCadastarContrato.Name = "btnCadastarContrato"
+        Me.btnCadastarContrato.Size = New System.Drawing.Size(68, 23)
+        Me.btnCadastarContrato.TabIndex = 50
+        Me.btnCadastarContrato.Text = "Cadastrar"
+        Me.btnCadastarContrato.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnRenovarContrato
         '
-        Me.Button1.Location = New System.Drawing.Point(307, 377)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(68, 23)
-        Me.Button1.TabIndex = 54
-        Me.Button1.Text = "Renovar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnRenovarContrato.Location = New System.Drawing.Point(307, 377)
+        Me.btnRenovarContrato.Name = "btnRenovarContrato"
+        Me.btnRenovarContrato.Size = New System.Drawing.Size(68, 23)
+        Me.btnRenovarContrato.TabIndex = 54
+        Me.btnRenovarContrato.Text = "Renovar"
+        Me.btnRenovarContrato.UseVisualStyleBackColor = True
         '
-        'FrmContrato
+        'FrmCadastroContrato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(384, 412)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnAlertaCadastroJogador)
-        Me.Controls.Add(Me.btnEditarCadastroJogador)
-        Me.Controls.Add(Me.btnCancelarCadastroJogador)
-        Me.Controls.Add(Me.btnCadastarJogador)
-        Me.Controls.Add(Me.mtxtCadastroTermino)
-        Me.Controls.Add(Me.mtxtCadastroInicio)
-        Me.Controls.Add(Me.txtClausulasJogador)
+        Me.Controls.Add(Me.btnRenovarContrato)
+        Me.Controls.Add(Me.btnAlertaCadastroContrato)
+        Me.Controls.Add(Me.btnEditarCadastroContrato)
+        Me.Controls.Add(Me.btnCancelarCadastroContrato)
+        Me.Controls.Add(Me.btnCadastarContrato)
+        Me.Controls.Add(Me.mtxtDataTermino)
+        Me.Controls.Add(Me.mtxtDataInicio)
+        Me.Controls.Add(Me.txtClausulasContrato)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.txtValorCarteiraJogador)
+        Me.Controls.Add(Me.txtValorCarteiraContrato)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.txtRemuneracaoJogador)
+        Me.Controls.Add(Me.txtRemuneracaoContrato)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtPrecoJogador)
+        Me.Controls.Add(Me.txtPrecoContrato)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtValorJogador)
+        Me.Controls.Add(Me.txtValorContrato)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtAgenteJogador)
+        Me.Controls.Add(Me.txtAgenteContrato)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtTipoJogador)
+        Me.Controls.Add(Me.txtTipoContrato)
         Me.Controls.Add(Me.Label2)
-        Me.Name = "FrmContrato"
+        Me.Name = "FrmCadastroContrato"
         Me.Text = "FrmContrato"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents mtxtCadastroTermino As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents mtxtCadastroInicio As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents txtClausulasJogador As System.Windows.Forms.TextBox
+    Friend WithEvents mtxtDataTermino As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents mtxtDataInicio As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txtClausulasContrato As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents txtValorCarteiraJogador As System.Windows.Forms.TextBox
+    Friend WithEvents txtValorCarteiraContrato As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents txtRemuneracaoJogador As System.Windows.Forms.TextBox
+    Friend WithEvents txtRemuneracaoContrato As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents txtPrecoJogador As System.Windows.Forms.TextBox
+    Friend WithEvents txtPrecoContrato As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtValorJogador As System.Windows.Forms.TextBox
+    Friend WithEvents txtValorContrato As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents txtAgenteJogador As System.Windows.Forms.TextBox
+    Friend WithEvents txtAgenteContrato As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtTipoJogador As System.Windows.Forms.TextBox
+    Friend WithEvents txtTipoContrato As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents btnAlertaCadastroJogador As System.Windows.Forms.Button
-    Friend WithEvents btnEditarCadastroJogador As System.Windows.Forms.Button
-    Friend WithEvents btnCancelarCadastroJogador As System.Windows.Forms.Button
-    Friend WithEvents btnCadastarJogador As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnAlertaCadastroContrato As System.Windows.Forms.Button
+    Friend WithEvents btnEditarCadastroContrato As System.Windows.Forms.Button
+    Friend WithEvents btnCancelarCadastroContrato As System.Windows.Forms.Button
+    Friend WithEvents btnCadastarContrato As System.Windows.Forms.Button
+    Friend WithEvents btnRenovarContrato As System.Windows.Forms.Button
 End Class
