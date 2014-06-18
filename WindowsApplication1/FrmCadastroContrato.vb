@@ -8,6 +8,10 @@ Public Class FrmCadastroContrato
     Private Property objReader As MySqlDataReader
     Private id_contrato As Integer = -1
     Private nomeJogador As String
+    Private inicio As Date
+    Private termino As Date
+    'Dim inicio As Date = mtxtDataInicio.Text
+    'Dim termino As Date = mtxtDataTermino.Text
     Public Sub IdJogador(ByVal id As Integer)
         If id > -1 Then
             id_jogador_contrato = id
@@ -16,7 +20,6 @@ Public Class FrmCadastroContrato
 
     Public Sub nomeDoJogador(ByVal nome As String)
         nomeJogador = nome
-        'MessageBox.Show(nomeJogador)
     End Sub
 
     Public Sub CadastrarJogador(ByVal cad As Boolean)
@@ -24,57 +27,18 @@ Public Class FrmCadastroContrato
     End Sub
 
     Private Sub btnCadastarJogador_Click(sender As Object, e As EventArgs) Handles btnCadastarContrato.Click
-        Dim inicio As Date = mtxtDataInicio.Text
-        Dim termino As Date = mtxtDataTermino.Text
-
+        inicio = mtxtDataInicio.Text
+        termino = mtxtDataTermino.Text
         inicio = Format(inicio, "yyyy-MM-dd")
         termino = Format(termino, "yyyy-MM-dd")
-        conn = Conexao.getConexao
-        adaptador = Contrato.getAdapter(conn)
 
-        conn.Open()
-        Try
-            'MessageBox.Show(linha.SubItems(0).ToString)
-            If cadastrar Then
-                ''linha Is Nothing Then
-                adaptador.InsertCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
-                adaptador.InsertCommand.Parameters("@tipo_contrato").Value = txtTipoContrato.Text
-                adaptador.InsertCommand.Parameters("@agente_contrato").Value = txtAgenteContrato.Text
-                adaptador.InsertCommand.Parameters("@valor_total_contrato").Value = txtValorContrato.Text
-                adaptador.InsertCommand.Parameters("@preco_exigido_contrato").Value = txtPrecoContrato.Text
-                adaptador.InsertCommand.Parameters("@remuneracao_contrato").Value = txtRemuneracaoContrato.Text
-                adaptador.InsertCommand.Parameters("@valor_carteira_contrato").Value = txtValorCarteiraContrato.Text
-                adaptador.InsertCommand.Parameters("@data_inicio_contrato").Value = inicio
-                adaptador.InsertCommand.Parameters("@data_fim_contrato").Value = termino
-                adaptador.InsertCommand.Parameters("@clausulas_contrato").Value = txtClausulasContrato.Text
-                adaptador.InsertCommand.Parameters("@status_ativo_contrato").Value = "1"
-                adaptador.InsertCommand.ExecuteNonQuery()
-                MessageBox.Show("Cadastro realizado com sucesso!")
-            Else
-                'MessageBox.Show(linha.Text)
-                adaptador.UpdateCommand.Parameters("@id_contrato").Value = id_contrato
-                adaptador.UpdateCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
-                adaptador.UpdateCommand.Parameters("@tipo_contrato").Value = txtTipoContrato.Text
-                adaptador.UpdateCommand.Parameters("@agente_contrato").Value = txtAgenteContrato.Text
-                adaptador.UpdateCommand.Parameters("@valor_total_contrato").Value = txtValorContrato.Text
-                adaptador.UpdateCommand.Parameters("@preco_exigido_contrato").Value = txtPrecoContrato.Text
-                adaptador.UpdateCommand.Parameters("@remuneracao_contrato").Value = txtRemuneracaoContrato.Text
-                adaptador.UpdateCommand.Parameters("@valor_carteira_contrato").Value = txtValorCarteiraContrato.Text
-                adaptador.UpdateCommand.Parameters("@data_inicio_contrato").Value = inicio
-                adaptador.UpdateCommand.Parameters("@data_fim_contrato").Value = termino
-                adaptador.UpdateCommand.Parameters("@clausulas_contrato").Value = txtClausulasContrato.Text
-                adaptador.UpdateCommand.Parameters("@status_ativo_contrato").Value = "1"
-                adaptador.UpdateCommand.ExecuteNonQuery()
-                MessageBox.Show("Alteração realizada com sucesso!!")
-            End If
-            conn.Close()
-            'frmListarJogadores.atualizar()
+        If inicio < termino Then
+            cadastrarAlterar(1)
             Me.Close()
-        Catch ex As Exception
-            MessageBox.Show("Valores repetidos")
-            MessageBox.Show(ex.ToString)
-        End Try
-
+        Else
+            MessageBox.Show("Inicio do contrato é maior que o termino!")
+        End If
+        
     End Sub
 
 
@@ -141,42 +105,78 @@ Public Class FrmCadastroContrato
 
     Private Sub btnRenovarContrato_Click(sender As Object, e As EventArgs) Handles btnRenovarContrato.Click
         If Not cadastrar Then
-            Dim inicio As Date = mtxtDataInicio.Text
-            Dim termino As Date = mtxtDataTermino.Text
-
-            inicio = Format(inicio, "yyyy-MM-dd")
-            termino = Format(termino, "yyyy-MM-dd")
-
-            conn = Conexao.getConexao
-            adaptador = Contrato.getAdapter(conn)
-
-            conn.Open()
-            adaptador.UpdateCommand.Parameters("@id_contrato").Value = id_contrato
-            adaptador.UpdateCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
-            adaptador.UpdateCommand.Parameters("@tipo_contrato").Value = txtTipoContrato.Text
-            adaptador.UpdateCommand.Parameters("@agente_contrato").Value = txtAgenteContrato.Text
-            adaptador.UpdateCommand.Parameters("@valor_total_contrato").Value = txtValorContrato.Text
-            adaptador.UpdateCommand.Parameters("@preco_exigido_contrato").Value = txtPrecoContrato.Text
-            adaptador.UpdateCommand.Parameters("@remuneracao_contrato").Value = txtRemuneracaoContrato.Text
-            adaptador.UpdateCommand.Parameters("@valor_carteira_contrato").Value = txtValorCarteiraContrato.Text
-            adaptador.UpdateCommand.Parameters("@data_inicio_contrato").Value = inicio
-            adaptador.UpdateCommand.Parameters("@data_fim_contrato").Value = termino
-            adaptador.UpdateCommand.Parameters("@clausulas_contrato").Value = txtClausulasContrato.Text
-            adaptador.UpdateCommand.Parameters("@status_ativo_contrato").Value = "0"
-            adaptador.UpdateCommand.ExecuteNonQuery()
-            MessageBox.Show("Renovação feita")
-            conn.Close()
-            txtTipoContrato.Text = ""
-            txtAgenteContrato.Text = ""
-            txtValorContrato.Text = ""
-            txtPrecoContrato.Text = ""
-            txtRemuneracaoContrato.Text = ""
-            txtValorCarteiraContrato.Text = ""
-            mtxtDataInicio.Text = ""
-            mtxtDataTermino.Text = ""
-            txtClausulasContrato.Text = ""
+            cadastrarAlterar(0)
+            limparCampos()
             cadastrar = True
         End If
-        
+
     End Sub
+
+    Private Sub cadastrarAlterar(ByVal ativo As Integer)
+        
+
+        inicio = Format(inicio, "yyyy-MM-dd")
+        termino = Format(termino, "yyyy-MM-dd")
+        conn = Conexao.getConexao
+        adaptador = Contrato.getAdapter(conn)
+
+        conn.Open()
+        Try
+            'MessageBox.Show(linha.SubItems(0).ToString)
+            If cadastrar Then
+                ''linha Is Nothing Then
+                adaptador.InsertCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
+                adaptador.InsertCommand.Parameters("@tipo_contrato").Value = txtTipoContrato.Text
+                adaptador.InsertCommand.Parameters("@agente_contrato").Value = txtAgenteContrato.Text
+                adaptador.InsertCommand.Parameters("@valor_total_contrato").Value = txtValorContrato.Text
+                adaptador.InsertCommand.Parameters("@preco_exigido_contrato").Value = txtPrecoContrato.Text
+                adaptador.InsertCommand.Parameters("@remuneracao_contrato").Value = txtRemuneracaoContrato.Text
+                adaptador.InsertCommand.Parameters("@valor_carteira_contrato").Value = txtValorCarteiraContrato.Text
+                adaptador.InsertCommand.Parameters("@data_inicio_contrato").Value = inicio
+                adaptador.InsertCommand.Parameters("@data_fim_contrato").Value = termino
+                adaptador.InsertCommand.Parameters("@clausulas_contrato").Value = txtClausulasContrato.Text
+                adaptador.InsertCommand.Parameters("@status_ativo_contrato").Value = ativo
+                adaptador.InsertCommand.ExecuteNonQuery()
+                MessageBox.Show("Cadastro realizado com sucesso!")
+            Else
+                'MessageBox.Show(linha.Text)
+                adaptador.UpdateCommand.Parameters("@id_contrato").Value = id_contrato
+                adaptador.UpdateCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
+                adaptador.UpdateCommand.Parameters("@tipo_contrato").Value = txtTipoContrato.Text
+                adaptador.UpdateCommand.Parameters("@agente_contrato").Value = txtAgenteContrato.Text
+                adaptador.UpdateCommand.Parameters("@valor_total_contrato").Value = txtValorContrato.Text
+                adaptador.UpdateCommand.Parameters("@preco_exigido_contrato").Value = txtPrecoContrato.Text
+                adaptador.UpdateCommand.Parameters("@remuneracao_contrato").Value = txtRemuneracaoContrato.Text
+                adaptador.UpdateCommand.Parameters("@valor_carteira_contrato").Value = txtValorCarteiraContrato.Text
+                adaptador.UpdateCommand.Parameters("@data_inicio_contrato").Value = inicio
+                adaptador.UpdateCommand.Parameters("@data_fim_contrato").Value = termino
+                adaptador.UpdateCommand.Parameters("@clausulas_contrato").Value = txtClausulasContrato.Text
+                adaptador.UpdateCommand.Parameters("@status_ativo_contrato").Value = ativo
+                adaptador.UpdateCommand.ExecuteNonQuery()
+                If ativo = 1 Then
+                    MessageBox.Show("Alteração realizada com sucesso!!")
+                End If
+                End If
+                conn.Close()
+                'frmListarJogadores.atualizar()
+        Catch ex As Exception
+            MessageBox.Show("Valores repetidos")
+            MessageBox.Show(ex.ToString)
+        End Try
+
+
+    End Sub
+
+    Private Sub limparCampos()
+        txtTipoContrato.Text = ""
+        txtAgenteContrato.Text = ""
+        txtValorContrato.Text = ""
+        txtPrecoContrato.Text = ""
+        txtRemuneracaoContrato.Text = ""
+        txtValorCarteiraContrato.Text = ""
+        mtxtDataInicio.Text = ""
+        mtxtDataTermino.Text = ""
+        txtClausulasContrato.Text = ""
+    End Sub
+
 End Class
