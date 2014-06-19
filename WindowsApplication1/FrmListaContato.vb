@@ -42,6 +42,7 @@ Public Class FrmListaContato
     End Sub
 
     Private Sub FrmListaContato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Location = New Point(0, 0)
         conn = Conexao.getConexao
         adaptador = Contatos.getAdapter(conn)
     End Sub
@@ -52,6 +53,7 @@ Public Class FrmListaContato
 
     Private Sub btnCadastrarContato_Click(sender As Object, e As EventArgs) Handles btnCadastrarContato.Click
         Dim frmCadastroContato As New FrmCadastroContato()
+        frmCadastroContato.atualizarCad()
         frmCadastroContato.MdiParent = Me.MdiParent
         frmCadastroContato.frmListarContatos = Me
         frmCadastroContato.Show()

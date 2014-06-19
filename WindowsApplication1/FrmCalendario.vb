@@ -150,6 +150,7 @@ Public Class FrmCalendario
         adaptador.SelectCommand.Parameters("@data_inicio_alerta").Value = data
         data = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-" + diaMes.ToString
         adaptador.SelectCommand.Parameters("@data_inicio_alerta1").Value = data
+
         objReader = adaptador.SelectCommand().ExecuteReader
         Dim diaMarcado As String = "0000000000"
 
@@ -451,7 +452,7 @@ Public Class FrmCalendario
             'mtxtAno.Focus()
         Catch ex As NullReferenceException
             MessageBox.Show("Data inválida")
-            mtxtAno.Focus()
+            'mtxtAno.Focus()
         End Try
     End Sub
 

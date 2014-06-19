@@ -66,7 +66,8 @@ Partial Class FrmListaEventosDia
         Me.ClientSize = New System.Drawing.Size(467, 375)
         Me.Controls.Add(Me.lstvAlertas)
         Me.Name = "FrmListaEventosDia"
-        Me.Text = "FrmListaEventosDia"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Eventos do Dia"
         Me.ResumeLayout(False)
 
     End Sub

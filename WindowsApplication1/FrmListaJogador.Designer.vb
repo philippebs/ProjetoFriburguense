@@ -25,7 +25,6 @@ Partial Class FrmListaJogador
         Me.lstvJogador = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnCadastrarjogador = New System.Windows.Forms.Button()
         Me.btnListaMostrar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -35,13 +34,13 @@ Partial Class FrmListaJogador
         Me.lstvJogador.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lstvJogador.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.lstvJogador.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
         Me.lstvJogador.FullRowSelect = True
         Me.lstvJogador.GridLines = True
         Me.lstvJogador.Location = New System.Drawing.Point(-1, -1)
         Me.lstvJogador.MultiSelect = False
         Me.lstvJogador.Name = "lstvJogador"
-        Me.lstvJogador.Size = New System.Drawing.Size(481, 284)
+        Me.lstvJogador.Size = New System.Drawing.Size(355, 285)
         Me.lstvJogador.TabIndex = 0
         Me.lstvJogador.UseCompatibleStateImageBehavior = False
         Me.lstvJogador.View = System.Windows.Forms.View.Details
@@ -49,17 +48,12 @@ Partial Class FrmListaJogador
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Nome"
-        Me.ColumnHeader1.Width = 200
+        Me.ColumnHeader1.Width = 235
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Posição"
-        Me.ColumnHeader2.Width = 120
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Categoria"
-        Me.ColumnHeader3.Width = 120
+        Me.ColumnHeader2.Width = 110
         '
         'btnCadastrarjogador
         '
@@ -83,13 +77,14 @@ Partial Class FrmListaJogador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(481, 325)
+        Me.ClientSize = New System.Drawing.Size(357, 325)
         Me.Controls.Add(Me.btnListaMostrar)
         Me.Controls.Add(Me.btnCadastrarjogador)
         Me.Controls.Add(Me.lstvJogador)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmListaJogador"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Lista Jogadores"
         Me.ResumeLayout(False)
 
@@ -97,7 +92,6 @@ Partial Class FrmListaJogador
     Friend WithEvents lstvJogador As System.Windows.Forms.ListView
     Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents btnCadastrarjogador As System.Windows.Forms.Button
     Friend WithEvents btnListaMostrar As System.Windows.Forms.Button
 End Class

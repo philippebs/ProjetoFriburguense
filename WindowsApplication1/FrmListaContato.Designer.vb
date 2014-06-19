@@ -76,7 +76,8 @@ Partial Class FrmListaContato
         Me.Controls.Add(Me.btnCadastrarContato)
         Me.Controls.Add(Me.lstvContato)
         Me.Name = "FrmListaContato"
-        Me.Text = "FrmListaContatos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.Text = "Contatos"
         Me.ResumeLayout(False)
 
     End Sub

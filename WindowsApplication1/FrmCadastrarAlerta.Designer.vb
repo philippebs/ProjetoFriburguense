@@ -129,6 +129,7 @@ Partial Class FrmCadastrarAlerta
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmCadastrarAlerta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cadastrar Alerta"
         Me.ResumeLayout(False)
         Me.PerformLayout()

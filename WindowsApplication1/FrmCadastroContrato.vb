@@ -46,7 +46,7 @@ Public Class FrmCadastroContrato
                 adaptador.UpdateCommand.Parameters("@tipo_contrato").Value = txtTipoContrato.Text
                 adaptador.UpdateCommand.Parameters("@agente_contrato").Value = txtAgenteContrato.Text
                 adaptador.UpdateCommand.Parameters("@valor_total_contrato").Value = txtValorContrato.Text
-                adaptador.UpdateCommand.Parameters("@preco_contrato").Value = txtPrecoContrato.Text
+                adaptador.UpdateCommand.Parameters("@preco_exigido_contrato").Value = txtPrecoContrato.Text
                 adaptador.UpdateCommand.Parameters("@remuneracao_contrato").Value = txtRemuneracaoContrato.Text
                 adaptador.UpdateCommand.Parameters("@valor_carteira_contrato").Value = txtValorCarteiraContrato.Text
                 adaptador.UpdateCommand.Parameters("@data_inicio_contrato").Value = mtxtDataInicio.Text
@@ -95,7 +95,7 @@ Public Class FrmCadastroContrato
                 'txtRemuneracaoJogador.Text = objReader.GetValue(9)
                 'txtValorCarteiraJogador.Text = objReader.GetValue(10)
                 ''Data = Format(objReader.GetValue(11), "dd/MM/yyyy")
-                MessageBox.Show("TEste")
+                'MessageBox.Show("TEste")
                 'mtxtCadastroInicio.Text = objReader.GetValue(11)
                 'mtxtCadastroTermino.Text = objReader.GetValue(12)
                 'txtClausulasJogador.Text = objReader.GetValue(13)
@@ -110,5 +110,9 @@ Public Class FrmCadastroContrato
             MessageBox.Show("Erro!")
             MessageBox.Show(linha.Text)
         End If
+    End Sub
+
+    Private Sub btnCancelarCadastroContrato_Click(sender As Object, e As EventArgs) Handles btnCancelarCadastroContrato.Click
+        Me.Close()
     End Sub
 End Class

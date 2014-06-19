@@ -40,7 +40,7 @@ Public Class FrmListaJogador
             Dim linha As New ListViewItem
             'If cat = categoria Then
             linha.Text = objReader.GetString(1)
-            linha.SubItems.Add(objReader.GetString(2))
+            'linha.SubItems.Add(objReader.GetString(2))
             linha.SubItems.Add(objReader.GetString(4))
             'linha.SubItems.Add(objReader.GetInt32(3).ToString)
             lstvJogador.Items.Add(linha)
@@ -52,6 +52,7 @@ Public Class FrmListaJogador
     End Sub
 
     Private Sub FrmListaJogador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Location = New Point(0, 0)
         conn = Conexao.getConexao
         adaptador = Jogadores.getAdapter(conn)
     End Sub

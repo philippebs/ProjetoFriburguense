@@ -35,6 +35,7 @@ Public Class FrmLogin
                 frmCadastroContatos = New FrmCadastroContato
                 frmCadastroContatos.MdiParent = Me.MdiParent
                 frmCadastroContatos.frmLogin = Me
+                frmCadastroContatos.atualizarCad()
                 frmCadastroContatos.Show()
             End If
             If abrir = "lst_contato" Then
