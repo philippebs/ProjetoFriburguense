@@ -168,7 +168,10 @@ Partial Class FrmCadastroJog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(378, 164)
+<<<<<<< HEAD
         Me.Controls.Add(Me.btnAvaliacao)
+=======
+>>>>>>> 4488fbf8481de3583faecc21c433e97c3e032037
         Me.Controls.Add(Me.btnContratoCadastro)
         Me.Controls.Add(Me.mtxtCadastroNAscimento)
         Me.Controls.Add(Me.Label15)

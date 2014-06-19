@@ -46,11 +46,12 @@ Partial Class FrmCadastroContrato
         Me.btnCancelarCadastroContrato = New System.Windows.Forms.Button()
         Me.btnCadastarContrato = New System.Windows.Forms.Button()
         Me.btnRenovarContrato = New System.Windows.Forms.Button()
+        Me.lblNomeJoagador = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'mtxtDataTermino
         '
-        Me.mtxtDataTermino.Location = New System.Drawing.Point(298, 212)
+        Me.mtxtDataTermino.Location = New System.Drawing.Point(297, 217)
         Me.mtxtDataTermino.Mask = "00/00/0000"
         Me.mtxtDataTermino.Name = "mtxtDataTermino"
         Me.mtxtDataTermino.Size = New System.Drawing.Size(64, 20)
@@ -60,7 +61,7 @@ Partial Class FrmCadastroContrato
         '
         'mtxtDataInicio
         '
-        Me.mtxtDataInicio.Location = New System.Drawing.Point(120, 212)
+        Me.mtxtDataInicio.Location = New System.Drawing.Point(119, 217)
         Me.mtxtDataInicio.Mask = "00/00/0000"
         Me.mtxtDataInicio.Name = "mtxtDataInicio"
         Me.mtxtDataInicio.Size = New System.Drawing.Size(64, 20)
@@ -70,7 +71,7 @@ Partial Class FrmCadastroContrato
         '
         'txtClausulasContrato
         '
-        Me.txtClausulasContrato.Location = New System.Drawing.Point(66, 246)
+        Me.txtClausulasContrato.Location = New System.Drawing.Point(65, 251)
         Me.txtClausulasContrato.Multiline = True
         Me.txtClausulasContrato.Name = "txtClausulasContrato"
         Me.txtClausulasContrato.Size = New System.Drawing.Size(296, 109)
@@ -79,7 +80,7 @@ Partial Class FrmCadastroContrato
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(8, 290)
+        Me.Label12.Location = New System.Drawing.Point(7, 295)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(52, 13)
         Me.Label12.TabIndex = 49
@@ -88,7 +89,7 @@ Partial Class FrmCadastroContrato
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(247, 215)
+        Me.Label11.Location = New System.Drawing.Point(246, 220)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(45, 13)
         Me.Label11.TabIndex = 48
@@ -97,7 +98,7 @@ Partial Class FrmCadastroContrato
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(65, 215)
+        Me.Label10.Location = New System.Drawing.Point(64, 220)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(32, 13)
         Me.Label10.TabIndex = 47
@@ -105,7 +106,7 @@ Partial Class FrmCadastroContrato
         '
         'txtValorCarteiraContrato
         '
-        Me.txtValorCarteiraContrato.Location = New System.Drawing.Point(103, 179)
+        Me.txtValorCarteiraContrato.Location = New System.Drawing.Point(102, 184)
         Me.txtValorCarteiraContrato.Name = "txtValorCarteiraContrato"
         Me.txtValorCarteiraContrato.Size = New System.Drawing.Size(259, 20)
         Me.txtValorCarteiraContrato.TabIndex = 36
@@ -113,7 +114,7 @@ Partial Class FrmCadastroContrato
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(8, 186)
+        Me.Label9.Location = New System.Drawing.Point(7, 191)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(84, 13)
         Me.Label9.TabIndex = 46
@@ -121,7 +122,7 @@ Partial Class FrmCadastroContrato
         '
         'txtRemuneracaoContrato
         '
-        Me.txtRemuneracaoContrato.Location = New System.Drawing.Point(104, 155)
+        Me.txtRemuneracaoContrato.Location = New System.Drawing.Point(103, 160)
         Me.txtRemuneracaoContrato.Name = "txtRemuneracaoContrato"
         Me.txtRemuneracaoContrato.Size = New System.Drawing.Size(259, 20)
         Me.txtRemuneracaoContrato.TabIndex = 35
@@ -129,7 +130,7 @@ Partial Class FrmCadastroContrato
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(8, 162)
+        Me.Label8.Location = New System.Drawing.Point(7, 167)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(74, 13)
         Me.Label8.TabIndex = 45
@@ -137,7 +138,7 @@ Partial Class FrmCadastroContrato
         '
         'txtPrecoContrato
         '
-        Me.txtPrecoContrato.Location = New System.Drawing.Point(104, 129)
+        Me.txtPrecoContrato.Location = New System.Drawing.Point(103, 134)
         Me.txtPrecoContrato.Name = "txtPrecoContrato"
         Me.txtPrecoContrato.Size = New System.Drawing.Size(259, 20)
         Me.txtPrecoContrato.TabIndex = 34
@@ -145,7 +146,7 @@ Partial Class FrmCadastroContrato
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 136)
+        Me.Label7.Location = New System.Drawing.Point(7, 141)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(71, 13)
         Me.Label7.TabIndex = 44
@@ -154,7 +155,7 @@ Partial Class FrmCadastroContrato
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(146, 20)
+        Me.Label6.Location = New System.Drawing.Point(142, 28)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(100, 13)
         Me.Label6.TabIndex = 40
@@ -162,7 +163,7 @@ Partial Class FrmCadastroContrato
         '
         'txtValorContrato
         '
-        Me.txtValorContrato.Location = New System.Drawing.Point(66, 100)
+        Me.txtValorContrato.Location = New System.Drawing.Point(65, 105)
         Me.txtValorContrato.Name = "txtValorContrato"
         Me.txtValorContrato.Size = New System.Drawing.Size(297, 20)
         Me.txtValorContrato.TabIndex = 33
@@ -170,7 +171,7 @@ Partial Class FrmCadastroContrato
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(8, 107)
+        Me.Label4.Location = New System.Drawing.Point(7, 112)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(31, 13)
         Me.Label4.TabIndex = 43
@@ -178,7 +179,7 @@ Partial Class FrmCadastroContrato
         '
         'txtAgenteContrato
         '
-        Me.txtAgenteContrato.Location = New System.Drawing.Point(66, 74)
+        Me.txtAgenteContrato.Location = New System.Drawing.Point(65, 79)
         Me.txtAgenteContrato.Name = "txtAgenteContrato"
         Me.txtAgenteContrato.Size = New System.Drawing.Size(297, 20)
         Me.txtAgenteContrato.TabIndex = 32
@@ -186,7 +187,7 @@ Partial Class FrmCadastroContrato
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 48)
+        Me.Label3.Location = New System.Drawing.Point(7, 53)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(28, 13)
         Me.Label3.TabIndex = 41
@@ -194,7 +195,7 @@ Partial Class FrmCadastroContrato
         '
         'txtTipoContrato
         '
-        Me.txtTipoContrato.Location = New System.Drawing.Point(66, 48)
+        Me.txtTipoContrato.Location = New System.Drawing.Point(65, 53)
         Me.txtTipoContrato.Name = "txtTipoContrato"
         Me.txtTipoContrato.Size = New System.Drawing.Size(296, 20)
         Me.txtTipoContrato.TabIndex = 31
@@ -202,7 +203,7 @@ Partial Class FrmCadastroContrato
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 78)
+        Me.Label2.Location = New System.Drawing.Point(7, 83)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 42
@@ -210,7 +211,7 @@ Partial Class FrmCadastroContrato
         '
         'btnAlertaCadastroContrato
         '
-        Me.btnAlertaCadastroContrato.Location = New System.Drawing.Point(233, 377)
+        Me.btnAlertaCadastroContrato.Location = New System.Drawing.Point(232, 382)
         Me.btnAlertaCadastroContrato.Name = "btnAlertaCadastroContrato"
         Me.btnAlertaCadastroContrato.Size = New System.Drawing.Size(68, 23)
         Me.btnAlertaCadastroContrato.TabIndex = 53
@@ -219,7 +220,7 @@ Partial Class FrmCadastroContrato
         '
         'btnEditarCadastroContrato
         '
-        Me.btnEditarCadastroContrato.Location = New System.Drawing.Point(159, 377)
+        Me.btnEditarCadastroContrato.Location = New System.Drawing.Point(158, 382)
         Me.btnEditarCadastroContrato.Name = "btnEditarCadastroContrato"
         Me.btnEditarCadastroContrato.Size = New System.Drawing.Size(68, 23)
         Me.btnEditarCadastroContrato.TabIndex = 52
@@ -228,7 +229,7 @@ Partial Class FrmCadastroContrato
         '
         'btnCancelarCadastroContrato
         '
-        Me.btnCancelarCadastroContrato.Location = New System.Drawing.Point(85, 377)
+        Me.btnCancelarCadastroContrato.Location = New System.Drawing.Point(84, 382)
         Me.btnCancelarCadastroContrato.Name = "btnCancelarCadastroContrato"
         Me.btnCancelarCadastroContrato.Size = New System.Drawing.Size(68, 23)
         Me.btnCancelarCadastroContrato.TabIndex = 51
@@ -237,7 +238,7 @@ Partial Class FrmCadastroContrato
         '
         'btnCadastarContrato
         '
-        Me.btnCadastarContrato.Location = New System.Drawing.Point(11, 377)
+        Me.btnCadastarContrato.Location = New System.Drawing.Point(10, 382)
         Me.btnCadastarContrato.Name = "btnCadastarContrato"
         Me.btnCadastarContrato.Size = New System.Drawing.Size(68, 23)
         Me.btnCadastarContrato.TabIndex = 50
@@ -246,18 +247,28 @@ Partial Class FrmCadastroContrato
         '
         'btnRenovarContrato
         '
-        Me.btnRenovarContrato.Location = New System.Drawing.Point(307, 377)
+        Me.btnRenovarContrato.Location = New System.Drawing.Point(306, 382)
         Me.btnRenovarContrato.Name = "btnRenovarContrato"
         Me.btnRenovarContrato.Size = New System.Drawing.Size(68, 23)
         Me.btnRenovarContrato.TabIndex = 54
         Me.btnRenovarContrato.Text = "Renovar"
         Me.btnRenovarContrato.UseVisualStyleBackColor = True
         '
+        'lblNomeJoagador
+        '
+        Me.lblNomeJoagador.AutoSize = True
+        Me.lblNomeJoagador.Location = New System.Drawing.Point(7, 9)
+        Me.lblNomeJoagador.Name = "lblNomeJoagador"
+        Me.lblNomeJoagador.Size = New System.Drawing.Size(38, 13)
+        Me.lblNomeJoagador.TabIndex = 55
+        Me.lblNomeJoagador.Text = "Nome:"
+        '
         'FrmCadastroContrato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(384, 412)
+        Me.ClientSize = New System.Drawing.Size(384, 417)
+        Me.Controls.Add(Me.lblNomeJoagador)
         Me.Controls.Add(Me.btnRenovarContrato)
         Me.Controls.Add(Me.btnAlertaCadastroContrato)
         Me.Controls.Add(Me.btnEditarCadastroContrato)
@@ -313,4 +324,5 @@ Partial Class FrmCadastroContrato
     Friend WithEvents btnCancelarCadastroContrato As System.Windows.Forms.Button
     Friend WithEvents btnCadastarContrato As System.Windows.Forms.Button
     Friend WithEvents btnRenovarContrato As System.Windows.Forms.Button
+    Friend WithEvents lblNomeJoagador As System.Windows.Forms.Label
 End Class

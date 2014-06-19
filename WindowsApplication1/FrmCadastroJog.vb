@@ -136,7 +136,10 @@ Public Class FrmCadastroJog
             conn.Close()
         Else
             'MessageBox.Show("Erro!")
+<<<<<<< HEAD
             btnAvaliacao.Visible = False
+=======
+>>>>>>> 4488fbf8481de3583faecc21c433e97c3e032037
         End If
 
     End Sub
@@ -161,9 +164,13 @@ Public Class FrmCadastroJog
     Private Sub btnContratoCadastro_Click(sender As Object, e As EventArgs) Handles btnContratoCadastro.Click
         Dim frmCadastroContrato As New FrmCadastroContrato()
         frmCadastroContrato.IdJogador(id_jogador)
+        frmCadastroContrato.nomeDoJogador(txtNomeJogador.Text)
         frmCadastroContrato.MdiParent = Me.MdiParent
         frmCadastroContrato.frmCadastroJog = Me
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4488fbf8481de3583faecc21c433e97c3e032037
         'MessageBox.Show(id_jogador)
         frmCadastroContrato.Show()
     End Sub
