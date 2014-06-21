@@ -115,6 +115,7 @@ Partial Class FrmVerAlerta
         Me.Controls.Add(Me.txtTitulo)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmVerAlerta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Alerta"
         Me.ResumeLayout(False)
         Me.PerformLayout()

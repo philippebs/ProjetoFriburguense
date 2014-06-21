@@ -5,6 +5,7 @@ Public Class FrmAlertaBox
     Dim nome As String
     Dim data_t As Date
     Dim y As Integer
+    Private id As Integer = -1
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         Static i As Integer = 10
         If i <= 210 Then
@@ -23,6 +24,11 @@ Public Class FrmAlertaBox
     Public Sub ValorN(n As Integer)
         y = n
     End Sub
+
+    Public Sub idAlerta(ByVal idTela As Integer)
+        id = idTela
+    End Sub
+
     Public Sub NomeAlerta(nomeAlerta As String, dataTermino As Date)
         nome = nomeAlerta
         data_t = dataTermino
@@ -53,7 +59,8 @@ Public Class FrmAlertaBox
         frmVerAlerta.MdiParent = Me.MdiParent
         frmVerAlerta.frmAlertaBox = Me
         'y = codigo ou ID
-        frmVerAlerta.pegarCodigo(y)
+        'MessageBox.Show(y)
+        frmVerAlerta.pegarCodigo(id)
         frmVerAlerta.Show()
     End Sub
 

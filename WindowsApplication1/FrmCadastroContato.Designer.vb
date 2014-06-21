@@ -252,6 +252,7 @@ Partial Class FrmCadastroContato
         Me.Controls.Add(Me.txtNomeContato)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmCadastroContato"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmCadastroContato"
         Me.ResumeLayout(False)
         Me.PerformLayout()

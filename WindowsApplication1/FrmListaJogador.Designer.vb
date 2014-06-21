@@ -25,7 +25,6 @@ Partial Class FrmListaJogador
         Me.lstvJogador = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnCadastrarjogador = New System.Windows.Forms.Button()
         Me.btnListaMostrar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -35,7 +34,7 @@ Partial Class FrmListaJogador
         Me.lstvJogador.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lstvJogador.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.lstvJogador.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
         Me.lstvJogador.FullRowSelect = True
         Me.lstvJogador.GridLines = True
         Me.lstvJogador.Location = New System.Drawing.Point(-1, -1)
@@ -55,11 +54,6 @@ Partial Class FrmListaJogador
         '
         Me.ColumnHeader2.Text = "Posição"
         Me.ColumnHeader2.Width = 120
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Categoria"
-        Me.ColumnHeader3.Width = 120
         '
         'btnCadastrarjogador
         '
@@ -97,7 +91,6 @@ Partial Class FrmListaJogador
     Friend WithEvents lstvJogador As System.Windows.Forms.ListView
     Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents btnCadastrarjogador As System.Windows.Forms.Button
     Friend WithEvents btnListaMostrar As System.Windows.Forms.Button
 End Class

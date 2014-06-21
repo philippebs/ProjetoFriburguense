@@ -135,6 +135,7 @@ Public Class FrmCadastroJog
             conn.Close()
         Else
             'MessageBox.Show("Erro!")
+            btnAvaliacao.Enabled = False
         End If
 
     End Sub
@@ -167,4 +168,17 @@ Public Class FrmCadastroJog
     End Sub
 
 
+    Private Sub FrmCadastroJog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub btnAvaliacao_Click(sender As Object, e As EventArgs) Handles btnAvaliacao.Click
+        Dim caminho As String = "C:\Users\Philippe-i3\Desktop\Avaliacao\" + cmbCategoriaJogador.SelectedItem + "\" + txtNomeJogador.Text + ".pdf"
+
+        Try
+            Process.Start(caminho)
+        Catch
+            MsgBox("A avaliação desse jogador não foi cadastrada")
+        End Try
+    End Sub
 End Class

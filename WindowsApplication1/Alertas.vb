@@ -21,11 +21,29 @@ Module Alertas
         alertasDtAdapter.SelectCommand = sqlSelectcommand
 
         sqlInsertCommand.Connection = conn
-        sqlInsertCommand.CommandText = "INSERT INTO tabela_alerta ( titulo_alerta, agente_contrato , data_inicio_contrato , data_termino_contrato , clausulas_contrato , remuneracao_contrato , preco_exigido_contrato , valor_total_contrato , valor_carteira_contrato, status_ativo_contrato) values(?,?,?,?,?,?,?,?,?,?,?)"
+        sqlInsertCommand.CommandText = "INSERT INTO tabela_alerta ( titulo_alerta , data_inicio_alerta , data_termino_alerta , mensagem_alerta, conta_alerta) values(?,?,?,?,?)"
 
-        objParam = sqlInsertCommand.Parameters.Add("@id_jogador_contrato", MySqlDbType.Int32)
-        objParam.SourceColumn = "id_jogador_contrato"
-        objParam.SourceVersion = DataRowVersion.Original
+        objParam = sqlInsertCommand.Parameters.Add("@titulo_alerta", MySqlDbType.VarChar)
+        objParam.SourceColumn = "titulo_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlInsertCommand.Parameters.Add("@data_inicio_alerta", MySqlDbType.Date)
+        objParam.SourceColumn = "data_inicio_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlInsertCommand.Parameters.Add("@data_termino_alerta", MySqlDbType.Date)
+        objParam.SourceColumn = "data_termino_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlInsertCommand.Parameters.Add("@mensagem_alerta", MySqlDbType.VarChar)
+        objParam.SourceColumn = "mensagem_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlInsertCommand.Parameters.Add("@conta_alerta", MySqlDbType.Int16)
+        objParam.SourceColumn = "conta_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        alertasDtAdapter.InsertCommand = sqlInsertCommand
 
         Return alertasDtAdapter
 

@@ -39,6 +39,7 @@ Public Class FrmListaEventosDia
     End Sub
 
     Private Sub FrmListaEventosDia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Location = New Point(0, 0)
         conn = Conexao.getConexao
         adaptador = ProcurarData.getAdapter(conn)
     End Sub

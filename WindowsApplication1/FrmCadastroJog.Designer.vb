@@ -35,6 +35,7 @@ Partial Class FrmCadastroJog
         Me.Label15 = New System.Windows.Forms.Label()
         Me.mtxtCadastroNAscimento = New System.Windows.Forms.MaskedTextBox()
         Me.btnContratoCadastro = New System.Windows.Forms.Button()
+        Me.btnAvaliacao = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -153,11 +154,21 @@ Partial Class FrmCadastroJog
         Me.btnContratoCadastro.Text = "Contrato"
         Me.btnContratoCadastro.UseVisualStyleBackColor = True
         '
+        'btnAvaliacao
+        '
+        Me.btnAvaliacao.Location = New System.Drawing.Point(262, 104)
+        Me.btnAvaliacao.Name = "btnAvaliacao"
+        Me.btnAvaliacao.Size = New System.Drawing.Size(98, 23)
+        Me.btnAvaliacao.TabIndex = 33
+        Me.btnAvaliacao.Text = "Avaliação"
+        Me.btnAvaliacao.UseVisualStyleBackColor = True
+        '
         'FrmCadastroJog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(378, 164)
+        Me.Controls.Add(Me.btnAvaliacao)
         Me.Controls.Add(Me.btnContratoCadastro)
         Me.Controls.Add(Me.mtxtCadastroNAscimento)
         Me.Controls.Add(Me.Label15)
@@ -174,6 +185,7 @@ Partial Class FrmCadastroJog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmCadastroJog"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cadastro de Jogadores"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -192,4 +204,5 @@ Partial Class FrmCadastroJog
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents mtxtCadastroNAscimento As System.Windows.Forms.MaskedTextBox
     Friend WithEvents btnContratoCadastro As System.Windows.Forms.Button
+    Friend WithEvents btnAvaliacao As System.Windows.Forms.Button
 End Class
