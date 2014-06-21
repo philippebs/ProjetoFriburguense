@@ -47,7 +47,7 @@ Public Class FrmCadastroContato
                 MessageBox.Show("Alteração realizada com sucesso!")
             End If
             conn.Close()
-            frmListarContatos.atualizar()
+            'frmListarContatos.atualizar_cad()
             Me.Close()
         Catch ex As Exception
             MessageBox.Show("Valores repetidos")
@@ -192,6 +192,12 @@ Public Class FrmCadastroContato
 
 
 
+    End Sub
+    Public Sub atualizarCad()
+        lstvNotas.Visible = False
+        Label7.Visible = False
+        btnCadastrarNota.Visible = False
+        btnRemoverNota.Visible = False
     End Sub
     Public Sub Up()
         atualizar()

@@ -53,6 +53,7 @@ Public Class FrmListaContato
 
     Private Sub btnCadastrarContato_Click(sender As Object, e As EventArgs) Handles btnCadastrarContato.Click
         Dim frmCadastroContato As New FrmCadastroContato()
+        frmCadastroContato.atualizarCad()
         frmCadastroContato.MdiParent = Me.MdiParent
         frmCadastroContato.frmListarContatos = Me
         frmCadastroContato.Show()

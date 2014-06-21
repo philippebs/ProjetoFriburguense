@@ -63,7 +63,11 @@ Partial Class FrmCadastroNota
         Me.Controls.Add(Me.txtNota)
         Me.Name = "FrmCadastroNota"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+<<<<<<< HEAD
         Me.Text = "FrmCadastroNota"
+=======
+        Me.Text = "Nota"
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

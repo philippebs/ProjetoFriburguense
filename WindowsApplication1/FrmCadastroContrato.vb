@@ -164,6 +164,45 @@ Public Class FrmCadastroContrato
             MessageBox.Show(ex.ToString)
         End Try
 
+<<<<<<< HEAD
+    End Sub
+
+
+    Private Sub FrmCadastroContrato_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        If Not linha Is Nothing Then
+
+            conn = Conexao.getConexao
+            adaptador = Contrato.getAdapter(conn)
+
+            conn.Open()
+            adaptador.SelectCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
+            adaptador.SelectCommand.Parameters("@status_ativo_contrato").Value = "1"
+            'MessageBox.Show(linha.SubItems(0).Text)
+            objReader = adaptador.SelectCommand().ExecuteReader
+
+            Do While objReader.Read
+                txtTipoContrato.Text = objReader.GetValue(3)
+                '    'Dim data As Date = String.Format(objReader.GetValue(11), "")
+                '    id_contrato = objReader.GetValue(0)
+                '    id_jogador_contrato = objReader.GetValue(1)
+                'txtNomeJogador.Text = objReader.GetValue(2)
+                'cmbPosicaoJogador.Text = objReader.GetValue(4)
+                'cmbCategoriaJogador.Text = objReader.GetValue(2)
+                'mtxtCadastroNAscimento.Text = objReader.GetValue(3)
+                'txtTipoJogador.Text = objReader.GetValue(6)
+                'txtAgenteJogador.Text = objReader.GetValue(5)
+                'txtValorJogador.Text = objReader.GetValue(7)
+                'txtPrecoJogador.Text = objReader.GetValue(8)
+                'txtRemuneracaoJogador.Text = objReader.GetValue(9)
+                'txtValorCarteiraJogador.Text = objReader.GetValue(10)
+                ''Data = Format(objReader.GetValue(11), "dd/MM/yyyy")
+                'MessageBox.Show("TEste")
+                'mtxtCadastroInicio.Text = objReader.GetValue(11)
+                'mtxtCadastroTermino.Text = objReader.GetValue(12)
+                'txtClausulasJogador.Text = objReader.GetValue(13)
+            Loop
+=======
+>>>>>>> 4488fbf8481de3583faecc21c433e97c3e032037
 
     End Sub
 
@@ -179,4 +218,10 @@ Public Class FrmCadastroContrato
         txtClausulasContrato.Text = ""
     End Sub
 
+<<<<<<< HEAD
+    Private Sub btnCancelarCadastroContrato_Click(sender As Object, e As EventArgs) Handles btnCancelarCadastroContrato.Click
+        Me.Close()
+    End Sub
+=======
+>>>>>>> 4488fbf8481de3583faecc21c433e97c3e032037
 End Class

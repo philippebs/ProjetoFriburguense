@@ -149,7 +149,12 @@ Public Class FrmCalendario
         '        MessageBox.Show(data)
         adaptador.SelectCommand.Parameters("@data_termino_alerta").Value = data
         data = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-" + diaMes.ToString
+<<<<<<< HEAD
         adaptador.SelectCommand.Parameters("@data_termino_alerta1").Value = data
+=======
+        adaptador.SelectCommand.Parameters("@data_inicio_alerta1").Value = data
+
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         objReader = adaptador.SelectCommand().ExecuteReader
         Dim diaMarcado As String = "0000000000"
 

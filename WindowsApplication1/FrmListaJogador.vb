@@ -40,6 +40,10 @@ Public Class FrmListaJogador
             Dim linha As New ListViewItem
             'If cat = categoria Then
             linha.Text = objReader.GetString(1)
+<<<<<<< HEAD
+=======
+            'linha.SubItems.Add(objReader.GetString(2))
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
             linha.SubItems.Add(objReader.GetString(4))
             'linha.SubItems.Add(objReader.GetString(4))
             'linha.SubItems.Add(objReader.GetInt32(3).ToString)

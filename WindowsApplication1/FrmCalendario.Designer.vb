@@ -40,14 +40,22 @@ Partial Class FrmCalendario
         '
         'pnlCalendarioDias
         '
+<<<<<<< HEAD
         Me.pnlCalendarioDias.Location = New System.Drawing.Point(29, 109)
+=======
+        Me.pnlCalendarioDias.Location = New System.Drawing.Point(33, 119)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.pnlCalendarioDias.Name = "pnlCalendarioDias"
         Me.pnlCalendarioDias.Size = New System.Drawing.Size(295, 171)
         Me.pnlCalendarioDias.TabIndex = 0
         '
         'btnMesAnterior
         '
+<<<<<<< HEAD
         Me.btnMesAnterior.Location = New System.Drawing.Point(29, 41)
+=======
+        Me.btnMesAnterior.Location = New System.Drawing.Point(33, 51)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.btnMesAnterior.Name = "btnMesAnterior"
         Me.btnMesAnterior.Size = New System.Drawing.Size(26, 23)
         Me.btnMesAnterior.TabIndex = 1
@@ -56,7 +64,11 @@ Partial Class FrmCalendario
         '
         'btnMesSeguinte
         '
+<<<<<<< HEAD
         Me.btnMesSeguinte.Location = New System.Drawing.Point(298, 41)
+=======
+        Me.btnMesSeguinte.Location = New System.Drawing.Point(302, 51)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.btnMesSeguinte.Name = "btnMesSeguinte"
         Me.btnMesSeguinte.Size = New System.Drawing.Size(26, 23)
         Me.btnMesSeguinte.TabIndex = 2
@@ -67,7 +79,11 @@ Partial Class FrmCalendario
         '
         Me.lblMesAtual.AutoSize = True
         Me.lblMesAtual.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+<<<<<<< HEAD
         Me.lblMesAtual.Location = New System.Drawing.Point(73, 41)
+=======
+        Me.lblMesAtual.Location = New System.Drawing.Point(77, 51)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.lblMesAtual.Name = "lblMesAtual"
         Me.lblMesAtual.Size = New System.Drawing.Size(42, 20)
         Me.lblMesAtual.TabIndex = 3
@@ -77,7 +93,11 @@ Partial Class FrmCalendario
         '
         Me.lblAnoCalendario.AutoSize = True
         Me.lblAnoCalendario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+<<<<<<< HEAD
         Me.lblAnoCalendario.Location = New System.Drawing.Point(126, 9)
+=======
+        Me.lblAnoCalendario.Location = New System.Drawing.Point(130, 19)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.lblAnoCalendario.Name = "lblAnoCalendario"
         Me.lblAnoCalendario.Size = New System.Drawing.Size(41, 20)
         Me.lblAnoCalendario.TabIndex = 4
@@ -87,7 +107,11 @@ Partial Class FrmCalendario
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.Enabled = False
+<<<<<<< HEAD
         Me.Button1.Location = New System.Drawing.Point(29, 80)
+=======
+        Me.Button1.Location = New System.Drawing.Point(33, 90)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(40, 23)
         Me.Button1.TabIndex = 7
@@ -98,7 +122,11 @@ Partial Class FrmCalendario
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.Enabled = False
+<<<<<<< HEAD
         Me.Button2.Location = New System.Drawing.Point(77, 80)
+=======
+        Me.Button2.Location = New System.Drawing.Point(81, 90)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(35, 23)
         Me.Button2.TabIndex = 8
@@ -109,7 +137,11 @@ Partial Class FrmCalendario
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button3.Enabled = False
+<<<<<<< HEAD
         Me.Button3.Location = New System.Drawing.Point(117, 80)
+=======
+        Me.Button3.Location = New System.Drawing.Point(121, 90)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(35, 23)
         Me.Button3.TabIndex = 9
@@ -120,7 +152,11 @@ Partial Class FrmCalendario
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button4.Enabled = False
+<<<<<<< HEAD
         Me.Button4.Location = New System.Drawing.Point(162, 80)
+=======
+        Me.Button4.Location = New System.Drawing.Point(166, 90)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(35, 23)
         Me.Button4.TabIndex = 10
@@ -131,7 +167,11 @@ Partial Class FrmCalendario
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button5.Enabled = False
+<<<<<<< HEAD
         Me.Button5.Location = New System.Drawing.Point(203, 80)
+=======
+        Me.Button5.Location = New System.Drawing.Point(207, 90)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(35, 23)
         Me.Button5.TabIndex = 11
@@ -142,7 +182,11 @@ Partial Class FrmCalendario
         '
         Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button6.Enabled = False
+<<<<<<< HEAD
         Me.Button6.Location = New System.Drawing.Point(244, 80)
+=======
+        Me.Button6.Location = New System.Drawing.Point(248, 90)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(35, 23)
         Me.Button6.TabIndex = 12
@@ -153,7 +197,11 @@ Partial Class FrmCalendario
         '
         Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button7.Enabled = False
+<<<<<<< HEAD
         Me.Button7.Location = New System.Drawing.Point(285, 80)
+=======
+        Me.Button7.Location = New System.Drawing.Point(289, 90)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(35, 23)
         Me.Button7.TabIndex = 13
@@ -163,7 +211,11 @@ Partial Class FrmCalendario
         'lblDiaAtualCor
         '
         Me.lblDiaAtualCor.AutoSize = True
+<<<<<<< HEAD
         Me.lblDiaAtualCor.Location = New System.Drawing.Point(42, 304)
+=======
+        Me.lblDiaAtualCor.Location = New System.Drawing.Point(46, 314)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.lblDiaAtualCor.Name = "lblDiaAtualCor"
         Me.lblDiaAtualCor.Size = New System.Drawing.Size(50, 13)
         Me.lblDiaAtualCor.TabIndex = 16
@@ -173,7 +225,11 @@ Partial Class FrmCalendario
         '
         Me.btnDiaAtualCor.BackColor = System.Drawing.Color.Green
         Me.btnDiaAtualCor.Enabled = False
+<<<<<<< HEAD
         Me.btnDiaAtualCor.Location = New System.Drawing.Point(8, 299)
+=======
+        Me.btnDiaAtualCor.Location = New System.Drawing.Point(12, 309)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.btnDiaAtualCor.Name = "btnDiaAtualCor"
         Me.btnDiaAtualCor.Size = New System.Drawing.Size(28, 23)
         Me.btnDiaAtualCor.TabIndex = 17
@@ -183,7 +239,11 @@ Partial Class FrmCalendario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(355, 333)
+=======
+        Me.ClientSize = New System.Drawing.Size(355, 343)
+>>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Me.Controls.Add(Me.btnDiaAtualCor)
         Me.Controls.Add(Me.lblDiaAtualCor)
         Me.Controls.Add(Me.Button7)
