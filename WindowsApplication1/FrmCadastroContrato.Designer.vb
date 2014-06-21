@@ -295,11 +295,11 @@ Partial Class FrmCadastroContrato
         Me.Controls.Add(Me.Label2)
         Me.Name = "FrmCadastroContrato"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-<<<<<<< HEAD
-        Me.Text = "FrmContrato"
-=======
+
+        'Me.Text = "FrmContrato"
+
         Me.Text = "Contrato"
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
+
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -241,3 +241,4 @@ C:\Users\eu\Desktop\last1\ProjetoFriburguense\WindowsApplication1\obj\Debug\Wind
 C:\Users\eu\Desktop\last1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
 C:\Users\eu\Desktop\last1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
 C:\Users\eu\Desktop\last1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastrarConta.resources
+C:\Users\Philippe-i3\Documents\Projeto v1\ProjetoFriburguense\WindowsApplication1\obj\Debug\WindowsApplication1.FrmCadastrarConta.resources

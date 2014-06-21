@@ -136,14 +136,8 @@ Public Class FrmCadastroJog
             conn.Close()
         Else
             'MessageBox.Show("Erro!")
-<<<<<<< HEAD
             btnAvaliacao.Enabled = False
-=======
-<<<<<<< HEAD
-            btnAvaliacao.Visible = False
-=======
->>>>>>> 4488fbf8481de3583faecc21c433e97c3e032037
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
+
         End If
 
     End Sub
@@ -171,27 +165,15 @@ Public Class FrmCadastroJog
         frmCadastroContrato.nomeDoJogador(txtNomeJogador.Text)
         frmCadastroContrato.MdiParent = Me.MdiParent
         frmCadastroContrato.frmCadastroJog = Me
-<<<<<<< HEAD
 
-=======
->>>>>>> 4488fbf8481de3583faecc21c433e97c3e032037
         'MessageBox.Show(id_jogador)
         frmCadastroContrato.Show()
     End Sub
 
 
-<<<<<<< HEAD
-    Private Sub FrmCadastroJog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub btnAvaliacao_Click(sender As Object, e As EventArgs) Handles btnAvaliacao.Click
         Dim caminho As String = "C:\Users\Philippe-i3\Desktop\Avaliacao\" + cmbCategoriaJogador.SelectedItem + "\" + txtNomeJogador.Text + ".pdf"
 
-=======
-    Private Sub btnAvaliacao_Click(sender As Object, e As EventArgs) Handles btnAvaliacao.Click
-        Dim caminho As String = "C:\Users\eu\Desktop\avaliacao\" + txtNomeJogador.Text + ".pdf"
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         Try
             Process.Start(caminho)
         Catch

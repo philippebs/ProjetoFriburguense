@@ -14,7 +14,7 @@
         Me.Close()
     End Sub
 
-<<<<<<< HEAD
+
     Private Sub btnAlertaSalvar_Click(sender As Object, e As EventArgs) Handles btnAlertaSalvar.Click
         Dim inicio As Date
         Dim termino As Date = mtxtAlertaDataTermino.Text
@@ -63,7 +63,4 @@
         lblDataInicio.Visible = False
         lblDataFim.Text = "Data de vencimento"
     End Sub
-=======
-
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
 End Class

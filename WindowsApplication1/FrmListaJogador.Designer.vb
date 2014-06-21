@@ -53,11 +53,8 @@ Partial Class FrmListaJogador
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Posição"
-<<<<<<< HEAD
-        Me.ColumnHeader2.Width = 120
-=======
+
         Me.ColumnHeader2.Width = 110
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
         '
         'btnCadastrarjogador
         '

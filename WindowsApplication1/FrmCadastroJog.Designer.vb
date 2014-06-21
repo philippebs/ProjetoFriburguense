@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmCadastroJog
     Inherits System.Windows.Forms.Form
 
@@ -159,11 +159,8 @@ Partial Class FrmCadastroJog
         Me.btnAvaliacao.Location = New System.Drawing.Point(262, 104)
         Me.btnAvaliacao.Name = "btnAvaliacao"
         Me.btnAvaliacao.Size = New System.Drawing.Size(98, 23)
-<<<<<<< HEAD
         Me.btnAvaliacao.TabIndex = 33
-=======
-        Me.btnAvaliacao.TabIndex = 32
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
+
         Me.btnAvaliacao.Text = "Avaliação"
         Me.btnAvaliacao.UseVisualStyleBackColor = True
         '
@@ -172,14 +169,10 @@ Partial Class FrmCadastroJog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(378, 164)
-<<<<<<< HEAD
+
+
         Me.Controls.Add(Me.btnAvaliacao)
-=======
-<<<<<<< HEAD
-        Me.Controls.Add(Me.btnAvaliacao)
-=======
->>>>>>> 4488fbf8481de3583faecc21c433e97c3e032037
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
+
         Me.Controls.Add(Me.btnContratoCadastro)
         Me.Controls.Add(Me.mtxtCadastroNAscimento)
         Me.Controls.Add(Me.Label15)
@@ -197,11 +190,11 @@ Partial Class FrmCadastroJog
         Me.MinimizeBox = False
         Me.Name = "FrmCadastroJog"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-<<<<<<< HEAD
+
         Me.Text = "Cadastro de Jogadores"
-=======
+
         Me.Text = "Jogadores"
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
+
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

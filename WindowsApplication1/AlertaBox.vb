@@ -12,11 +12,8 @@ Module AlertaBox
         Dim diaAtual As String = data_.Day.ToString()
         Dim data1 As String = anoAtual + "-" + mesAtual + "-" + diaAtual
 
-<<<<<<< HEAD
         sqlSelectcommand.CommandText = "Select * from tabela_alerta where data_inicio_alerta >= '" + d_i + "' AND '" + data1 + "' > data_termino_alerta"
-=======
-        sqlSelectcommand.CommandText = "Select * from tabela_alerta where data_inicio_alerta <= '" + d_i + "' AND '" + data1 + "' > data_termino_alerta ORDER BY data_termino_alerta DESC"
->>>>>>> 7588756032e05a95ea49ae00e8f2881d54a256ac
+
 
         'Dim objParam As MySqlParameter
 
