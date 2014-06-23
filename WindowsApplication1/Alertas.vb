@@ -11,11 +11,11 @@ Module Alertas
         Dim objParam As MySqlParameter
 
         objParam = sqlSelectcommand.Parameters.Add("@data_termino_alerta", MySqlDbType.Date)
-        objParam.SourceColumn = "data_inicio_alerta"
+        objParam.SourceColumn = "data_termino_alerta"
         objParam.SourceVersion = DataRowVersion.Current
 
         objParam = sqlSelectcommand.Parameters.Add("@data_termino_alerta1", MySqlDbType.Date)
-        objParam.SourceColumn = "data_inicio_alerta1"
+        objParam.SourceColumn = "data_termino_alerta1"
         objParam.SourceVersion = DataRowVersion.Current
 
         alertasDtAdapter.SelectCommand = sqlSelectcommand

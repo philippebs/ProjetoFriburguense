@@ -5,12 +5,12 @@ Module ProcurarData
         Dim sqlSelectcommand As New MySqlCommand
 
         sqlSelectcommand.Connection = conn
-        sqlSelectcommand.CommandText = "Select * from tabela_alerta where data_inicio_alerta = ?"
+        sqlSelectcommand.CommandText = "Select * from tabela_alerta where data_termino_alerta = ?"
 
         Dim objParam As MySqlParameter
 
-        objParam = sqlSelectcommand.Parameters.Add("@data_inicio_alerta", MySqlDbType.Date)
-        objParam.SourceColumn = "data_inicio_alerta"
+        objParam = sqlSelectcommand.Parameters.Add("@data_termino_alerta", MySqlDbType.Date)
+        objParam.SourceColumn = "data_termino_alerta"
         objParam.SourceVersion = DataRowVersion.Current
 
         procurarDataDtAdapter.SelectCommand = sqlSelectcommand

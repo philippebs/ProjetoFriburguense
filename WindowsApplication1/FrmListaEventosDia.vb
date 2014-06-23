@@ -12,7 +12,7 @@ Public Class FrmListaEventosDia
         lstvAlertas.Items.Clear()
         conn.Open()
 
-        adaptador.SelectCommand.Parameters("@data_inicio_alerta").Value = data
+        adaptador.SelectCommand.Parameters("@data_termino_alerta").Value = data
         objReader = adaptador.SelectCommand().ExecuteReader
 
         Do While objReader.Read
