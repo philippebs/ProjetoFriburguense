@@ -7,20 +7,8 @@ Public Class FrmListaJogador
     Dim categoria As String
     Public frmLogin As New FrmLogin
     Private Property objReader As MySqlDataReader
-
-    'Dim conexao As New MySqlConnection
-    'Dim comando As New MySqlCommand
-    'Dim adaptador As New MySqlDataAdapter
-    'Dim dados As New DataTable
-    'Dim sql As String
     Public Sub CategoriaJogador(cat_jogador As String)
-        'If cat_jogador = "profissional" Then
-
-        'End If
         categoria = cat_jogador
-        'MessageBox.Show(cat_jogador)
-
-
     End Sub
 
     Public Sub atualizar()
@@ -28,28 +16,14 @@ Public Class FrmListaJogador
         conn.Open()
 
         adaptador.SelectCommand.Parameters("@categoria_jogador").Value = categoria.ToString
-
-
         objReader = adaptador.SelectCommand().ExecuteReader
 
-
-
         Do While objReader.Read
-            'Dim cat As String
-            ' cat = objReader.GetString(2)
             Dim linha As New ListViewItem
-            'If cat = categoria Then
             linha.Text = objReader.GetString(1)
-
             linha.SubItems.Add(objReader.GetString(4))
-
-            'linha.SubItems.Add(objReader.GetString(4))
-            'linha.SubItems.Add(objReader.GetInt32(3).ToString)
             lstvJogador.Items.Add(linha)
-            'End If
-
         Loop
-
         conn.Close()
     End Sub
 
@@ -76,7 +50,6 @@ Public Class FrmListaJogador
             frmCadastro.MdiParent = Me.MdiParent
             frmCadastro.frmListarJogadores = Me
             frmCadastro.linha = lstvJogador.SelectedItems(0)
-            ' MessageBox.Show(lstvJogador.SelectedItems(0).SubItems(0).Text)
             frmCadastro.btnCadastarJogador.Text = "Salvar"
             frmCadastro.Show()
         Else

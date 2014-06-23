@@ -13,64 +13,34 @@ Public Class FrmCalendario
     Dim adaptador As New MySqlDataAdapter
     Private Property objReader As MySqlDataReader
     Dim count(31) As Integer
-    'Dim contador As Integer = 0
 
     Private Sub FrmCalendario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conn = Conexao.getConexao
         adaptador = Alertas.getAdapter(conn)
-        'montarCalendario()
     End Sub
 
     Private Sub montarCalendario()
         'exibe o mês atual
-        'comboBoxMonth.Text = DateTime.Now.Month.ToString()
-
-        'cmbMes.Text = DateTime.Now.Month.ToString()
         mesAtual = DateTime.Now.Month.ToString()
-        'MessageBox.Show(lblMesAtual.Text)
         'obtem a cultura do windows
         CurrentCulture = Globalization.CultureInfo.CurrentCulture.Name
         'exibe o nome completo do mes atual
         lblMesAtual.Text = Application.CurrentCulture.DateTimeFormat.GetMonthName(Convert.ToInt32(mesAtual)) 'comboBoxMonth.Text))
         formatarNomeMes()
-        'lblMesAtual.Text = "0" & lblMesAtual.Text
         'obtem o numero de dias do mes e ano selecionado
         My.Application.ChangeCulture("en-za")
         Dim Dayz As Int32 = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month)
         'exibe o ano atual no textbox
-        'textBoxYear.Text = DateTime.Now.Year.ToString()
-        'mtxtAno.Text = DateTime.Now.Year.ToString()
         lblAnoCalendario.Text = DateTime.Now.Year.ToString()
-        'MessageBox.Show(lblAnoCalendario.Text)
         'chama a função verificaDia
         verificaDia()
-        'conn.Open()
-        ''Teste 
-        'Dim data As Date = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-01"
-        ''        MessageBox.Show(data)
-        'adaptador.SelectCommand.Parameters("@data_inicio_alerta").Value = data
-        'data = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-" + Dayz.ToString
-        'adaptador.SelectCommand.Parameters("@data_inicio_alerta1").Value = data
-        'objReader = adaptador.SelectCommand().ExecuteReader
-        'Dim diaMarcado As String = "0000000000"
-
-        'Do While objReader.Read
-        '    diaMarcado = objReader.GetValue(2).ToString
-        '    MessageBox.Show(diaMarcado.Length & " - " & diaMarcado.Substring(0, 2))
-        '    diaMarcado = diaMarcado.Substring(0, 2)
-        '    MessageBox.Show(diaMarcado) '.Substring(8, 2)) 'objReader.GetValue(1).ToString)
-        'Loop
         marcarDia(Dayz.ToString)
         For i As Int32 = 1 To Dayz
             ndayz += 1
-            'lblDayz = New Label()
             btnDayz = New Button
             AddHandler btnDayz.Click, AddressOf btnDayz_Click
-            'lblDayz.Name = "B" & i
             btnDayz.Name = "b" & i
-            'lblDayz.Text = i.ToString()
             btnDayz.Text = i.ToString
-
             If i = DateTime.Now.Day Then
                 btnDayz.BackColor = Color.Green
                 lblDiaAtualCor.Text = i & " de " & lblMesAtual.Text & " de " & lblAnoCalendario.Text
@@ -79,45 +49,25 @@ Public Class FrmCalendario
             Else
                 btnDayz.BackColor = Color.Aquamarine
             End If
-            'If i = diaMarcado.ToString Then
-            '    MessageBox.Show(diaMarcado)
-            '    btnDayz.BackColor = Color.Coral
-            'End If
-            'If marcarDia(i, Dayz.ToString) Then
-            '    btnDayz.BackColor = Color.Silver
-            'End If
-
             For k As Int16 = 0 To 30
                 If count(k) = i Then
                     btnDayz.BackColor = Color.Silver
                 End If
             Next
             btnDayz.SetBounds(x, y, 37, 27)
-            'lblDayz.SetBounds(x, y, 37, 27)
             x += 42
             If ndayz = 7 Then
                 x = 0
                 ndayz = 0
                 y += 29
             End If
-            'panel1.Controls.Add(lblDayz)
             pnlCalendarioDias.Controls.Add(btnDayz)
-            'lblDayz.Enabled = True
         Next
-        'Dim tamanho = diaMarcado.Length - 2
-
         'Fim teste
-
         'retorna os valores padrão
         x = 0
         ndayz = 0
         y = 0
-        'lblAnoCalendario.Text = mtxtAno.Text
-        'conn.Clone()
-        'For j As Int16 = 1 To 31
-        '    MessageBox.Show(count(j))
-        'Next
-        'MessageBox.Show(contador)
     End Sub
 
     Private Sub formatarNomeMes()
@@ -149,27 +99,21 @@ Public Class FrmCalendario
     End Sub
 
     Private Sub marcarDia(diaMes As String)
-        'conn.Open()
         conn = Conexao.getConexao
         adaptador = Alertas.getAdapter(conn)
         conn.Open()
-        'Dim contador = 0
         Dim i As Integer = 0
         Dim pegarData As Boolean = True
-        'Teste 
         Dim data As Date = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-1"
-        '        MessageBox.Show(data)
         adaptador.SelectCommand.Parameters("@data_termino_alerta").Value = data
         data = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-" + diaMes.ToString
         adaptador.SelectCommand.Parameters("@data_termino_alerta1").Value = data
-
 
         objReader = adaptador.SelectCommand().ExecuteReader
         Dim diaMarcado As String = "0000000000"
         Dim dataV As Date
 
         Do While objReader.Read
-            'contador += 1
             data = objReader.GetValue(3)
             If pegarData Then
                 dataV = data
@@ -177,49 +121,17 @@ Public Class FrmCalendario
                 i += 1
             End If
             pegarData = False
-            'MessageBox.Show(data.Day)
-            'diaMarcado = objReader.GetValue(2).ToString
-            'MessageBox.Show(diaMarcado.ToString)
-            ' MessageBox.Show(diaMarcado.Length & " - " & diaMarcado.Substring(0, 2))
-
-            '            MessageBox.Show(diaMarcado)
-            'If diaMarcado.Substring(1, 1) = "/" Then
-            '    diaMarcado = diaMarcado.Substring(2, 1)
-            'Else
-            '    diaMarcado = diaMarcado.Substring(3, 2)
-            'End If
-            'count += 1
-            'If data.Day = indice Then
-            '    contador += 1
-            'End If
-
             If data.Day <> dataV.Day And dataV <> data Then
                 count(i) = data.Day
                 i += 1
             End If
             dataV = data
-            'MessageBox.Show(diaMarcado) '.Substring(8, 2)) 'objReader.GetValue(1).ToString)
         Loop
-
         conn.Close()
-        'If contador > 0 Then
-        '    'MessageBox.Show(diaMarcado.ToString)
-        '    Return True
-        'Else
-        '    Return False
-        'End If
-
-        'Return True
     End Sub
 
-
     Private Sub btnDayz_Click(ByVal sender As Object, ByVal e As EventArgs)
-        ' Add event handler code here.
-        'Dim linha As New ListViewItem
         Dim diaSelecionado As Integer = 0
-        'conn = Conexao.getConexao
-        'adaptador = ProcurarData.getAdapter(conn)
-        'conn.Open()
         Dim dataSelecionada As Date
         If sender.ToString = "System.Windows.Forms.Button, Text: 1" Then
             diaSelecionado = 1
@@ -297,7 +209,6 @@ Public Class FrmCalendario
             diaSelecionado = 31
         End If
 
-
         dataSelecionada = lblAnoCalendario.Text + "-" + mesAtual.ToString + "-" + diaSelecionado.ToString
 
         Dim frmListarEventosDia As New FrmListaEventosDia
@@ -305,32 +216,10 @@ Public Class FrmCalendario
         frmListarEventosDia.frmCalendario = Me
         frmListarEventosDia.data = dataSelecionada
         frmListarEventosDia.Show()
-
-        'adaptador.SelectCommand.Parameters("@data_inicio_alerta").Value = dataSelecionada
-        'objReader = adaptador.SelectCommand().ExecuteReader
-
-        'Do While objReader.Read
-        '    'MessageBox.Show("Id: " & objReader.GetValue(0).ToString)
-        '    'MessageBox.Show("Titulo: " & objReader.GetValue(1).ToString)
-        '    'MessageBox.Show("Data inicio: " & objReader.GetValue(2).ToString)
-        '    'MessageBox.Show("Data fim: " & objReader.GetValue(3).ToString)
-        '    'MessageBox.Show("Mensagem: " & objReader.GetValue(4).ToString)
-        '    linha.Text = objReader.GetValue(1).ToString
-        '    linha.SubItems.Add(objReader.GetValue(2).ToString)
-        '    linha.SubItems.Add(objReader.GetValue(3).ToString)
-        '    linha.SubItems.Add(objReader.GetValue(4).ToString)
-
-        'Loop
-        'conn.Close()
     End Sub
 
     Private Function verificaDia() As Int32
-        'Dim mes = lblMesAtual.Text
-        'If mes <> "10" And mes <> "11" And mes <> "12" Then
-        '    mes = "0" & mes
-        'End If
-        'Dim ano = lblAnoCalendario.Text
-        Dim time As DateTime = Convert.ToDateTime(mesAtual + "/01/" + lblAnoCalendario.Text) 'mtxtAno.Text)
+        Dim time As DateTime = Convert.ToDateTime(mesAtual + "/01/" + lblAnoCalendario.Text)
         'obtem o dia de inicia da semana para a data informada
         Dayofweek = Application.CurrentCulture.Calendar.GetDayOfWeek(time).ToString()
         If Dayofweek = "Sunday" Then
@@ -355,13 +244,12 @@ Public Class FrmCalendario
             ndayz = 6
         End If
         Return x
-
     End Function
 
     Private Sub renderizaCalendario()
         Try
             Dim currentmonth, currentyear As Int32
-            currentyear = Convert.ToInt32(lblAnoCalendario.Text) 'mtxtAno.Text)
+            currentyear = Convert.ToInt32(lblAnoCalendario.Text)
             currentmonth = Convert.ToInt32(mesAtual)
             If irParProximoMes = True Then
                 If (currentmonth = 12) Then
@@ -369,7 +257,6 @@ Public Class FrmCalendario
                     currentyear += 1
                     currentmonth = 1
                     lblAnoCalendario.Text = currentyear.ToString
-                    'mtxtAno.Text = currentyear.ToString()
                     mesAtual = currentmonth.ToString()
                 Else
                     currentmonth += 1
@@ -390,7 +277,6 @@ Public Class FrmCalendario
                     mesAtual = currentmonth.ToString()
                 End If
             End If
-
             'limpa o painel
             pnlCalendarioDias.Controls.Clear()
             'Exibe o nome do mes na cultura do windows
@@ -404,24 +290,9 @@ Public Class FrmCalendario
             marcarDia(Dayz.ToString)
             For i As Int32 = 1 To Dayz
                 ndayz += 1
-                'lblDayz = New Label()
-                'lblDayz.Text = i.ToString()
-                'lblDayz.BorderStyle = BorderStyle.Fixed3D
+
                 Dim mon As Int32 = Convert.ToInt32(mesAtual)
                 Dim years As Int32 = Convert.ToInt32(lblAnoCalendario.Text)
-                'If ((i = DateTime.Now.Day) And (mon = DateTime.Now.Month) And (years = DateTime.Now.Year)) Then
-                '    'destaca o dia atual
-                '    lblDayz.BackColor = Color.Green
-                'ElseIf (ndayz = 1) Then
-                '    lblDayz.BackColor = Color.Red
-                'ElseIf ndayz = 7 Then
-                '    lblDayz.BackColor = Color.Blue
-                'Else
-                '    'define a cor dos outros dias do mes
-                '    lblDayz.BackColor = Color.Aquamarine
-                'End If
-                'lblDayz.Font = label31.Font
-                'lblDayz.SetBounds(x, y, 37, 27)v
                 btnDayz = New Button
                 AddHandler btnDayz.Click, AddressOf btnDayz_Click
 
@@ -434,40 +305,27 @@ Public Class FrmCalendario
                 Else
                     btnDayz.BackColor = Color.Aquamarine
                 End If
-
-                'If marcarDia(i, Dayz.ToString) Then
-                'btnDayz.BackColor = Color.Silver
-                'End If
-
                 For k As Int16 = 0 To 30
                     If count(k) = i Then
                         btnDayz.BackColor = Color.Silver
                     End If
                 Next
-
                 btnDayz.SetBounds(x, y, 37, 27)
-
-
-
                 x += 42
                 If (ndayz = 7) Then
                     x = 0
                     ndayz = 0
                     y += 29
                 End If
-                'panel1.Controls.Add(lblDayz)
                 pnlCalendarioDias.Controls.Add(btnDayz)
             Next
             x = 0
             ndayz = 0
             y = 0
-            'lblAnoCalendario.Text = mtxtAno.Text
         Catch et As FormatException
             MessageBox.Show("Data inválida")
-            'mtxtAno.Focus()
         Catch ex As NullReferenceException
             MessageBox.Show("Data inválida")
-            'mtxtAno.Focus()
         End Try
     End Sub
 
@@ -484,5 +342,4 @@ Public Class FrmCalendario
     Private Sub FrmCalendario_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         montarCalendario()
     End Sub
-
 End Class

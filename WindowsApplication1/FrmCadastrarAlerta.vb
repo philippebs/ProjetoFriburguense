@@ -14,7 +14,6 @@
         Me.Close()
     End Sub
 
-
     Private Sub btnAlertaSalvar_Click(sender As Object, e As EventArgs) Handles btnAlertaSalvar.Click
         Dim inicio As Date
         Dim termino As Date = mtxtAlertaDataTermino.Text
@@ -39,7 +38,6 @@
             If conta = 1 Then
                 Dim dia As Integer = termino.Day
                 dia -= 3
-                'Dim d As String = dia
                 inicio = dia.ToString & "/" & termino.Month & "/" & termino.Year
                 inicio = Format(inicio, "yyyy-MM-dd")
             End If

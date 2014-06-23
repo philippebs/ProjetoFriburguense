@@ -48,7 +48,6 @@ Public Class Friburguense
         Dim ctl As Control
         Dim ctlMDI As MdiClient
 
-
         ' Loop through all of the form's controls looking
         ' for the control of type MdiClient.
         For Each ctl In Me.Controls
@@ -69,10 +68,10 @@ Public Class Friburguense
         Dim mesAtual As String = DateTime.Now.Month.ToString()
         Dim anoAtual As String = DateTime.Now.Year.ToString()
         Dim diaAtual As String = "01"
-        'MessageBox.Show(DateTime.Now)
+
         Dim data1 As String = anoAtual + "-" + mesAtual + "-" + diaAtual
         adaptador = AlertaBox.getAdapter(conn, data1)
-        'adaptador.SelectCommand.Parameters("@data_inicio_alerta").Value = data
+
         objReader = adaptador.SelectCommand().ExecuteReader
         Do While objReader.Read
             contador += 1
@@ -81,33 +80,19 @@ Public Class Friburguense
         Dim data_termino(contador) As Date
         Dim id_alerta(contador) As Int32
         Dim count As Integer = 1
-        conn.Close()
-        conn.Open()
+        'conn.Close()
+        'conn.Open()
 
-        objReader = adaptador.SelectCommand().ExecuteReader
+        'objReader = adaptador.SelectCommand().ExecuteReader
         Do While objReader.Read
-            'Dim cat As String
-            ' cat = objReader.GetString(2)
-            'Dim linha As New ListViewItem
-            'If cat = categoria Then
-            'linha.Text = objReader.GetValue(1).ToString
-            'linha.SubItems.Add(objReader.GetValue(2).ToString)
-            'linha.SubItems.Add(objReader.GetValue(3).ToString)
-            'linha.SubItems.Add(objReader.GetValue(4).ToString)
             id_alerta(count) = objReader.GetValue(0)
             titulo_alerta(count) = objReader.GetValue(1).ToString
             data_termino(count) = objReader.GetValue(3)
-            'MsgBox(titulo_alerta(count))
             count += 1
         Loop
-        'If contador = 0 Then
-        '    MessageBox.Show("Nenhum evento para o dia selecionado!")
-        '    Me.Close()
-        'End If
         conn.Close()
 
         For i = 1 To contador Step 1
-
             frmAlertaBox = New FrmAlertaBox
             frmAlertaBox.NomeAlerta(titulo_alerta(i), data_termino(i))
             frmAlertaBox.ValorN(i)
@@ -125,16 +110,10 @@ Public Class Friburguense
 
     Private Sub CadastrarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CadastrarToolStripMenuItem1.Click
         Login("cad_contato")
-        'frmCadastroContatos = New FrmCadastroContato
-        'frmCadastroContatos.MdiParent = Me
-        'frmCadastroContatos.Show()
     End Sub
 
     Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
         Login("lst_contato")
-        'frmListaContatos = New FrmListaContato
-        'frmListaContatos.MdiParent = Me
-        'frmListaContatos.Show()
     End Sub
 
     Private Sub CalendárioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CalendárioToolStripMenuItem.Click

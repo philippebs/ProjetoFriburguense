@@ -10,8 +10,6 @@ Public Class FrmCadastroContrato
     Private nomeJogador As String
     Private inicio As Date
     Private termino As Date
-    'Dim inicio As Date = mtxtDataInicio.Text
-    'Dim termino As Date = mtxtDataTermino.Text
     Public Sub IdJogador(ByVal id As Integer)
         If id > -1 Then
             id_jogador_contrato = id
@@ -43,7 +41,6 @@ Public Class FrmCadastroContrato
 
 
     Private Sub FrmCadastroContrato_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        'If Not linha Is Nothing Then
         lblNomeJoagador.Text = "Nome: " + nomeJogador
         conn = Conexao.getConexao
         adaptador = Contrato.getAdapter(conn)
@@ -51,7 +48,6 @@ Public Class FrmCadastroContrato
         conn.Open()
         adaptador.SelectCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
         adaptador.SelectCommand.Parameters("@status_ativo_contrato").Value = "1"
-        'MessageBox.Show(linha.SubItems(0).Text)
         objReader = adaptador.SelectCommand().ExecuteReader
         If objReader.HasRows Then
             Do While objReader.Read
@@ -65,38 +61,13 @@ Public Class FrmCadastroContrato
                 txtPrecoContrato.Text = objReader.GetValue(8)
                 txtValorContrato.Text = objReader.GetValue(9)
                 txtValorCarteiraContrato.Text = objReader.GetValue(10)
-
-                '    'Dim data As Date = String.Format(objReader.GetValue(11), "")
-                '    id_contrato = objReader.GetValue(0)
-                '    id_jogador_contrato = objReader.GetValue(1)
-                'txtNomeJogador.Text = objReader.GetValue(2)
-                'cmbPosicaoJogador.Text = objReader.GetValue(4)
-                'cmbCategoriaJogador.Text = objReader.GetValue(2)
-                'mtxtCadastroNAscimento.Text = objReader.GetValue(3)
-                'txtTipoJogador.Text = objReader.GetValue(6)
-                'txtAgenteJogador.Text = objReader.GetValue(5)
-                'txtValorJogador.Text = objReader.GetValue(7)
-                'txtPrecoJogador.Text = objReader.GetValue(8)
-                'txtRemuneracaoJogador.Text = objReader.GetValue(9)
-                'txtValorCarteiraJogador.Text = objReader.GetValue(10)
-                ''Data = Format(objReader.GetValue(11), "dd/MM/yyyy")
-                'MessageBox.Show("TEste")
-                'mtxtCadastroInicio.Text = objReader.GetValue(11)
-                'mtxtCadastroTermino.Text = objReader.GetValue(12)
-                'txtClausulasJogador.Text = objReader.GetValue(13)
             Loop
             cadastrar = False
             btnCadastarContrato.Text = "Salvar"
-            'cmbPosicaoJogador.Text = linha.SubItems(1).Text
-            'cmbCategoriaJogador.Text = linha.SubItems(2).Text
-            'MessageBox.Show(linha.SubItems(3).Text)
-
         Else
             MessageBox.Show("Jogador sem contrato ou contrato terminou!")
         End If
         conn.Close()
-        'MessageBox.Show(linha.Text)
-        'End If
     End Sub
 
     Private Sub btnCancelarCadastroContrato_Click(sender As Object, e As EventArgs) Handles btnCancelarCadastroContrato.Click
@@ -113,8 +84,6 @@ Public Class FrmCadastroContrato
     End Sub
 
     Private Sub cadastrarAlterar(ByVal ativo As Integer)
-        
-
         inicio = Format(inicio, "yyyy-MM-dd")
         termino = Format(termino, "yyyy-MM-dd")
         conn = Conexao.getConexao
@@ -122,9 +91,7 @@ Public Class FrmCadastroContrato
 
         conn.Open()
         Try
-            'MessageBox.Show(linha.SubItems(0).ToString)
             If cadastrar Then
-                ''linha Is Nothing Then
                 adaptador.InsertCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
                 adaptador.InsertCommand.Parameters("@tipo_contrato").Value = txtTipoContrato.Text
                 adaptador.InsertCommand.Parameters("@agente_contrato").Value = txtAgenteContrato.Text
@@ -139,7 +106,6 @@ Public Class FrmCadastroContrato
                 adaptador.InsertCommand.ExecuteNonQuery()
                 MessageBox.Show("Cadastro realizado com sucesso!")
             Else
-                'MessageBox.Show(linha.Text)
                 adaptador.UpdateCommand.Parameters("@id_contrato").Value = id_contrato
                 adaptador.UpdateCommand.Parameters("@id_jogador_contrato").Value = id_jogador_contrato
                 adaptador.UpdateCommand.Parameters("@tipo_contrato").Value = txtTipoContrato.Text
@@ -158,7 +124,6 @@ Public Class FrmCadastroContrato
                 End If
                 End If
                 conn.Close()
-                'frmListarJogadores.atualizar()
         Catch ex As Exception
             MessageBox.Show("Valores repetidos")
             MessageBox.Show(ex.ToString)
