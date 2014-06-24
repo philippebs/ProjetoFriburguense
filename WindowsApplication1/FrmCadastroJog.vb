@@ -26,6 +26,7 @@ Public Class FrmCadastroJog
                 adaptador.InsertCommand.Parameters("@categoria_jogador").Value = cmbCategoriaJogador.SelectedItem
                 adaptador.InsertCommand.Parameters("@nascimento_jogador").Value = nascimento
                 adaptador.InsertCommand.Parameters("@posicao_jogador").Value = cmbPosicaoJogador.SelectedItem
+                adaptador.InsertCommand.Parameters("@numero_pos_jogador").Value = cmbPosicaoJogador.SelectedIndex
                 adaptador.InsertCommand.ExecuteNonQuery()
                 MessageBox.Show("Cadastro realizado com sucesso!")
             Else
@@ -34,6 +35,7 @@ Public Class FrmCadastroJog
                 adaptador.UpdateCommand.Parameters("@categoria_jogador").Value = cmbCategoriaJogador.SelectedItem
                 adaptador.UpdateCommand.Parameters("@nascimento_jogador").Value = nascimento
                 adaptador.UpdateCommand.Parameters("@posicao_jogador").Value = cmbPosicaoJogador.SelectedItem
+                adaptador.UpdateCommand.Parameters("@numero_pos_jogador").Value = cmbPosicaoJogador.SelectedIndex
                 adaptador.UpdateCommand.ExecuteNonQuery()
                 MessageBox.Show("Alteração realizada com sucesso!!")
             End If
@@ -47,11 +49,31 @@ Public Class FrmCadastroJog
     End Sub
 
     Private Sub btnAlertaCadastroJogador_Click(sender As Object, e As EventArgs) Handles btnAlertaCadastroJogador.Click
-        Dim frmCadastroAlert As New FrmCadastrarAlerta()
-        frmCadastroAlert.MdiParent = Me.MdiParent
-        frmCadastroAlert.frmCadastroJogador = Me
-        frmCadastroAlert.Show()
+        'Dim frmCadastroAlert As New FrmCadastrarAlerta()
+        'frmCadastroAlert.MdiParent = Me.MdiParent
+        'frmCadastroAlert.frmCadastroJogador = Me
+        'frmCadastroAlert.txtTitulo.Text = retornaTextoSelecionado()
+        'frmCadastroAlert.Show()
+        MessageBox.Show(retornaTextoSelecionado())
     End Sub
+
+    Private Function retornaTextoSelecionado()
+        Dim texto As String = "Nao selecionado"
+        If txtNomeJogador.SelectedText.Length > 0 Then
+            texto = txtNomeJogador.SelectedText
+        End If
+        If mtxtCadastroNAscimento.SelectedText.Length > 0 Then
+            texto = mtxtCadastroNAscimento.SelectedText
+        End If
+        If cmbCategoriaJogador.SelectedText.Length > 0 Then
+            texto = cmbCategoriaJogador.SelectedText
+            MessageBox.Show(cmbCategoriaJogador.SelectedText)
+        End If
+        If cmbPosicaoJogador.SelectedText.Length > 0 Then
+            texto = cmbPosicaoJogador.SelectedText
+        End If
+        Return texto
+    End Function
 
     Private Sub FrmCadastroJog_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
 

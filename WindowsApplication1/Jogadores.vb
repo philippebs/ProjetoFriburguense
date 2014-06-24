@@ -7,7 +7,7 @@ Module Jogadores
         Dim sqlSelectcommand As New MySqlCommand
 
         sqlSelectcommand.Connection = conn
-        sqlSelectcommand.CommandText = "Select * from tabela_jogadores where categoria_jogador = ?"
+        sqlSelectcommand.CommandText = "Select * from tabela_jogadores where categoria_jogador = ? order by numero_pos_jogador"
 
         Dim objParam As MySqlParameter
 
@@ -20,7 +20,7 @@ Module Jogadores
         Dim sqlUpdateCommand As New MySqlCommand
 
         sqlUpdateCommand.Connection = conn
-        sqlUpdateCommand.CommandText = "update tabela_jogadores set nome_jogador = ?, categoria_jogador = ?, nascimento_jogador = ?, posicao_jogador = ? where id_jogador = ?"
+        sqlUpdateCommand.CommandText = "update tabela_jogadores set nome_jogador = ?, categoria_jogador = ?, nascimento_jogador = ?, posicao_jogador = ?, numero_pos_jogador = ? where id_jogador = ?"
 
         objParam = sqlUpdateCommand.Parameters.Add("@nome_jogador", MySqlDbType.VarChar)
         objParam.SourceColumn = "nome_jogador"
@@ -38,6 +38,10 @@ Module Jogadores
         objParam.SourceColumn = "posicao_jogador"
         objParam.SourceVersion = DataRowVersion.Current
 
+        objParam = sqlUpdateCommand.Parameters.Add("@numero_pos_jogador", MySqlDbType.Int16)
+        objParam.SourceColumn = "numero_pos_jogador"
+        objParam.SourceVersion = DataRowVersion.Current
+
         objParam = sqlUpdateCommand.Parameters.Add("@id_jogador", MySqlDbType.Int32)
         objParam.SourceColumn = "id_jogador"
         objParam.SourceVersion = DataRowVersion.Original
@@ -47,7 +51,7 @@ Module Jogadores
         Dim sqlInsertCommand As New MySqlCommand
 
         sqlInsertCommand.Connection = conn
-        sqlInsertCommand.CommandText = "INSERT INTO tabela_jogadores ( nome_jogador, categoria_jogador, nascimento_jogador, posicao_jogador) values(?,?,?,?)"
+        sqlInsertCommand.CommandText = "INSERT INTO tabela_jogadores ( nome_jogador, categoria_jogador, nascimento_jogador, posicao_jogador, numero_pos_jogador) values(?,?,?,?,?)"
 
         objParam = sqlInsertCommand.Parameters.Add("@nome_jogador", MySqlDbType.VarChar)
         objParam.SourceColumn = "nome_jogador"
@@ -63,6 +67,10 @@ Module Jogadores
 
         objParam = sqlInsertCommand.Parameters.Add("@posicao_jogador", MySqlDbType.VarChar)
         objParam.SourceColumn = "posicao_jogador"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlInsertCommand.Parameters.Add("@numero_pos_jogador", MySqlDbType.Int16)
+        objParam.SourceColumn = "numero_pos_jogador"
         objParam.SourceVersion = DataRowVersion.Current
 
         jogadoresDtAdapter.InsertCommand = sqlInsertCommand

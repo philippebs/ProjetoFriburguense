@@ -143,4 +143,7 @@ Public Class FrmCadastroContrato
         txtClausulasContrato.Text = ""
     End Sub
 
+    Private Sub btnAlertaCadastroContrato_Click(sender As Object, e As EventArgs) Handles btnAlertaCadastroContrato.Click
+
+    End Sub
 End Class

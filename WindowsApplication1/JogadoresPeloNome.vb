@@ -6,7 +6,7 @@ Module JogadoresPeloNome
 
         Dim sqlSelectNomeCommand As New MySqlCommand
         sqlSelectNomeCommand.Connection = conn
-        sqlSelectNomeCommand.CommandText = "Select * from tabela_jogadores where nome_jogador = ?"
+        sqlSelectNomeCommand.CommandText = "Select * from tabela_jogadores where nome_jogador = ? "
 
         Dim objParam As MySqlParameter
 

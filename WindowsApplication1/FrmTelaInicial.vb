@@ -67,7 +67,7 @@ Public Class Friburguense
         conn.Open()
         Dim mesAtual As String = DateTime.Now.Month.ToString()
         Dim anoAtual As String = DateTime.Now.Year.ToString()
-        Dim diaAtual As String = "01"
+        Dim diaAtual As String = DateTime.Now.Day.ToString()
 
         Dim data1 As String = anoAtual + "-" + mesAtual + "-" + diaAtual
         adaptador = AlertaBox.getAdapter(conn, data1)
@@ -80,10 +80,10 @@ Public Class Friburguense
         Dim data_termino(contador) As Date
         Dim id_alerta(contador) As Int32
         Dim count As Integer = 1
-        'conn.Close()
-        'conn.Open()
+        conn.Close()
+        conn.Open()
 
-        'objReader = adaptador.SelectCommand().ExecuteReader
+        objReader = adaptador.SelectCommand().ExecuteReader
         Do While objReader.Read
             id_alerta(count) = objReader.GetValue(0)
             titulo_alerta(count) = objReader.GetValue(1).ToString
@@ -91,7 +91,6 @@ Public Class Friburguense
             count += 1
         Loop
         conn.Close()
-
         For i = 1 To contador Step 1
             frmAlertaBox = New FrmAlertaBox
             frmAlertaBox.NomeAlerta(titulo_alerta(i), data_termino(i))

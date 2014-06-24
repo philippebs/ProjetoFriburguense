@@ -295,11 +295,7 @@ Partial Class FrmCadastroContrato
         Me.Controls.Add(Me.Label2)
         Me.Name = "FrmCadastroContrato"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-
-        'Me.Text = "FrmContrato"
-
         Me.Text = "Contrato"
-
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
