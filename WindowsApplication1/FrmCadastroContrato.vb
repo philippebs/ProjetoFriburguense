@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class FrmCadastroContrato
     Public frmCadastroJog As New FrmCadastroJog
+    Private frmCadastrarAlertas As FrmCadastrarAlerta
     Private cadastrar As Boolean = True
     Private id_jogador_contrato As Integer
     Private conn As MySql.Data.MySqlClient.MySqlConnection
@@ -104,6 +105,23 @@ Public Class FrmCadastroContrato
                 adaptador.InsertCommand.Parameters("@clausulas_contrato").Value = txtClausulasContrato.Text
                 adaptador.InsertCommand.Parameters("@status_ativo_contrato").Value = ativo
                 adaptador.InsertCommand.ExecuteNonQuery()
+
+                Dim adaptador2 As MySql.Data.MySqlClient.MySqlDataAdapter
+                Dim conn2 As MySql.Data.MySqlClient.MySqlConnection
+                conn2 = Conexao.getConexao
+                adaptador2 = Alertas.getAdapter(conn2)
+                conn2.Open()
+                Try
+                    adaptador2.InsertCommand.Parameters("@titulo_alerta").Value = "Renovar Contrato: " + nomeJogador
+                    adaptador2.InsertCommand.Parameters("@data_inicio_alerta").Value = termino
+                    adaptador2.InsertCommand.Parameters("@data_termino_alerta").Value = termino
+                    adaptador2.InsertCommand.Parameters("@mensagem_alerta").Value = "O contrato do jogador " & nomeJogador & " termina em: " & termino.Day.ToString & "/" & termino.Month.ToString & "/" & termino.Year.ToString
+                    adaptador2.InsertCommand.Parameters("@conta_alerta").Value = 0
+                    adaptador2.InsertCommand.ExecuteNonQuery()
+                    conn2.Close()
+                Catch ex As Exception
+                    MessageBox.Show(ex.ToString)
+                End Try
                 MessageBox.Show("Cadastro realizado com sucesso!")
             Else
                 adaptador.UpdateCommand.Parameters("@id_contrato").Value = id_contrato
@@ -122,12 +140,18 @@ Public Class FrmCadastroContrato
                 If ativo = 1 Then
                     MessageBox.Show("Alteração realizada com sucesso!!")
                 End If
-                End If
+            End If
                 conn.Close()
         Catch ex As Exception
             MessageBox.Show("Valores repetidos")
             MessageBox.Show(ex.ToString)
         End Try
+
+        'Dim frmCadastroAlert As New FrmCadastrarAlerta()
+        'frmCadastroAlert.MdiParent = Me.MdiParent
+        'frmCadastroAlert.frmCadastroJogador = Me
+
+        'frmCadastroAlert.Show()
 
     End Sub
 
