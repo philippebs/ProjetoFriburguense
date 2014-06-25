@@ -67,7 +67,7 @@ Partial Class FrmAlertaBox
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lime
-        Me.ClientSize = New System.Drawing.Size(203, 122)
+        Me.ClientSize = New System.Drawing.Size(184, 62)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)

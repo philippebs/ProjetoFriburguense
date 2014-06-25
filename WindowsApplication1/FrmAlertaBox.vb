@@ -15,12 +15,9 @@ Public Class FrmAlertaBox
             Me.Refresh()
         Else
             Timer1.Stop()
-
         End If
-
     End Sub
     'Dim teste As Form2
-
     Public Sub ValorN(n As Integer)
         y = n
     End Sub
@@ -34,8 +31,8 @@ Public Class FrmAlertaBox
         data_t = dataTermino
     End Sub
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Height = 100
-        Me.Width = 200
+        'Me.Height = 100
+        'Me.Width = 200
         Dim z = y * 110
         Me.Location = New Point(intX - 200, intY - 30)
 
@@ -63,7 +60,4 @@ Public Class FrmAlertaBox
         frmVerAlerta.pegarCodigo(id)
         frmVerAlerta.Show()
     End Sub
-
-
-
 End Class

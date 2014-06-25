@@ -112,7 +112,7 @@ Public Class FrmCadastroContrato
                 adaptador2 = Alertas.getAdapter(conn2)
                 conn2.Open()
                 Try
-                    adaptador2.InsertCommand.Parameters("@titulo_alerta").Value = "Renovar Contrato: " + nomeJogador
+                    adaptador2.InsertCommand.Parameters("@titulo_alerta").Value = "Renovar Contrato: "
                     adaptador2.InsertCommand.Parameters("@data_inicio_alerta").Value = termino
                     adaptador2.InsertCommand.Parameters("@data_termino_alerta").Value = termino
                     adaptador2.InsertCommand.Parameters("@mensagem_alerta").Value = "O contrato do jogador " & nomeJogador & " termina em: " & termino.Day.ToString & "/" & termino.Month.ToString & "/" & termino.Year.ToString
@@ -147,12 +147,6 @@ Public Class FrmCadastroContrato
             MessageBox.Show(ex.ToString)
         End Try
 
-        'Dim frmCadastroAlert As New FrmCadastrarAlerta()
-        'frmCadastroAlert.MdiParent = Me.MdiParent
-        'frmCadastroAlert.frmCadastroJogador = Me
-
-        'frmCadastroAlert.Show()
-
     End Sub
 
     Private Sub limparCampos()
@@ -168,6 +162,38 @@ Public Class FrmCadastroContrato
     End Sub
 
     Private Sub btnAlertaCadastroContrato_Click(sender As Object, e As EventArgs) Handles btnAlertaCadastroContrato.Click
-
+        MessageBox.Show(retornaTextoSelecionado())
     End Sub
+
+    Private Function retornaTextoSelecionado()
+        Dim texto As String = "Nao selecionado"
+        If txtTipoContrato.SelectedText.Length > 0 Then
+            texto = txtTipoContrato.SelectedText
+        End If
+        If txtAgenteContrato.SelectedText.Length > 0 Then
+            texto = txtAgenteContrato.SelectedText
+        End If
+        If txtPrecoContrato.SelectedText.Length > 0 Then
+            texto = txtPrecoContrato.SelectedText
+        End If
+        If txtRemuneracaoContrato.SelectedText.Length > 0 Then
+            texto = txtRemuneracaoContrato.SelectedText
+        End If
+        If txtValorCarteiraContrato.SelectedText.Length > 0 Then
+            texto = txtValorCarteiraContrato.SelectedText
+        End If
+        If txtValorContrato.SelectedText.Length > 0 Then
+            texto = txtValorContrato.SelectedText
+        End If
+        If txtClausulasContrato.SelectedText.Length > 0 Then
+            texto = txtClausulasContrato.SelectedText
+        End If
+        If mtxtDataInicio.SelectedText.Length > 0 Then
+            texto = mtxtDataInicio.SelectedText
+        End If
+        If mtxtDataTermino.SelectedText.Length > 0 Then
+            texto = mtxtDataTermino.SelectedText
+        End If
+        Return texto
+    End Function
 End Class

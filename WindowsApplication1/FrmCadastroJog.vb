@@ -65,13 +65,14 @@ Public Class FrmCadastroJog
         If mtxtCadastroNAscimento.SelectedText.Length > 0 Then
             texto = mtxtCadastroNAscimento.SelectedText
         End If
-        If cmbCategoriaJogador.SelectedText.Length > 0 Then
-            texto = cmbCategoriaJogador.SelectedText
-            MessageBox.Show(cmbCategoriaJogador.SelectedText)
-        End If
-        If cmbPosicaoJogador.SelectedText.Length > 0 Then
-            texto = cmbPosicaoJogador.SelectedText
-        End If
+        MessageBox.Show(cmbCategoriaJogador.SelectedText.Length)
+        'If cmbCategoriaJogador.SelectedText.Then Then
+        '    texto = cmbCategoriaJogador.SelectedItem
+        '    'MessageBox.Show(cmbCategoriaJogador.SelectedItem)
+        'End If
+        'If cmbPosicaoJogador.CanFocus Then
+        'texto = cmbPosicaoJogador.SelectedItem
+        'End If
         Return texto
     End Function
 
