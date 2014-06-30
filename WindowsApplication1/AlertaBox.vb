@@ -6,13 +6,13 @@ Module AlertaBox
         sqlSelectcommand.Connection = conn
         Dim time As Date = Date.Parse(d_i)
         Dim data_ As Date
-        data_ = time.AddDays(30)
+        data_ = time.AddMonths(7)
         Dim mesAtual As String = data_.Month.ToString()
         Dim anoAtual As String = data_.Year.ToString()
         Dim diaAtual As String = data_.Day.ToString()
         Dim data1 As String = anoAtual + "-" + mesAtual + "-" + diaAtual
 
-        sqlSelectcommand.CommandText = "Select * from tabela_alerta where data_termino_alerta >= '" + d_i + "'" 'AND '" + data1 + "' > data_termino_alerta"
+        sqlSelectcommand.CommandText = "Select * from tabela_alerta where data_termino_alerta >= '" + d_i + "'AND data_termino_alerta < '" + data1 + "' "
 
 
         'Dim objParam As MySqlParameter
