@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class FrmCadastroJog
+    Public frmLogin As New FrmLogin
     Public frmListarJogadores As New FrmListaJogador
     Private frmCadastrarAlertas As FrmCadastrarAlerta
     Public linha As ListViewItem
@@ -129,14 +130,20 @@ Public Class FrmCadastroJog
         mtxtTelefone.Enabled = True
     End Sub
     Private Sub btnContratoCadastro_Click(sender As Object, e As EventArgs) Handles btnContratoCadastro.Click
-        Dim frmCadastroContrato As New FrmCadastroContrato()
-        frmCadastroContrato.IdJogador(id_jogador)
-        frmCadastroContrato.nomeDoJogador(txtNomeJogador.Text)
-        frmCadastroContrato.MdiParent = Me.MdiParent
-        frmCadastroContrato.frmCadastroJog = Me
-        frmCadastroContrato.Show()
+        Dim frmLogin As New FrmLogin()
+        'frmLogin.IdJogador(id_jogador)
+        'frmLogin.nomeDoJogador(txtNomeJogador.Text)
+        frmLogin.MdiParent = Me.MdiParent
+        Login("contrato")
+        'frmLogin.frmCadastroJog = Me
+        frmLogin.Show()
     End Sub
-
+    Private Sub Login(tela As String)
+        frmLogin = New FrmLogin
+        frmLogin.abrirOutraTela(tela)
+        'frmLogin.MdiParent = Me
+        frmLogin.Show()
+    End Sub
 
     Private Sub btnAvaliacao_Click(sender As Object, e As EventArgs) Handles btnAvaliacao.Click
         Dim caminho As String = "C:\Users\Philippe-i3\Desktop\Avaliacao\" + cmbCategoriaJogador.SelectedItem + "\" + txtNomeJogador.Text + ".pdf"

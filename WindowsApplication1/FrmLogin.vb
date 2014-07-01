@@ -3,6 +3,7 @@ Imports System.Security.Cryptography
 
 Public Class FrmLogin
     Private frmListaJogadores As FrmListaJogador
+    Private frmCadContrato As FrmCadastroContrato
     Private frmCadastroContatos As FrmCadastroContato
     Private frmListaContatos As FrmListaContato
     Public abrir As String
@@ -10,6 +11,13 @@ Public Class FrmLogin
     Private conn As MySql.Data.MySqlClient.MySqlConnection
     Private adaptador As MySql.Data.MySqlClient.MySqlDataAdapter
     Private Property objReader As MySqlDataReader
+    Private id As Integer
+    Private nome As String
+
+    Public Sub jogador(ByVal id_jog As Integer, ByVal nome_jog As String)
+        id = id_jog
+        nome = nome_jog
+    End Sub
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         conn = Conexao.getConexao
         conn.Open()
@@ -45,6 +53,18 @@ Public Class FrmLogin
                 frmListaContatos.frmLogin = Me
                 frmListaContatos.Show()
             End If
+            If abrir = "contrato" Then
+                frmCadContrato = New FrmCadastroContrato
+                frmCadContrato.MdiParent = Me.MdiParent
+                frmCadContrato.IdJogador(id)
+                frmCadContrato.nomeDoJogador(nome)
+                frmCadContrato.MdiParent = Me.MdiParent
+                'frmCadContrato.frmCadastroJog = Me
+
+                'frmCadContrato.frmLogin = Me
+                frmCadContrato.Show()
+            End If
+
             Me.Close()
         Else
             MsgBox("Senha incorreta, por favor tente novamente")

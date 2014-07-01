@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class FrmCadastroContrato
+
     Public frmCadastroJog As New FrmCadastroJog
     Private frmCadastrarAlertas As FrmCadastrarAlerta
     Private cadastrar As Boolean = True
@@ -37,7 +38,7 @@ Public Class FrmCadastroContrato
         Else
             MessageBox.Show("Inicio do contrato é maior que o termino!")
         End If
-        
+
     End Sub
 
 
@@ -168,7 +169,7 @@ Public Class FrmCadastroContrato
                     MessageBox.Show("Alteração realizada com sucesso!!")
                 End If
             End If
-                conn.Close()
+            conn.Close()
         Catch ex As Exception
             MessageBox.Show("Valores repetidos")
             MessageBox.Show(ex.ToString)
