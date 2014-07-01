@@ -36,6 +36,10 @@ Partial Class FrmCadastroJog
         Me.mtxtCadastroNAscimento = New System.Windows.Forms.MaskedTextBox()
         Me.btnContratoCadastro = New System.Windows.Forms.Button()
         Me.btnAvaliacao = New System.Windows.Forms.Button()
+        Me.txtContato = New System.Windows.Forms.TextBox()
+        Me.lblContato = New System.Windows.Forms.Label()
+        Me.lblTelefone = New System.Windows.Forms.Label()
+        Me.mtxtTelefone = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -77,7 +81,7 @@ Partial Class FrmCadastroJog
         Me.btnCadastarJogador.Location = New System.Drawing.Point(9, 133)
         Me.btnCadastarJogador.Name = "btnCadastarJogador"
         Me.btnCadastarJogador.Size = New System.Drawing.Size(68, 23)
-        Me.btnCadastarJogador.TabIndex = 13
+        Me.btnCadastarJogador.TabIndex = 7
         Me.btnCadastarJogador.Text = "Cadastrar"
         Me.btnCadastarJogador.UseVisualStyleBackColor = True
         '
@@ -86,7 +90,7 @@ Partial Class FrmCadastroJog
         Me.btnCancelarCadastroJogador.Location = New System.Drawing.Point(83, 133)
         Me.btnCancelarCadastroJogador.Name = "btnCancelarCadastroJogador"
         Me.btnCancelarCadastroJogador.Size = New System.Drawing.Size(68, 23)
-        Me.btnCancelarCadastroJogador.TabIndex = 14
+        Me.btnCancelarCadastroJogador.TabIndex = 8
         Me.btnCancelarCadastroJogador.Text = "Cancelar"
         Me.btnCancelarCadastroJogador.UseVisualStyleBackColor = True
         '
@@ -95,7 +99,7 @@ Partial Class FrmCadastroJog
         Me.btnEditarCadastroJogador.Location = New System.Drawing.Point(157, 133)
         Me.btnEditarCadastroJogador.Name = "btnEditarCadastroJogador"
         Me.btnEditarCadastroJogador.Size = New System.Drawing.Size(68, 23)
-        Me.btnEditarCadastroJogador.TabIndex = 15
+        Me.btnEditarCadastroJogador.TabIndex = 9
         Me.btnEditarCadastroJogador.Text = "Editar"
         Me.btnEditarCadastroJogador.UseVisualStyleBackColor = True
         '
@@ -104,7 +108,7 @@ Partial Class FrmCadastroJog
         Me.btnAlertaCadastroJogador.Location = New System.Drawing.Point(231, 133)
         Me.btnAlertaCadastroJogador.Name = "btnAlertaCadastroJogador"
         Me.btnAlertaCadastroJogador.Size = New System.Drawing.Size(68, 23)
-        Me.btnAlertaCadastroJogador.TabIndex = 16
+        Me.btnAlertaCadastroJogador.TabIndex = 10
         Me.btnAlertaCadastroJogador.Text = "Alerta"
         Me.btnAlertaCadastroJogador.UseVisualStyleBackColor = True
         '
@@ -141,7 +145,7 @@ Partial Class FrmCadastroJog
         Me.mtxtCadastroNAscimento.Mask = "00/00/0000"
         Me.mtxtCadastroNAscimento.Name = "mtxtCadastroNAscimento"
         Me.mtxtCadastroNAscimento.Size = New System.Drawing.Size(64, 20)
-        Me.mtxtCadastroNAscimento.TabIndex = 3
+        Me.mtxtCadastroNAscimento.TabIndex = 4
         Me.mtxtCadastroNAscimento.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
         Me.mtxtCadastroNAscimento.ValidatingType = GetType(Date)
         '
@@ -150,7 +154,7 @@ Partial Class FrmCadastroJog
         Me.btnContratoCadastro.Location = New System.Drawing.Point(305, 133)
         Me.btnContratoCadastro.Name = "btnContratoCadastro"
         Me.btnContratoCadastro.Size = New System.Drawing.Size(68, 23)
-        Me.btnContratoCadastro.TabIndex = 31
+        Me.btnContratoCadastro.TabIndex = 11
         Me.btnContratoCadastro.Text = "Contrato"
         Me.btnContratoCadastro.UseVisualStyleBackColor = True
         '
@@ -159,20 +163,53 @@ Partial Class FrmCadastroJog
         Me.btnAvaliacao.Location = New System.Drawing.Point(262, 104)
         Me.btnAvaliacao.Name = "btnAvaliacao"
         Me.btnAvaliacao.Size = New System.Drawing.Size(98, 23)
-        Me.btnAvaliacao.TabIndex = 33
-
+        Me.btnAvaliacao.TabIndex = 6
         Me.btnAvaliacao.Text = "Avaliação"
         Me.btnAvaliacao.UseVisualStyleBackColor = True
+        '
+        'txtContato
+        '
+        Me.txtContato.Location = New System.Drawing.Point(55, 73)
+        Me.txtContato.Name = "txtContato"
+        Me.txtContato.Size = New System.Drawing.Size(100, 20)
+        Me.txtContato.TabIndex = 3
+        '
+        'lblContato
+        '
+        Me.lblContato.AutoSize = True
+        Me.lblContato.Location = New System.Drawing.Point(10, 80)
+        Me.lblContato.Name = "lblContato"
+        Me.lblContato.Size = New System.Drawing.Size(44, 13)
+        Me.lblContato.TabIndex = 35
+        Me.lblContato.Text = "Contato"
+        '
+        'lblTelefone
+        '
+        Me.lblTelefone.AutoSize = True
+        Me.lblTelefone.Location = New System.Drawing.Point(5, 111)
+        Me.lblTelefone.Name = "lblTelefone"
+        Me.lblTelefone.Size = New System.Drawing.Size(49, 13)
+        Me.lblTelefone.TabIndex = 37
+        Me.lblTelefone.Text = "Telefone"
+        '
+        'mtxtTelefone
+        '
+        Me.mtxtTelefone.Location = New System.Drawing.Point(55, 104)
+        Me.mtxtTelefone.Mask = "(99) 0000-0000"
+        Me.mtxtTelefone.Name = "mtxtTelefone"
+        Me.mtxtTelefone.Size = New System.Drawing.Size(100, 20)
+        Me.mtxtTelefone.TabIndex = 5
         '
         'FrmCadastroJog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(378, 164)
-
-
+        Me.Controls.Add(Me.mtxtTelefone)
+        Me.Controls.Add(Me.lblTelefone)
+        Me.Controls.Add(Me.lblContato)
+        Me.Controls.Add(Me.txtContato)
         Me.Controls.Add(Me.btnAvaliacao)
-
         Me.Controls.Add(Me.btnContratoCadastro)
         Me.Controls.Add(Me.mtxtCadastroNAscimento)
         Me.Controls.Add(Me.Label15)
@@ -190,11 +227,7 @@ Partial Class FrmCadastroJog
         Me.MinimizeBox = False
         Me.Name = "FrmCadastroJog"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-
-        Me.Text = "Cadastro de Jogadores"
-
         Me.Text = "Jogadores"
-
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -213,4 +246,8 @@ Partial Class FrmCadastroJog
     Friend WithEvents mtxtCadastroNAscimento As System.Windows.Forms.MaskedTextBox
     Friend WithEvents btnContratoCadastro As System.Windows.Forms.Button
     Friend WithEvents btnAvaliacao As System.Windows.Forms.Button
+    Friend WithEvents txtContato As System.Windows.Forms.TextBox
+    Friend WithEvents lblContato As System.Windows.Forms.Label
+    Friend WithEvents lblTelefone As System.Windows.Forms.Label
+    Friend WithEvents mtxtTelefone As System.Windows.Forms.MaskedTextBox
 End Class

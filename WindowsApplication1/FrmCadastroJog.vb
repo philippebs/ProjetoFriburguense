@@ -27,6 +27,8 @@ Public Class FrmCadastroJog
                 adaptador.InsertCommand.Parameters("@nascimento_jogador").Value = nascimento
                 adaptador.InsertCommand.Parameters("@posicao_jogador").Value = cmbPosicaoJogador.SelectedItem
                 adaptador.InsertCommand.Parameters("@numero_pos_jogador").Value = cmbPosicaoJogador.SelectedIndex
+                adaptador.InsertCommand.Parameters("@contato_jogador").Value = txtContato.Text
+                adaptador.InsertCommand.Parameters("@telefone_contato_jogador").Value = mtxtTelefone.Text
                 adaptador.InsertCommand.ExecuteNonQuery()
                 MessageBox.Show("Cadastro realizado com sucesso!")
             Else
@@ -36,6 +38,8 @@ Public Class FrmCadastroJog
                 adaptador.UpdateCommand.Parameters("@nascimento_jogador").Value = nascimento
                 adaptador.UpdateCommand.Parameters("@posicao_jogador").Value = cmbPosicaoJogador.SelectedItem
                 adaptador.UpdateCommand.Parameters("@numero_pos_jogador").Value = cmbPosicaoJogador.SelectedIndex
+                adaptador.UpdateCommand.Parameters("@contato_jogador").Value = txtContato.Text
+                adaptador.UpdateCommand.Parameters("@telefone_contato_jogador").Value = mtxtTelefone.Text
                 adaptador.UpdateCommand.ExecuteNonQuery()
                 MessageBox.Show("Alteração realizada com sucesso!!")
             End If
@@ -96,6 +100,8 @@ Public Class FrmCadastroJog
                 cmbPosicaoJogador.Text = objReader.GetValue(4)
                 cmbCategoriaJogador.Text = objReader.GetValue(2)
                 mtxtCadastroNAscimento.Text = objReader.GetValue(3)
+                txtContato.Text = objReader.GetValue(6)
+                mtxtTelefone.Text = objReader.GetValue(7)
             Loop
 
             txtNomeJogador.Enabled = False
@@ -103,6 +109,8 @@ Public Class FrmCadastroJog
             cmbCategoriaJogador.Enabled = False
             mtxtCadastroNAscimento.Enabled = False
             btnAlertaCadastroJogador.Enabled = False
+            txtContato.Enabled = False
+            mtxtTelefone.Enabled = False
             conn.Close()
         Else
             btnAvaliacao.Enabled = False
@@ -117,6 +125,8 @@ Public Class FrmCadastroJog
         cmbCategoriaJogador.Enabled = True
         mtxtCadastroNAscimento.Enabled = True
         btnAlertaCadastroJogador.Enabled = True
+        txtContato.Enabled = True
+        mtxtTelefone.Enabled = True
     End Sub
     Private Sub btnContratoCadastro_Click(sender As Object, e As EventArgs) Handles btnContratoCadastro.Click
         Dim frmCadastroContrato As New FrmCadastroContrato()
