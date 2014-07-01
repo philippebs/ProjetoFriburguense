@@ -56,12 +56,10 @@ Public Class FrmLogin
             If abrir = "contrato" Then
                 frmCadContrato = New FrmCadastroContrato
                 frmCadContrato.MdiParent = Me.MdiParent
+                frmCadContrato.frmLogin = Me
                 frmCadContrato.IdJogador(id)
                 frmCadContrato.nomeDoJogador(nome)
-                frmCadContrato.MdiParent = Me.MdiParent
-                'frmCadContrato.frmCadastroJog = Me
 
-                'frmCadContrato.frmLogin = Me
                 frmCadContrato.Show()
             End If
 

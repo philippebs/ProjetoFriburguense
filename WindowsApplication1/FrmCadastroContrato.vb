@@ -2,6 +2,7 @@
 Public Class FrmCadastroContrato
 
     Public frmCadastroJog As New FrmCadastroJog
+    Public frmLogin As New FrmLogin
     Private frmCadastrarAlertas As FrmCadastrarAlerta
     Private cadastrar As Boolean = True
     Private id_jogador_contrato As Integer
@@ -66,6 +67,15 @@ Public Class FrmCadastroContrato
             Loop
             cadastrar = False
             btnCadastarContrato.Text = "Salvar"
+            txtTipoContrato.Enabled = False
+            txtAgenteContrato.Enabled = False
+            txtValorContrato.Enabled = False
+            txtPrecoContrato.Enabled = False
+            txtRemuneracaoContrato.Enabled = False
+            txtValorCarteiraContrato.Enabled = False
+            mtxtDataInicio.Enabled = False
+            mtxtDataTermino.Enabled = False
+            txtClausulasContrato.Enabled = False
         Else
             MessageBox.Show("Jogador sem contrato ou contrato terminou!")
         End If
@@ -224,4 +234,16 @@ Public Class FrmCadastroContrato
         End If
         Return texto
     End Function
+
+    Private Sub btnEditarCadastroContrato_Click(sender As Object, e As EventArgs) Handles btnEditarCadastroContrato.Click
+        txtTipoContrato.Enabled = True
+        txtAgenteContrato.Enabled = True
+        txtValorContrato.Enabled = True
+        txtPrecoContrato.Enabled = True
+        txtRemuneracaoContrato.Enabled = True
+        txtValorCarteiraContrato.Enabled = True
+        mtxtDataInicio.Enabled = True
+        mtxtDataTermino.Enabled = True
+        txtClausulasContrato.Enabled = True
+    End Sub
 End Class

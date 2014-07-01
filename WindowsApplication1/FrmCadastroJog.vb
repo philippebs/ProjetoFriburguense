@@ -130,19 +130,12 @@ Public Class FrmCadastroJog
         mtxtTelefone.Enabled = True
     End Sub
     Private Sub btnContratoCadastro_Click(sender As Object, e As EventArgs) Handles btnContratoCadastro.Click
-        Dim frmLogin As New FrmLogin()
-        'frmLogin.IdJogador(id_jogador)
-        'frmLogin.nomeDoJogador(txtNomeJogador.Text)
-        frmLogin.MdiParent = Me.MdiParent
-        Login("contrato")
-        'frmLogin.frmCadastroJog = Me
-        frmLogin.Show()
-    End Sub
-    Private Sub Login(tela As String)
         frmLogin = New FrmLogin
-        frmLogin.abrirOutraTela(tela)
-        'frmLogin.MdiParent = Me
+        frmLogin.abrirOutraTela("contrato")
+        frmLogin.MdiParent = Me.MdiParent
+        frmLogin.jogador(id_jogador, txtNomeJogador.Text)
         frmLogin.Show()
+
     End Sub
 
     Private Sub btnAvaliacao_Click(sender As Object, e As EventArgs) Handles btnAvaliacao.Click
