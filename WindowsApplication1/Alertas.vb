@@ -45,6 +45,38 @@ Module Alertas
 
         alertasDtAdapter.InsertCommand = sqlInsertCommand
 
+        Dim sqlUpdateCommand As New MySqlCommand
+
+        sqlUpdateCommand.Connection = conn
+        sqlUpdateCommand.CommandText = "update tabela_alerta set titulo_alerta = ?, data_inicio_alerta = ?, data_termino_alerta = ?, mensagem_alerta = ?, conta_alerta = ? where id_alerta = ?"
+
+        objParam = sqlUpdateCommand.Parameters.Add("@titulo_alerta", MySqlDbType.VarChar)
+        objParam.SourceColumn = "titulo_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlUpdateCommand.Parameters.Add("@data_inicio_alerta", MySqlDbType.Date)
+        objParam.SourceColumn = "data_inicio_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlUpdateCommand.Parameters.Add("@data_termino_alerta", MySqlDbType.Date)
+        objParam.SourceColumn = "data_termino_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlUpdateCommand.Parameters.Add("@mensagem_alerta", MySqlDbType.VarChar)
+        objParam.SourceColumn = "mensagem_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlUpdateCommand.Parameters.Add("@conta_alerta", MySqlDbType.Int16)
+        objParam.SourceColumn = "conta_alerta"
+        objParam.SourceVersion = DataRowVersion.Current
+
+        objParam = sqlUpdateCommand.Parameters.Add("@id_alerta", MySqlDbType.Int32)
+        objParam.SourceColumn = "id_alerta"
+        objParam.SourceVersion = DataRowVersion.Original
+
+
+        alertasDtAdapter.UpdateCommand = sqlUpdateCommand
+
         Return alertasDtAdapter
 
     End Function

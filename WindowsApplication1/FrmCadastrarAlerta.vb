@@ -3,6 +3,7 @@
     Public frmCadastroJogador As FrmCadastroJog
     Public frmCadastroContatos As FrmCadastroContato
     Public frmCadastroNota As FrmCadastroContato
+    Public frmListaEventoDia As FrmListaEventosDia
     Private conn As MySql.Data.MySqlClient.MySqlConnection
     Private adaptador As MySql.Data.MySqlClient.MySqlDataAdapter
 
@@ -57,8 +58,15 @@
     End Sub
 
     Private Sub cbConta_CheckedChanged(sender As Object, e As EventArgs) Handles cbConta.CheckedChanged
-        mtxtAlertaDataInicio.Visible = False
-        lblDataInicio.Visible = False
-        lblDataFim.Text = "Data de vencimento"
+        If cbConta.Checked Then
+            mtxtAlertaDataInicio.Visible = False
+            lblDataInicio.Visible = False
+            lblDataFim.Text = "Data de vencimento"
+        Else
+            mtxtAlertaDataInicio.Visible = True
+            lblDataInicio.Visible = True
+            lblDataFim.Text = "Data Término"
+        End If
+        
     End Sub
 End Class

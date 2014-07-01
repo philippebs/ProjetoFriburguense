@@ -29,7 +29,6 @@ Public Class FrmListaEventosDia
         Loop
         If contador = 0 Then
             MessageBox.Show("Nenhum evento para o dia selecionado!")
-            Me.Close()
         End If
         conn.Close()
     End Sub
@@ -42,5 +41,12 @@ Public Class FrmListaEventosDia
         Location = New Point(0, 0)
         conn = Conexao.getConexao
         adaptador = ProcurarData.getAdapter(conn)
+    End Sub
+
+    Private Sub btnAlertaCadastro_Click(sender As Object, e As EventArgs) Handles btnAlertaCadastro.Click
+        Dim frmCadastroAlert As New FrmCadastrarAlerta()
+        frmCadastroAlert.MdiParent = Me.MdiParent
+        frmCadastroAlert.frmListaEventoDia = Me
+        frmCadastroAlert.Show()
     End Sub
 End Class

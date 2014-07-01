@@ -40,12 +40,19 @@ Public Class FrmAlertaBox
         Dim data_atual As Date = Now
         'MsgBox(data_t.AddDays(30))
 
+        If data_atual.AddMonths(7) >= data_t Then
+            Me.BackColor = Color.Blue
+        End If
+        If data_atual.AddDays(30) >= data_t Then
+            Me.BackColor = Color.Green
+        End If
         If (data_atual.AddDays(15) >= data_t) Then
             Me.BackColor = Color.Yellow
         End If
         If (data_atual.AddDays(7) >= data_t) Then
             Me.BackColor = Color.Red
         End If
+        
         Label3.Text = nome
         Label2.Text = data_t
 

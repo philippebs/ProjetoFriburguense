@@ -80,8 +80,35 @@ Public Class FrmCadastroContrato
             cadastrarAlterar(0)
             limparCampos()
             cadastrar = True
-        End If
+            Dim id As Integer = -1
+            Dim adaptadorAler As MySql.Data.MySqlClient.MySqlDataAdapter
+            Dim connAlert As MySql.Data.MySqlClient.MySqlConnection
+            connAlert = Conexao.getConexao
+            adaptadorAler = ExcluirAlerta.getAdapter(connAlert)
+            Dim objReader2 As MySqlDataReader
+            connAlert.Open()
+            adaptadorAler.SelectCommand.Parameters("@titulo_alerta").Value = "Renovar Contrato: " + nomeJogador
+            objReader2 = adaptadorAler.SelectCommand().ExecuteReader
 
+            Do While objReader2.Read
+                id = objReader2.GetValue(0)
+            Loop
+            connAlert.Close()
+            If id <> -1 Then
+                Dim adaptadorAux As MySql.Data.MySqlClient.MySqlDataAdapter
+                Dim connAux As MySql.Data.MySqlClient.MySqlConnection
+                connAux = Conexao.getConexao
+                adaptadorAux = ExcluirAlerta.getAdapter(connAux)
+                connAux.Open()
+                Try
+                    adaptadorAux.DeleteCommand.Parameters("@id_alerta").Value = id
+                    adaptadorAux.DeleteCommand.ExecuteNonQuery()
+                    connAux.Close()
+                Catch ex As Exception
+
+                End Try
+            End If
+        End If
     End Sub
 
     Private Sub cadastrarAlterar(ByVal ativo As Integer)
@@ -112,7 +139,7 @@ Public Class FrmCadastroContrato
                 adaptador2 = Alertas.getAdapter(conn2)
                 conn2.Open()
                 Try
-                    adaptador2.InsertCommand.Parameters("@titulo_alerta").Value = "Renovar Contrato: "
+                    adaptador2.InsertCommand.Parameters("@titulo_alerta").Value = "Renovar Contrato: " + nomeJogador
                     adaptador2.InsertCommand.Parameters("@data_inicio_alerta").Value = termino
                     adaptador2.InsertCommand.Parameters("@data_termino_alerta").Value = termino
                     adaptador2.InsertCommand.Parameters("@mensagem_alerta").Value = "O contrato do jogador " & nomeJogador & " termina em: " & termino.Day.ToString & "/" & termino.Month.ToString & "/" & termino.Year.ToString

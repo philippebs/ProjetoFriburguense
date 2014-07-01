@@ -62,7 +62,7 @@ Public Class FrmCadastroContato
         frmCadastroAlert.MdiParent = Me.MdiParent
         frmCadastroAlert.frmCadastroContatos = Me
         'MessageBox.Show(lstvNotas.SelectedItems(0).SubItems(0).Text)
-        frmCadastroAlert.txtTitulo.Text = lstvNotas.SelectedItems(0).SubItems(0).Text
+        'frmCadastroAlert.txtTitulo.Text = lstvNotas.SelectedItems(0).SubItems(0).Text
 
         frmCadastroAlert.Show()
 

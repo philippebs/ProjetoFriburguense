@@ -30,6 +30,8 @@ Partial Class FrmVerAlerta
         Me.txtTitulo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnSalvar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtTexto
@@ -101,11 +103,31 @@ Partial Class FrmVerAlerta
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Título"
         '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(92, 216)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.TabIndex = 18
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
+        'btnSalvar
+        '
+        Me.btnSalvar.Location = New System.Drawing.Point(11, 216)
+        Me.btnSalvar.Name = "btnSalvar"
+        Me.btnSalvar.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalvar.TabIndex = 19
+        Me.btnSalvar.Text = "Salvar"
+        Me.btnSalvar.UseVisualStyleBackColor = True
+        '
         'FrmVerAlerta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(349, 251)
+        Me.Controls.Add(Me.btnSalvar)
+        Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtTexto)
         Me.Controls.Add(Me.mtxtAlertaDataTermino)
@@ -129,4 +151,6 @@ Partial Class FrmVerAlerta
     Friend WithEvents txtTitulo As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents btnEditar As System.Windows.Forms.Button
+    Friend WithEvents btnSalvar As System.Windows.Forms.Button
 End Class

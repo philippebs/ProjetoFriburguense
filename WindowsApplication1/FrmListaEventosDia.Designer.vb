@@ -27,6 +27,7 @@ Partial Class FrmListaEventosDia
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnAlertaCadastro = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lstvAlertas
@@ -59,11 +60,21 @@ Partial Class FrmListaEventosDia
         Me.ColumnHeader4.Text = "Mensagem"
         Me.ColumnHeader4.Width = 166
         '
+        'btnAlertaCadastro
+        '
+        Me.btnAlertaCadastro.Location = New System.Drawing.Point(12, 308)
+        Me.btnAlertaCadastro.Name = "btnAlertaCadastro"
+        Me.btnAlertaCadastro.Size = New System.Drawing.Size(68, 23)
+        Me.btnAlertaCadastro.TabIndex = 17
+        Me.btnAlertaCadastro.Text = "Cadastrar"
+        Me.btnAlertaCadastro.UseVisualStyleBackColor = True
+        '
         'FrmListaEventosDia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(467, 375)
+        Me.ClientSize = New System.Drawing.Size(467, 337)
+        Me.Controls.Add(Me.btnAlertaCadastro)
         Me.Controls.Add(Me.lstvAlertas)
         Me.Name = "FrmListaEventosDia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -76,4 +87,5 @@ Partial Class FrmListaEventosDia
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnAlertaCadastro As System.Windows.Forms.Button
 End Class

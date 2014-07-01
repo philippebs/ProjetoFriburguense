@@ -49,12 +49,15 @@ Public Class FrmCadastroJog
     End Sub
 
     Private Sub btnAlertaCadastroJogador_Click(sender As Object, e As EventArgs) Handles btnAlertaCadastroJogador.Click
-        'Dim frmCadastroAlert As New FrmCadastrarAlerta()
-        'frmCadastroAlert.MdiParent = Me.MdiParent
-        'frmCadastroAlert.frmCadastroJogador = Me
-        'frmCadastroAlert.txtTitulo.Text = retornaTextoSelecionado()
-        'frmCadastroAlert.Show()
-        MessageBox.Show(retornaTextoSelecionado())
+        Dim frmCadastroAlert As New FrmCadastrarAlerta()
+        frmCadastroAlert.MdiParent = Me.MdiParent
+        frmCadastroAlert.frmCadastroJogador = Me
+        If retornaTextoSelecionado() <> "Nao selecionado" Then
+            frmCadastroAlert.txtTitulo.Text = retornaTextoSelecionado()
+        End If
+
+        frmCadastroAlert.Show()
+        'MessageBox.Show(retornaTextoSelecionado())
     End Sub
 
     Private Function retornaTextoSelecionado()
@@ -65,7 +68,7 @@ Public Class FrmCadastroJog
         If mtxtCadastroNAscimento.SelectedText.Length > 0 Then
             texto = mtxtCadastroNAscimento.SelectedText
         End If
-        MessageBox.Show(cmbCategoriaJogador.SelectedText.Length)
+        'MessageBox.Show(cmbCategoriaJogador.SelectedText.Length)
         'If cmbCategoriaJogador.SelectedText.Then Then
         '    texto = cmbCategoriaJogador.SelectedItem
         '    'MessageBox.Show(cmbCategoriaJogador.SelectedItem)
